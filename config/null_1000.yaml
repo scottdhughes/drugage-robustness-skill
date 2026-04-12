@@ -1,0 +1,63 @@
+anage:
+  path: data/anage_snapshot.tsv
+  release_name: stable snapshot
+  sha256: 98867969fbd4d0bed6bab415c2715bb19079dbd7f92bdc26e5961856aa1c1519
+  source_url: https://genomics.senescence.info/species/dataset.zip
+contract_version: 2026-03-22.v1
+dataset:
+  build: Build 5
+  path: data/drugage_build5_2024-11-29.csv
+  release_date: 2024-11-29
+  required_columns:
+  - compound_name
+  - species
+  - strain
+  - dosage
+  - age_at_initiation
+  - treatment_duration
+  - avg_lifespan_change_percent
+  - avg_lifespan_significance
+  - max_lifespan_change_percent
+  - max_lifespan_significance
+  - gender
+  - weight_change_percent
+  - weight_change_significance
+  - ITP
+  - pubmed_id
+  sha256: 7ed9771440fa4e1e30be0d3c8e92d919254b572ab40c81e2440ba78c885401d4
+  source_url: https://genomics.senescence.info/drugs/dataset.zip
+outputs:
+  anage_species_join: anage_species_join.csv
+  claim_stability_certificate: claim_stability_certificate.json
+  claim_stability_heatmap: claim_stability_heatmap.png
+  compound_evidence_profiles: compound_evidence_profiles.csv
+  compound_null_significance: compound_null_significance.csv
+  compound_taxonomic_context: compound_taxonomic_context.csv
+  empirical_null_certificate: empirical_null_certificate.json
+  manifest: manifest.json
+  normalization_audit: normalization_audit.json
+  null_separation_plot: null_separation_plot.png
+  robustness_rankings: robustness_rankings.csv
+  taxonomic_breadth_heatmap: taxonomic_breadth_heatmap.png
+  verification: verification.json
+pipeline:
+  null_model_type: species_stratified_effect_permutation
+  null_reruns: 1000
+  null_seed: 20260322
+  tier_priority:
+    conflicted: 3
+    promising: 1
+    robust: 0
+    thin_evidence: 2
+  top_n_compounds: 10
+  trimmed_mean_fraction: 0.1
+  verification_top_n: 20
+runtime:
+  package_versions:
+  - pandas
+  - numpy
+  - matplotlib
+  - PyYAML
+  - jsonschema
+  pythonhashseed: 0
+title: Claim-Certified Cross-Species Robustness of Longevity Interventions from DrugAge

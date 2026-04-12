@@ -1,0 +1,12 @@
+{
+  "build4_compounds": 1084,
+  "build5_compounds": 1038,
+  "compounds_gaining_experiments": 191,
+  "new_compounds_in_build5": 108,
+  "total_delta_experiments": 532,
+  "top_q_with_delta": 65,
+  "bottom_with_delta": 124,
+  "top_q_delta_positive_rate": 0.8862,
+  "bottom_delta_positive_rate": 0.5873,
+  "mann_whitney_p": 0.0
+}

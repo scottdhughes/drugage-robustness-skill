@@ -1,0 +1,203 @@
+{
+  "holdout_matched": 29,
+  "holdout_absent": 24,
+  "itp_positive_in_robust_holdout": 3,
+  "itp_positive_total_holdout": 8,
+  "itp_negative_in_conflicted_holdout": 3,
+  "itp_negative_total_holdout": 9,
+  "fisher_p_holdout": 0.241176,
+  "holdout_tier_distribution": {
+    "positive": {
+      "robust": 3,
+      "promising": 3,
+      "thin_evidence": 2
+    },
+    "negative": {
+      "robust": 1,
+      "promising": 2,
+      "thin_evidence": 3,
+      "conflicted": 3
+    },
+    "mixed": {
+      "robust": 5,
+      "conflicted": 6,
+      "thin_evidence": 1
+    }
+  },
+  "details": [
+    {
+      "compound": "Alpha-ketoglutarate",
+      "itp_direction": "positive",
+      "holdout_tier": "robust",
+      "holdout_rank": 5
+    },
+    {
+      "compound": "Rapamycin",
+      "itp_direction": "positive",
+      "holdout_tier": "robust",
+      "holdout_rank": 6
+    },
+    {
+      "compound": "Mycophenolic acid",
+      "itp_direction": "mixed",
+      "holdout_tier": "robust",
+      "holdout_rank": 10
+    },
+    {
+      "compound": "2,4-dinitrophenol",
+      "itp_direction": "mixed",
+      "holdout_tier": "robust",
+      "holdout_rank": 14
+    },
+    {
+      "compound": "Fisetin",
+      "itp_direction": "mixed",
+      "holdout_tier": "robust",
+      "holdout_rank": 16
+    },
+    {
+      "compound": "Minocycline",
+      "itp_direction": "mixed",
+      "holdout_tier": "robust",
+      "holdout_rank": 17
+    },
+    {
+      "compound": "Green tea extract",
+      "itp_direction": "positive",
+      "holdout_tier": "robust",
+      "holdout_rank": 26
+    },
+    {
+      "compound": "Hydralazine",
+      "itp_direction": "mixed",
+      "holdout_tier": "robust",
+      "holdout_rank": 34
+    },
+    {
+      "compound": "Simvastatin",
+      "itp_direction": "negative",
+      "holdout_tier": "robust",
+      "holdout_rank": 36
+    },
+    {
+      "compound": "Curcumin",
+      "itp_direction": "positive",
+      "holdout_tier": "promising",
+      "holdout_rank": 59
+    },
+    {
+      "compound": "Nicotinamide riboside",
+      "itp_direction": "negative",
+      "holdout_tier": "promising",
+      "holdout_rank": 75
+    },
+    {
+      "compound": "Astaxanthin",
+      "itp_direction": "positive",
+      "holdout_tier": "promising",
+      "holdout_rank": 131
+    },
+    {
+      "compound": "Glycine",
+      "itp_direction": "positive",
+      "holdout_tier": "promising",
+      "holdout_rank": 135
+    },
+    {
+      "compound": "Leucine",
+      "itp_direction": "negative",
+      "holdout_tier": "promising",
+      "holdout_rank": 153
+    },
+    {
+      "compound": "Captopril",
+      "itp_direction": "positive",
+      "holdout_tier": "thin_evidence",
+      "holdout_rank": 238
+    },
+    {
+      "compound": "4-phenylbutyrate",
+      "itp_direction": "mixed",
+      "holdout_tier": "thin_evidence",
+      "holdout_rank": 257
+    },
+    {
+      "compound": "Oxaloacetate",
+      "itp_direction": "positive",
+      "holdout_tier": "thin_evidence",
+      "holdout_rank": 378
+    },
+    {
+      "compound": "Enalapril",
+      "itp_direction": "negative",
+      "holdout_tier": "thin_evidence",
+      "holdout_rank": 414
+    },
+    {
+      "compound": "Caffeic acid phenethylester",
+      "itp_direction": "negative",
+      "holdout_tier": "thin_evidence",
+      "holdout_rank": 573
+    },
+    {
+      "compound": "Nebivolol",
+      "itp_direction": "negative",
+      "holdout_tier": "thin_evidence",
+      "holdout_rank": 615
+    },
+    {
+      "compound": "Aspirin",
+      "itp_direction": "mixed",
+      "holdout_tier": "conflicted",
+      "holdout_rank": 658
+    },
+    {
+      "compound": "Resveratrol",
+      "itp_direction": "mixed",
+      "holdout_tier": "conflicted",
+      "holdout_rank": 660
+    },
+    {
+      "compound": "Nordihydroguaiaretic acid",
+      "itp_direction": "mixed",
+      "holdout_tier": "conflicted",
+      "holdout_rank": 661
+    },
+    {
+      "compound": "Metformin",
+      "itp_direction": "mixed",
+      "holdout_tier": "conflicted",
+      "holdout_rank": 667
+    },
+    {
+      "compound": "Fish oil",
+      "itp_direction": "mixed",
+      "holdout_tier": "conflicted",
+      "holdout_rank": 726
+    },
+    {
+      "compound": "Beta-guanidinopropionic acid",
+      "itp_direction": "negative",
+      "holdout_tier": "conflicted",
+      "holdout_rank": 780
+    },
+    {
+      "compound": "Methylene blue",
+      "itp_direction": "mixed",
+      "holdout_tier": "conflicted",
+      "holdout_rank": 830
+    },
+    {
+      "compound": "4-hydroxyphenyl-N-tert-butylnitrone",
+      "itp_direction": "negative",
+      "holdout_tier": "conflicted",
+      "holdout_rank": 903
+    },
+    {
+      "compound": "Nitroflurbiprofen",
+      "itp_direction": "negative",
+      "holdout_tier": "conflicted",
+      "holdout_rank": 910
+    }
+  ]
+}

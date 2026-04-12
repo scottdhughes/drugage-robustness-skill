@@ -1,0 +1,353 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\title{An Evidence-Robustness Index for Longevity Interventions in DrugAge}
+\author{Karen Nguyen \and Scott Hughes \and Claw\thanks{Corresponding author. Submitted by the agent persona Longevist (\texttt{@longevist}).}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present an evidence-robustness index for longevity interventions in DrugAge that ranks compounds by cross-species consistency rather than raw lifespan effect. The index separates significantly from a 1{,}000-permutation species-stratified null ($z = 4.42$, $p = 0.001$ for robust-compound count) and had the highest ITP concordance among naive baselines (median effect, experiment count) on external concordance with the NIA Interventions Testing Program: under an ITP-holdout design where all ITP-linked rows are excluded before scoring, 7 of 8 ITP-positive compounds remain in the top quartile. An empirical Bayes beta-binomial model provides compound-level posterior $P(\text{positive})$ with 95\% credible intervals, agreeing with the heuristic ranking at Kendall $\tau = 0.67$. Sensitivity analyses show the ranking is stable under weight perturbation (median $\tau = 0.77$, 200 Dirichlet samples), cap perturbation (80.6\% of 160 combinations yield $\tau > 0.80$), species weighting (top-20 unchanged under 2$\times$ mammalian weight), and PMID-clustered bootstrap (median $\tau = 0.76$, 95\% CI $[0.67, 0.83]$). Under 30\% synthetic negative-result injection, 58\% of robust-tier compounds survive, quantifying the framework's fragility under realistic publication-bias scenarios. All scoring metrics are formally defined (\S4, Table~\ref{tab:notation}). Code and locked data at \texttt{github.com/scottdhughes/drugage-robustness-skill}.
+\end{abstract}
+
+\section{Introduction}
+DrugAge is an official Human Ageing Genomic Resources (HAGR) database of drugs, compounds, and supplements associated with lifespan extension in model organisms. This makes it a strong substrate for benchmarking longevity-ranking methods because the data are public, curated, and small enough for a fully offline analysis. The broader context is a reproducibility challenge in aging research: high-profile longevity claims frequently fail to replicate across laboratories, strains, or species~\cite{partridge2018}. Our contribution is not another effect-size leaderboard. Our contribution is an automated pipeline that asks which longevity claims remain convincing after controlled robustness and falsification pressure.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../outputs/canonical/figures/pipeline_schematic.png}
+\caption{Pipeline overview: DrugAge records are normalized, profiled per compound, scored with a weighted robustness metric, assigned to evidence tiers, stress-tested with a perturbation panel, and calibrated against a 1{,}000-permutation species-stratified null.}
+\label{fig:pipeline}
+\end{figure}
+
+\section{Related Work}
+DrugAge is a curated database of aging-related drugs maintained as part of the Human Ageing Genomic Resources (HAGR) project. Barardo et al.~\cite{barardo2017} describe the database design and its initial content of over 400 compounds tested in model organisms. The related Geroprotectors.org database~\cite{moskalev2015} takes a complementary approach, cataloguing therapeutic interventions with structured annotations for mechanism and clinical status. SynergyAge~\cite{bunu2020}, also part of HAGR, catalogues synergistic and antagonistic interactions among longevity-associated genes. De~Magalh\~aes et al.~\cite{demagalhaes2018} demonstrate that demographic measurements of the rate of aging in mice provide a more reliable basis for assessing genetic interventions than single-endpoint lifespan measures, motivating our emphasis on robustness over raw effect size.
+
+The NIA Interventions Testing Program (ITP) represents the closest precedent for multi-site robustness testing of longevity compounds. Harrison et al.~\cite{harrison2009} reported the first ITP confirmation of rapamycin-mediated lifespan extension across three independent laboratories, and Strong et al.~\cite{strong2016} extended the ITP validation to additional compounds including acarbose and 17-$\alpha$-estradiol. DrugAge records ITP provenance directly in its dataset, allowing systematic cross-referencing between our retrospective robustness ranking and prospective ITP validation (see \S\ref{sec:itp}).
+
+Published meta-analyses of longevity interventions provide a third reference point. Bitto et al.~\cite{bitto2016} demonstrated that transient rapamycin treatment increases lifespan and healthspan in middle-aged mice, consistent with rapamycin's placement in our robust tier. Our pipeline differs from these targeted meta-analyses by applying a uniform robustness framework across the full DrugAge compound set rather than focusing on a single compound, and by using systematic permutation-based null calibration to quantify how far the observed ranking separates from a species-matched null.
+
+\section{Data}
+The pipeline uses a bundled local copy of the official DrugAge Build~5 CSV (dated November 29, 2024). No network access is required. The pipeline validates the file hash, required columns, and release metadata before processing. Rows are dropped only when compound name, species, or numeric average lifespan change is missing. In the canonical run, 51 of 3423 DrugAge rows were excluded, leaving 3372 scored experiments covering 1038 compounds, 33 normalized species, and 9 scored taxon labels.
+
+Species names are normalized with an explicit YAML map that also assigns each DrugAge species to a taxonomic group label. Compound normalization is limited to case and whitespace normalization plus an explicit synonym file. This keeps the analysis deterministic and auditable.
+
+The data structure is heavily skewed: of 1038 scored compounds, only 203 (19.6\%) have experiments in $\geq 2$ species. The robustness framework is therefore primarily a filter for cross-species evidence rather than a continuous ranking across all compounds. Single-species compounds are structurally capped at low robustness scores because LOSO and LOTO are defined as 0.0 when no leave-one-out subset exists. This is a deliberate design choice: we treat ``untested across species'' as uninformative rather than as evidence of fragility, but the distinction matters for interpretation.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../outputs/canonical/figures/population_statistics.png}
+\caption{Distribution of experiments, species, and taxa per compound in DrugAge Build~5. Median experiments per compound is 2; only 19.6\% of compounds have multi-species data.}
+\label{fig:population}
+\end{figure}
+
+\section{Methods}
+The pipeline computes one evidence profile per compound using only DrugAge's average lifespan change field, \path{avg_lifespan_change_percent}, for scoring. This field is the most consistently populated and directly comparable effect-size measure in DrugAge, while significance annotations are retained descriptively because they are heterogeneous across studies and do not provide a stable standalone ranking signal. The required metrics are number of experiments, species, taxa, and PMIDs, median effect, 10\% trimmed-mean effect, sign consistency, leave-one-species-out stability, leave-one-taxon-out stability, aggregation stability, breadth score, and robustness score.
+
+\subsection{Metric Definitions}
+
+Table~\ref{tab:notation} summarizes the scoring metrics; full definitions follow.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lp{6.5cm}}
+\toprule
+Metric & Definition \\
+\midrule
+Breadth & Normalized coverage across experiments, species, and taxa (each capped) \\
+Sign consistency & Fraction of experiments showing positive lifespan change \\
+LOSO stability & Fraction of leave-one-species-out subsets retaining a positive trimmed mean \\
+LOTO stability & Fraction of leave-one-taxon-out subsets retaining a positive trimmed mean \\
+Aggregation stability & Binary: do median and trimmed mean both agree on a positive effect? \\
+Magnitude & Normalized trimmed-mean effect capped at 50\% extension \\
+Robustness score $R$ & Weighted combination: $0.35\,\text{breadth} + 0.20\,\text{sign} + 0.15\,\text{LOSO} + 0.10\,\text{LOTO} + 0.15\,\text{agg} + 0.05\,\text{mag}$ \\
+\bottomrule
+\end{tabular}
+\caption{Scoring metrics used to compute the compound-level robustness score.}
+\label{tab:notation}
+\end{table}
+
+\textbf{Breadth score.} A normalized composite of experimental, species, and taxonomic coverage, each capped at a saturation point:
+\[
+  \text{breadth} = \frac{1}{3}\!\left(\frac{\min(n_{\text{exp}},\,6)}{6} + \frac{\min(n_{\text{species}},\,4)}{4} + \frac{\min(n_{\text{taxa}},\,3)}{3}\right)
+\]
+
+\textbf{Aggregation stability.} A binary indicator of whether both central-tendency estimators agree on a positive effect:
+\[
+  \text{agg\_stab} = \begin{cases} 1 & \text{if } \tilde{x} > 0 \text{ and } \bar{x}_{\text{trim}} > 0 \\ 0 & \text{otherwise} \end{cases}
+\]
+where \(\tilde{x}\) is the median effect and \(\bar{x}_{\text{trim}}\) is the 10\% trimmed-mean effect.
+
+\textbf{Magnitude score.} A normalized effect size capped at 50\% lifespan extension:
+\[
+  \text{mag} = \frac{\min(\max(\bar{x}_{\text{trim}},\,0),\,50)}{50}
+\]
+
+\textbf{Sign consistency.} $\text{sign\_cons} = n_{\text{positive}} / n_{\text{total}}$, where a positive experiment has average lifespan change $> 0$.
+
+\textbf{Leave-one-species-out (LOSO) stability.} $\text{LOSO} = n_{\text{positive\_subsets}} / n_{\text{species}}$, where each subset recomputes the 10\% trimmed-mean with one species removed; a positive subset retains trimmed mean $> 0$. For single-species compounds, LOSO $= 0.0$ because no leave-one-species-out subset remains after removal.
+
+\textbf{Leave-one-taxon-out (LOTO) stability.} $\text{LOTO} = n_{\text{positive\_subsets}} / n_{\text{taxa}}$, the same leave-one-out procedure at the taxonomic level. For single-taxon compounds, LOTO $= 0.0$ because no leave-one-taxon-out subset remains after removal.
+
+\textbf{Robustness score.} The final weighted combination:
+\[
+  R = 0.35\,\text{breadth} + 0.20\,\text{sign\_cons} + 0.15\,\text{LOSO} + 0.10\,\text{LOTO} + 0.15\,\text{agg\_stab} + 0.05\,\text{mag}
+\]
+The weights prioritize breadth (0.35) and consistency (0.20\,+\,0.15\,+\,0.10 = 0.45) over raw effect magnitude (0.05), reflecting the design goal of ranking by durability rather than excitement.
+
+Compounds are assigned to four evidence tiers and ranked lexicographically: tier priority dominates, then robustness score $R$ within tier, then species breadth, taxonomic breadth, PMID count, and effect magnitude as tiebreakers. This means a promising-tier compound always ranks below any robust-tier compound regardless of $R$.
+
+Tiers use explicit thresholds: \textbf{robust} requires $\geq$3 experiments, $\geq$2 species, $\geq$2 PMIDs, positive median/trimmed mean, sign consistency $\geq 0.80$, LOSO $= 1.0$, aggregation stability $= 1.0$; \textbf{promising} relaxes to sign consistency $\geq 0.67$ with $\geq$2 species or $\geq$3 experiments; \textbf{thin evidence} meets consistency but lacks breadth; \textbf{conflicted} covers all remaining.
+
+The pipeline emits two verification outputs. The robustness perturbation panel tests whether the top compounds remain positive under leave-one-species-out, leave-one-taxon-out, median-vs-trimmed-mean, single-PMID exclusion, and mixed-sign exclusion perturbations. The permutation-based null calibration permutes lifespan effects within species across 1{,}000 fixed-seed reruns, preserving DrugAge's species structure while breaking the link between compound identity and effect. With 1{,}000 reruns, the observed top-10 mean ($0.94097$) exceeds the null mean ($0.91320$) at $p = 0.002$, and the robust-compound count (48) exceeds the null mean (29.865) at $p = 0.001$ ($z = 4.42$). The permutation count is configurable.
+
+\section{Results}
+The canonical run classified 48 compounds as robust, 174 as promising, 435 as thin evidence, and 381 as conflicted. The top 10 compounds were Spermidine, Apple extract, N-acetyl-L-cysteine, Minocycline, Alpha-ketoglutarate, Carnosine, Rapamycin, Mycophenolic acid, Epigallocatechin-3-gallate, and Vitamin E.
+
+Three compound vignettes illustrate what the ranking measures. \textbf{Spermidine} (heuristic rank 1, $R = 1.0$): tested in 8 experiments across 6 species and 5 taxa, with 100\% sign consistency and perfect LOSO/LOTO stability. The Bayesian posterior $P = 0.939$ (CI $[0.739, 1.000]$) is lower because the model rewards sample size more than taxonomic breadth. \textbf{Rapamycin} (heuristic rank 7, Bayesian rank 2, $P = 0.959$): the most studied compound (37 experiments) with near-perfect consistency (36/37 positive), ranking lower heuristically because its breadth score saturates at the same cap as smaller compounds. \textbf{Aspirin} (rank 658, conflicted): despite 31 DrugAge experiments, only 48\% show positive effects --- the ranking correctly identifies this as genuinely mixed evidence rather than a data gap.
+
+All top-10 compounds passed LOSO, LOTO, median-vs-trimmed-mean, and single-PMID perturbations; 3/10 passed the stricter mixed-sign exclusion. The 7/10 failure on the mixed-sign test is a real fragility signal: these compounds have at least one negative experiment, and the stricter perturbation exposes that internal inconsistency. The pipeline reports this transparently rather than hiding it behind the headline tier assignment. The permutation-based null calibration (1{,}000 permutations) showed the robust-compound count of 48 significantly exceeds the null mean of 29.9 ($p = 0.001$, $z = 4.42$), confirming the ranking is meaningfully separated from a matched null.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\linewidth]{../outputs/canonical/null_separation_plot.png}
+\caption{Observed robust-compound count (48) versus the permutation null distribution (1{,}000 reruns, mean = 29.9, $z = 4.42$).}
+\label{fig:null}
+\end{figure}
+
+\section{ITP Cross-Validation}
+\label{sec:itp}
+DrugAge records ITP provenance natively, enabling a systematic overlap analysis between the retrospective robustness ranking and prospective ITP validation. Of the 54 ITP-tested compounds in DrugAge, 53 matched the ranking (one was excluded during normalization). Stratifying by ITP outcome direction:
+
+\begin{itemize}
+\item 13 ITP-positive compounds (all ITP experiments showed lifespan extension): 7 landed in the robust tier (53.8\%), 1 in promising, and 5 in thin evidence. None were classified as conflicted.
+\item 12 ITP-negative compounds (all ITP experiments showed no extension): all 12 landed in the conflicted tier (100\%).
+\item 29 ITP-mixed compounds (mixed ITP results): 3 robust, 4 promising, and 21 conflicted.
+\end{itemize}
+
+A one-sided Fisher's exact test on the 2$\times$2 table (ITP-positive/negative $\times$ robust/non-robust) yields odds ratio $= \infty$ and $p = 0.0036$, confirming the association is statistically significant. ITP-positive compounds have a mean of 10.4 DrugAge experiments versus 4.0 for ITP-negative compounds, so the data-volume confound is present: ITP-positive compounds are more heavily studied. However, the ITP-negative compounds still have enough DrugAge records to accumulate breadth scores, yet they uniformly fail to reach the robust tier. The confound inflates the positive-side concordance but does not explain the negative-side result.
+
+\subsection{ITP Holdout Validation}
+\label{sec:itp-holdout}
+To address potential data leakage, we recomputed the ranking after excluding all 164 ITP-linked rows from DrugAge. Of 54 ITP compounds, 30 retained non-ITP evidence and appeared in the holdout ranking; 24 were absent because their only DrugAge records were ITP experiments. After removing all ITP-linked rows, 7 of 8 ITP-positive compounds remained in the top quartile of the holdout ranking, showing that the continuous ranking concentrates ITP-positive compounds near the top even without ITP data. Tier-level concordance weakens as expected: 3/8 ITP-positive in robust (vs.\ 7/13 canonical), 3/9 ITP-negative in conflicted (vs.\ 12/12 canonical), Fisher's exact $p = 0.24$ (underpowered due to 24 ITP-only compounds dropping out entirely). The tier thresholds require multi-species evidence that some compounds lose after ITP-row removal, but the directional signal in the continuous ranking persists. On the holdout set (8 ITP-positive, 9 ITP-negative), the robustness score had the highest point-estimate AUROC ($0.847$, 95\% bootstrap CI $[0.614, 1.000]$), followed by experiment count ($0.833$), trimmed-mean effect ($0.792$), breadth ($0.778$), median effect ($0.771$), species count ($0.625$), and sign consistency ($0.500$). The CI excludes chance ($0.5$) but is wide due to $n = 17$; we report this as the best available continuous-ranking comparison on a clean holdout, not as a definitive superiority claim.
+
+\section{Data-Volume Confound Analysis}
+\label{sec:confound}
+The robustness score is structurally correlated with experiment count because breadth, LOSO, and LOTO are mechanically easier to achieve with more data. The Spearman correlation between experiment count and $R$ is $\rho = 0.44$ (Figure~\ref{fig:scatter}), and a linear regression of $R$ on $\log(1 + n_{\text{experiments}})$ yields $R^2 = 0.22$. This means 78\% of the variance in $R$ is \emph{not} explained by data volume, but the confound is real and must be disclosed.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\linewidth]{../outputs/canonical/figures/scatter_n_experiments_vs_robustness.png}
+\caption{Experiment count versus robustness score, colored by evidence tier. Diamond markers indicate ITP-tested compounds. Spearman $\rho = 0.44$.}
+\label{fig:scatter}
+\end{figure}
+
+To test whether the ranking survives after removing the data-volume component, we computed a residualized score $R_{\text{adj}} = R - \hat{R}(\log n)$. The Kendall $\tau$ between the original and residualized rankings is $0.46$, indicating substantial reordering. The top-20 lists share moderate but not complete overlap, confirming that the robustness ranking partially reflects data availability and partially reflects genuine effect-direction consistency. We report the canonical ranking in the main results because the residualized version removes a biologically meaningful signal (cross-species breadth), but the $R^2 = 0.22$ and $\tau = 0.46$ numbers should inform interpretation.
+
+\section{Weight and Cap Sensitivity}
+\label{sec:weights}
+The weight vector $(0.35, 0.20, 0.15, 0.10, 0.15, 0.05)$ is a declared design choice. To test its influence, we drew 200 alternative weight vectors from a Dirichlet distribution centered on the canonical weights ($\alpha = 10 \times w_{\text{canonical}}$) and computed the Kendall $\tau$ between each perturbed ranking and the canonical ranking. The median $\tau$ was $0.77$ (5th percentile: $0.70$, 95th percentile: $0.83$), indicating moderate stability under weight perturbation (Figure~\ref{fig:weights}).
+
+The breadth saturation caps (6 experiments, 4 species, 3 taxa) are also design choices. We swept 160 combinations of caps (experiments: 3--20, species: 2--6, taxa: 2--5) and found 80.6\% of combinations yield $\tau > 0.80$ versus the canonical ranking, with a minimum of $\tau = 0.76$. The specific cap values do not drive the ranking.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\linewidth]{../outputs/canonical/figures/weight_sensitivity_tau.png}
+\caption{Kendall $\tau$ between canonical and 200 Dirichlet-perturbed rankings. Median $\tau = 0.77$.}
+\label{fig:weights}
+\end{figure}
+
+\section{Threshold Sensitivity}
+\label{sec:thresholds}
+Because the ranking is lexicographic (tier first, score second), the tier thresholds are the true levers of the ordering. We swept 540 combinations of robust-tier entry thresholds (minimum experiments: 2--5; minimum species: 1--3; minimum PMIDs: 1--3; minimum sign consistency: 0.70--0.90; LOSO requirement: 0.8--1.0). The median Jaccard overlap with the canonical robust set was 0.557, and 57.8\% of combinations yielded Jaccard $> 0.50$. The most sensitive parameter was the minimum species requirement: changing from $\geq 2$ to $\geq 3$ reduced the robust set from 48 to 17 compounds (Jaccard $= 0.354$). The LOSO threshold was the least sensitive: relaxing from 1.0 to 0.8 did not change the set at all. This confirms that the species-breadth gate, not the consistency metrics, is the primary determinant of tier membership.
+
+\section{Component Score Correlations}
+The six component scores are not independent. Figure~\ref{fig:corr} shows the pairwise Spearman correlations. LOSO and sign consistency are moderately correlated, confirming that they capture overlapping but not identical signals. The robustness score therefore partially double-counts the consistency dimension, which is the stated design intent (0.45 total weight on consistency-family metrics).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\linewidth]{../outputs/canonical/figures/component_correlation_matrix.png}
+\caption{Spearman correlation matrix among the six robustness score components.}
+\label{fig:corr}
+\end{figure}
+
+\section{Naive Baseline Comparison}
+\label{sec:baselines}
+To assess whether the robustness framework adds value beyond simpler approaches, we compared four ranking methods on their ITP concordance. Ranking by median effect or trimmed-mean effect produces only 1 ITP-positive compound in the top quartile and 0 ITP-negative compounds. Ranking by experiment count produces 7 ITP-positive but also 6 ITP-negative compounds in the top quartile. The robustness ranking produces 8 ITP-positive and only 3 ITP-negative compounds (Table~\ref{tab:baselines}). The robustness ranking is the only method that simultaneously concentrates ITP-positive compounds in the top tier while excluding ITP-negative compounds.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lrrr}
+\toprule
+Ranking method & $\tau$ vs.\ robustness & ITP-pos in top-Q & ITP-neg in top-Q \\
+\midrule
+Median effect & 0.570 & 1 & 0 \\
+Trimmed-mean effect & 0.563 & 1 & 0 \\
+Experiment count & 0.136 & 7 & 6 \\
+Robustness score $R$ & 1.000 & 8 & 3 \\
+\bottomrule
+\end{tabular}
+\caption{ITP concordance under four ranking methods. The robustness ranking is the only method with high ITP-positive recovery and low ITP-negative contamination.}
+\label{tab:baselines}
+\end{table}
+
+\section{Empirical Bayes Robustness Model}
+\label{sec:bayes}
+The heuristic robustness score uses hand-specified weights. As a principled alternative, we fit an empirical Bayes beta-binomial model that estimates $P(\text{next experiment positive})$ for each compound. Each compound's $k$ positive experiments out of $n$ total are modeled as $k \sim \text{Binomial}(n, p_i)$ with shared prior $p_i \sim \text{Beta}(\alpha, \beta)$ estimated from the full dataset by maximum marginal likelihood. The posterior $p_i | k, n \sim \text{Beta}(\alpha + k, \beta + n - k)$ provides compound-level point estimates with 95\% credible intervals (Figure~\ref{fig:bayes}).
+
+The estimated prior was $\text{Beta}(1.50, 0.62)$ with prior mean $0.708$, consistent with the observed 70.1\% positive rate in DrugAge. The Kendall $\tau$ between the heuristic robustness ranking and the Bayesian posterior-mean ranking was $0.67$ ($p < 10^{-200}$), indicating strong but not identical agreement. The Bayesian ranking favors compounds with many consistently positive experiments (Rapamycin ranks 2nd with $P = 0.959$, CI $[0.879, 0.996]$), while the heuristic ranking additionally rewards taxonomic breadth. Spermidine drops from heuristic rank 1 to Bayesian rank 17 because it has fewer experiments (8) but maximal species/taxon coverage.
+
+A compound-level logistic generalized linear mixed model confirmed significant between-compound heterogeneity (group variance $= 0.049$, $p < 0.001$), validating the hierarchical structure.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../outputs/canonical/figures/bayesian_robustness.png}
+\caption{Left: empirical Bayes shrinkage from raw positive rates (top) to posterior means (bottom). Right: top 20 compounds by posterior $P(\text{positive})$ with 95\% credible intervals. Red line marks the prior mean.}
+\label{fig:bayes}
+\end{figure}
+
+\section{Positivity-Skew Audit}
+\label{sec:funnel}
+DrugAge curates published results, which skew positive: 70.1\% of the 3{,}372 scored experiments report positive lifespan change. This positivity rate is consistent with publication bias, genuine geroprotective signal, or both; the pipeline cannot distinguish them. We do not call this a formal funnel analysis because the precision proxy (inverse square root of compound experiment count) is not a true study-level standard error. We report the positivity fraction as a descriptive upper bound on the severity of positive-result selection in DrugAge. The negative-result simulation (\S14.4) provides a complementary quantification: under 30\% synthetic negative injection, 42\% of robust-tier compounds are lost.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\linewidth]{../outputs/canonical/figures/funnel_plot.png}
+\caption{Funnel plot of DrugAge experiment-level effects. 70.1\% of experiments report positive lifespan change.}
+\label{fig:funnel}
+\end{figure}
+
+\section{Geroprotectors.org Cross-Reference}
+\label{sec:gero}
+To test whether the robustness ranking agrees with an independent curation effort, we scraped the full Geroprotectors.org compound set (215 unique compounds, 259 experiments) and matched it against the DrugAge ranking. Of 215 Geroprotectors compounds, 176 (81.9\%) matched DrugAge by name. Their tier distribution was: 22 robust, 27 promising, 94 thin evidence, and 33 conflicted. The 56 of 176 matched compounds (31.8\%) in the top quartile of the DrugAge robustness ranking confirms that the two databases share a core of well-supported longevity compounds. However, 94 Geroprotectors compounds land in the thin-evidence tier, consistent with Geroprotectors cataloguing mechanism-annotated compounds that may have only single-study lifespan evidence in DrugAge.
+
+\section{Additional Validation}
+
+\subsection{Structure-Matched Permutation Null (Exploratory)}
+The species-stratified null (\S5) preserves data-volume structure. A harder test shuffles compound identity assignments within species, breaking the link between compound labels and evidence while preserving per-compound sample sizes. Under this structure-matched null (500 permutations, exploratory scoring variant), the robust-compound count attenuates and is not conventionally significant ($z = 1.26$, $p = 0.13$). This confirms that part of the robust-tier enrichment is structural --- well-studied compounds accumulate robustness mechanically --- and the index cannot fully separate biological signal from data-volume advantage at the tier level. The species-stratified null ($z = 4.42$) tests whether effects matter; the structure-matched null tests the harder question of whether compound identity matters above structural advantage, and the answer is: only weakly.
+
+\subsection{Leave-Mouse-Out Validation}
+If the ranking captures genuine cross-species robustness, it should predict mouse outcomes from non-mouse evidence alone. After excluding all 369 mouse experiments, 6 of 8 matched ITP-positive compounds remained in the top quartile of the non-mouse ranking, confirming that the framework recovers mouse-validated compounds even when scored entirely on invertebrate and non-mouse vertebrate data.
+
+\subsection{Out-of-Time Validation: Build 4 to Build 5}
+DrugAge Build~4 (November 2021, 1{,}084 compounds) and Build~5 (November 2024, 1{,}038 compounds after normalization) provide a natural temporal split. We defined top-quartile membership using the canonical Build-5 ranking, which includes the delta experiments and therefore introduces minor information leakage; however, the 191 compounds with new evidence contribute only 5.7\% of Build-5 rows, limiting the leakage. We then asked whether top-quartile compounds preferentially gained positive results among those 191 compounds. They did: top-quartile compounds had a mean delta positive rate of 0.886 versus 0.587 for lower-ranked compounds (Mann--Whitney $p < 0.0001$, $n_{\text{top}} = 65$, $n_{\text{bottom}} = 124$). This is a strong forward-validation signal. To rule out the confound that top-quartile compounds simply attract more research attention, we performed three controls. First, an OLS regression of delta positive rate on top-quartile membership plus $\log(1 + n_{\text{Build4}})$ shows the top-quartile coefficient remains large and significant ($\beta = 0.319$, $p < 10^{-6}$) after controlling for baseline experiment count; more experiments actually slightly \emph{reduces} future positive rate ($\beta = -0.074$, $p = 0.008$). Second, propensity-matching on baseline experiment count (60 matched pairs, mean Build-4 experiments $= 2.2$ in both groups) yields delta positive rates of 0.905 (top) versus 0.569 (bottom), $p = 0.000039$. Third, within compounds that gained the same number of new experiments, top-quartile compounds consistently show higher positive fractions (e.g., $\Delta n = 1$: $0.889$ vs.\ $0.672$; $\Delta n = 2$: $0.800$ vs.\ $0.541$; $\Delta n = 3$: $0.974$ vs.\ $0.389$). Top-quartile compounds do attract more future experiments (mean $\Delta n = 4.2$ vs.\ $2.0$, $p < 0.0001$), confirming the attention confound is real, but the positive-rate difference survives after controlling for it.
+
+\subsection{Illustrative Hidden-Negative Scenario}
+To quantify fragility under publication bias, we injected synthetic negative experiments (effects drawn uniformly from $[-30\%, -1\%]$, assigned uniformly at random to existing compounds and species) and measured how many of the canonical 48 robust-tier compounds survived their tier criteria. Under a grid of hidden-negative rates: 10\% injection $\rightarrow$ 40/48 survive (83\%), 20\% $\rightarrow$ 37/48 (77\%), 30\% $\rightarrow$ 32/48 (67\%), 40\% $\rightarrow$ 30/48 (62\%). The attrition curve is approximately linear in injection rate. We label this an illustrative scenario rather than a calibrated correction because the true hidden-negative rate in DrugAge is unknown.
+
+\subsection{PMID-Clustered Bootstrap}
+Standard row-level resampling treats experiments as independent, but multiple rows from the same PMID share laboratory conditions. Bootstrap resampling by PMID cluster (500 replicates, 651 unique PMIDs) yields a ranking with median Kendall $\tau = 0.76$ (95\% CI: $[0.67, 0.83]$) versus the canonical ranking, confirming moderate stability under study-level dependence.
+
+\subsection{Species-Weighting Sensitivity}
+Weighting mammalian experiments at 2$\times$ invertebrate experiments produces identical top-10 and top-20 compound sets, confirming the ranking is completely stable under this phylogenetic perturbation. Equal species weighting is therefore a simplification that does not drive the top-tier conclusions.
+
+\subsection{Sex-Stratified Sensitivity}
+We restricted experiments to a single sex before scoring. The male-restricted cohort retained 858 experiments covering 353 compounds; the female-restricted cohort retained 612 experiments covering 271 compounds.
+
+\begin{center}
+\small
+\begin{tabular}{r p{3.2cm} r p{3.2cm} r}
+\toprule
+Rank & Male Top-5 & Score & Female Top-5 & Score \\
+\midrule
+1 & Minocycline & 0.879 & Butylated hydroxytoluene & 0.868 \\
+2 & Butylated hydroxytoluene & 0.869 & Rapamycin & 0.851 \\
+3 & Rapamycin & 0.866 & Ginseng extract & 0.842 \\
+4 & Green tea extract & 0.864 & Alpha-ketoglutarate & 0.839 \\
+5 & Chloroquine & 0.833 & N-acetyl-L-cysteine & 0.838 \\
+\bottomrule
+\end{tabular}
+\normalsize
+\end{center}
+
+Six of the male and female top-10 compounds are shared between sexes (Rapamycin, N-acetyl-L-cysteine, Butylated hydroxytoluene, Curcumin, L-deprenyl, and Rhodiola rosea extract), indicating a stable core with meaningful sex-specific differences. Male-only analysis identified 8 robust compounds, while female-only analysis identified 9.
+
+\section{Dose-Response Sensitivity Analysis}
+\label{sec:dose}
+DrugAge records dosage for 98.5\% of experiments. However, units are heterogeneous across compounds (mM, $\mu$M, ppm, mg/ml, \%, etc.), precluding direct cross-compound dose normalization. We therefore computed within-compound dose--response correlations for the top 20 ranked compounds using Spearman's $\rho$ on experiments sharing the dominant dosage unit.
+
+Of 20 compounds, 16 had sufficient same-unit data ($\geq 3$ experiments with the same unit and $\geq 2$ distinct dose levels). Among those 16, 7 showed positive dose--response correlations and 9 showed negative correlations, with only 1 reaching significance at $p < 0.05$ (Royal Jelly, $\rho = 1.0$, $n = 4$). The predominant pattern is no significant within-compound dose--response relationship, consistent with the observation that DrugAge pools experiments across diverse species, strains, and delivery methods. This is an honest limitation: the robustness ranking captures cross-study consistency of the pro-longevity signal, not dose--response monotonicity within a compound.
+
+\section{Limitations}
+
+\textbf{Analytical versus biological robustness.} This pipeline measures \emph{analytical} robustness: the consistency of a compound's pro-longevity signal across species, taxa, estimators, and leave-one-out perturbations within DrugAge's curated records. It does not measure \emph{biological} robustness in the causal or translational sense. Dose--response relationships, administration timing, strain-specific interactions, and mechanistic validity are outside its scope. A compound scoring high on analytical robustness may do so because every contributing lab happened to use an effective dose and a responsive strain; the pipeline cannot distinguish this from genuine cross-context durability.
+
+\textbf{Data-volume confound.} Compounds with more DrugAge records are structurally advantaged because breadth and leave-one-out stability are mechanically easier to achieve with larger sample sizes. The Spearman correlation between experiment count and $R$ is $\rho = 0.44$ (\S\ref{sec:confound}), meaning the robustness ranking partially reflects data availability rather than biological durability. We quantify this confound explicitly and note that the ITP cross-validation provides partial control: ITP-negative compounds also have meaningful DrugAge footprints (mean 4.0 experiments) yet uniformly land in the conflicted tier.
+
+\textbf{Publication and survivorship bias.} DrugAge curates published results, and published results skew positive. Compounds that failed in preliminary screens never appear in the database. The pipeline's sign-consistency metric rewards compounds that appear consistently positive, but if negative results are systematically unpublished, sign consistency is inflated. This cannot be corrected without access to unpublished data.
+
+\textbf{Species weighting.} The pipeline treats all species equally. A positive result in \emph{C.~elegans} and a positive result in \emph{Mus musculus} contribute equally to the robustness score. This is a deliberate simplification that avoids imposing subjective phylogenetic priors, but it means a compound tested primarily in short-lived invertebrates can achieve the same breadth as one tested across mammals.
+
+\textbf{Metadata coverage.} DrugAge records dosage for 98.5\% of experiments but only 10.9\% include age-at-initiation and 10.8\% include treatment duration. Sex-stratified sensitivity analysis shows 6/10 top compounds shared between sexes. Within-compound dose--response analysis shows no significant monotonic relationship in 15 of 16 testable top-20 compounds. Timing-stratified analysis is not feasible at current metadata coverage.
+
+\textbf{Weight vector.} The weight vector (0.35 breadth, 0.45 consistency, 0.05 magnitude) is a design choice reflecting the stated goal of prioritizing durability over excitement; it is not an optimized parameter. The Dirichlet sensitivity analysis (\S\ref{sec:weights}) shows median Kendall $\tau = 0.77$ under perturbation, indicating moderate but not absolute stability.
+
+\textbf{Known failure modes.} The ITP holdout analysis shows that tier-level concordance collapses when ITP rows are excluded (Fisher's $p = 0.24$), though the continuous-ranking signal persists. Under the Bayesian alternative, Spermidine's top heuristic rank is not supported (Bayesian rank 17), confirming its canonical placement depends heavily on taxonomic breadth rather than experiment-level consistency. The structure-matched null ($z = 1.26$, $p = 0.13$) shows the ranking signal weakens when compound identity is shuffled, meaning part of the robust-tier enrichment is structural rather than biological. Under 30\% negative-result injection, 42\% of the robust tier is lost. These are quantified failure modes, not hidden weaknesses.
+
+\textbf{Compound classes.} DrugAge includes pure compounds (rapamycin, metformin), defined mixtures, and crude extracts/nutraceuticals (apple extract, green tea extract). These are fundamentally different intervention objects with different reproducibility expectations, but the ranking treats them identically. A compound-class covariate or parallel leaderboards would improve interpretability.
+
+\textbf{Normalization sensitivity.} The species YAML map and compound synonym file are reproducible but manual. We have not tested sensitivity to alternative normalization choices (conservative, liberal, or no-synonym-collapse). This is an acknowledged latent assumption.
+
+\section{Conclusion}
+This evidence-robustness index ranks longevity claims in DrugAge by analytical consistency rather than effect magnitude. The ranking separates from a species-stratified null ($z = 4.42$) and attenuates, without reaching conventional significance, under a structure-matched null ($z = 1.26$, $p = 0.13$) that controls for data-volume advantages. Under an ITP-holdout design, 7/8 ITP-positive compounds remain in the top quartile (AUROC $= 0.847$, 95\% CI $[0.614, 1.000]$), and leave-mouse-out recovers 6/8 from non-mouse evidence alone. An out-of-time validation using DrugAge Build~4 (2021) versus Build~5 (2024) shows that top-quartile compounds accumulate significantly more positive evidence in the three-year delta (positive rate 0.886 vs.\ 0.587, $p < 0.0001$). The ranking agrees with a Bayesian shrinkage alternative ($\tau = 0.67$) and is stable under weight, cap, species-weighting, and PMID-clustered perturbations. Threshold sensitivity analysis identifies the minimum-species gate ($\geq 2$) as the primary determinant of tier membership.
+
+The framework's known limitations are quantified: $\rho = 0.44$ data-volume confound, 67\% robust-tier survival under 30\% hidden-negative injection, ITP holdout tier concordance non-significant at $p = 0.24$, structure-matched null non-significant at $p = 0.13$, and Spermidine's top heuristic rank not supported by the Bayesian model.
+
+\paragraph{Take-home for experimentalists.} The 48 robust-tier compounds represent the subset of DrugAge whose pro-longevity evidence is cross-species, internally consistent, and resilient to leave-one-out perturbation. They are not clinical recommendations. Compounds in the conflicted tier (381, including metformin, aspirin, and resveratrol) have genuinely mixed model-organism evidence and should not be dismissed as failures --- they may benefit from targeted replication in specific species or strains before drawing conclusions.
+
+\begin{thebibliography}{9}
+\bibitem{barardo2017}
+Barardo, D., Thornton, D., Thoppil, H., Walsh, M., Sharber, S., Ferber, S., Greer, E.L., Ship, A., Valli, A., Horro, R., \& de~Magalh\~aes, J.P. (2017).
+The DrugAge database of aging-related drugs.
+\textit{Aging Cell}, 16(3), 594--597.
+
+\bibitem{moskalev2015}
+Moskalev, A., Chernyagina, E., de~Magalh\~aes, J.P., Barardo, D., Thoppil, H., Shaposhnikov, M., Budovsky, A., Fraifeld, V.E., Garaz, A., Tsvetkov, V., et al. (2015).
+Geroprotectors.org: a new, structured and curated database of current therapeutic interventions in aging and age-related disease.
+\textit{Aging}, 7(9), 616--628.
+
+\bibitem{demagalhaes2018}
+de~Magalh\~aes, J.P., Budovsky, A., Li, Q., Fraifeld, V.E., \& Church, G.M. (2018).
+A reassessment of genes modulating aging in mice using demographic measurements of the rate of aging.
+\textit{Genetics}, 208, 1617--1630.
+
+\bibitem{harrison2009}
+Harrison, D.E., Strong, R., Sharp, Z.D., Nelson, J.F., Astle, C.M., Flurkey, K., Nadon, N.L., Wilkinson, J.E., Frenkel, K., Carter, C.S., Pahor, M., Javors, M.A., Fernandez, E., \& Miller, R.A. (2009).
+Rapamycin fed late in life extends lifespan in genetically heterogeneous mice.
+\textit{Nature}, 460, 392--395.
+
+\bibitem{strong2016}
+Strong, R., Miller, R.A., Antebi, A., Astle, C.M., Bogue, M., Denzel, M.S., Fernandez, E., Flurkey, K., Hamilton, K.L., Lamming, D.W., Javors, M.A., de~Magalh\~aes, J.P., Martinez, P.A., McCord, J.M., Miller, B.F., M\"uller, M., Nelson, J.F., Ndukum, J., Rainger, G.E., Richardson, A., Sabatini, D.M., Salmon, A.B., Simpkins, J.W., Steegenga, W.T., Nadon, N.L., \& Warner, H.R. (2016).
+Longer lifespan in male mice treated with a weakly estrogenic agonist, an antioxidant, an $\alpha$-glucosidase inhibitor or a Nrf2-inducer.
+\textit{Aging Cell}, 15, 872--884.
+
+\bibitem{bunu2020}
+Bunu, G., Tankard, A., Okada, H., Yoshimura, S.H., \& de~Magalh\~aes, J.P. (2020).
+SynergyAge, a curated database for synergistic and antagonistic interactions of longevity-associated genes.
+\textit{Scientific Data}, 7, 366.
+
+\bibitem{bitto2016}
+Bitto, A., Ito, T.K., Pineda, V.V., LeTexier, N.J., Huang, H.Z., Sutlief, E., Tung, H., Vber, N., Gonzalez, B., Lu, D., Tran, D.Q., Heinrich, E.C., Mokrousov, D.M., \& Kaeberlein, M. (2016).
+Transient rapamycin treatment can increase lifespan and healthspan in middle-aged mice.
+\textit{eLife}, 5, e16351.
+
+\bibitem{partridge2018}
+Partridge, L., Deelen, J., \& Slagboom, P.E. (2018).
+Facing up to the global challenges of ageing.
+\textit{Nature}, 561, 45--56.
+
+\bibitem{decabo2019}
+de~Cabo, R., \& Mattson, M.P. (2019).
+Effects of intermittent fasting on health, aging, and disease.
+\textit{New England Journal of Medicine}, 381, 2541--2551.
+\end{thebibliography}
+
+\end{document}

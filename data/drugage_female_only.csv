@@ -1,0 +1,617 @@
+compound_name,species,strain,dosage,age_at_initiation,treatment_duration,avg_lifespan_change_percent,avg_lifespan_significance,max_lifespan_change_percent,max_lifespan_significance,gender,weight_change_percent,weight_change_significance,ITP,pubmed_id
+Ethanol,Drosophila mojavensis,A300,4%,,,71.03,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A300,2%,,,123.26,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A512d,4%,,,57.39,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A512d,2%,,,80.71,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A361,4%,,,119.56,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A361,2%,,,145.62,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A514,4%,,,124.24,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A514,2%,,,94.33,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A316b,4%,,,52.04,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A316b,2%,,,105.71,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A572,4%,,,74.94,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A572,2%,,,103.88,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A374,4%,,,19.75,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A374,2%,,,58.11,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A429,4%,,,-1.96,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A429,2%,,,2.51,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A376,4%,,,31.53,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A376,2%,,,101.79,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A422,4%,,,47.75,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A422,2%,,,37.7,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A428,4%,,,-3.89,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A428,2%,,,21.72,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A420,4%,,,88.55,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A420,2%,,,89.09,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A350,4%,,,28.42,NA,,NA,Female,,NA,No,13369
+Ethanol,Drosophila mojavensis,A350,2%,,,57.65,NA,,NA,Female,,NA,No,13369
+Nitrosodimethylurea,Drosophila melanogaster,D32,0.00%,,,-2.94,NS,0,NA,Female,,NA,No,119648
+2-Ethyl-6-methylpyridin-3-ol hydrochloride,Drosophila melanogaster,R(1)2 yy/y+Y,0.01%,,,2.28,NS,13.63,NA,Female,,NA,No,119648
+2-Ethyl-6-methylpyridin-3-ol hydrochloride,Drosophila melanogaster,R(1)2 yy/y+Y,0.10%,,,-10,NS,-9.09,NA,Female,,NA,No,119648
+2-Ethyl-6-methylpyridin-3-ol hydrochloride,Drosophila melanogaster,D32,0.01%,,,18,S,2.32,NA,Female,,NA,No,119648
+2-Ethyl-6-methylpyridin-3-ol hydrochloride,Drosophila melanogaster,D32,0.10%,,,23,S,21,NA,Female,,NA,No,119648
+Phenobarbital,Rattus norvegicus,Sprague Dawley,2 mg/kg/week,,,-9.57,S,,NA,Female,,NA,No,132031
+Nicotine,Rattus norvegicus,Sprague Dawley,2 mg/kg/week,,,-8.51,S,,NA,Female,,NA,No,132031
+Pilocarpine,Rattus norvegicus,Sprague Dawley,30 mg/kg/week,,,-12.76,NS,,NA,Female,,NA,No,132031
+Atropine,Rattus norvegicus,Sprague Dawley,6 mg/kg/week,,,-5.31,NS,,NA,Female,,NA,No,132031
+Cyclophosphamide,Rattus norvegicus,Sprague Dawley,4 mg/kg/week,,,-9.57,S,,NA,Female,,NA,No,132031
+Amethopterin,Rattus norvegicus,Sprague Dawley,37.5 mg/kg/week,,,7.44,NS,,NA,Female,,NA,No,132031
+Hydrocortisone,Rattus norvegicus,Sprague Dawley,37.5 mg/kg/week,,,2.12,NS,,NA,Female,,NA,No,132031
+Butylated hydroxytoluene,Mus musculus,BaLB/c,7500 ppm food,2.6 months,until death,25,S,0,NS,Female,,NA,No,448040
+Butylated hydroxytoluene,Mus musculus,BaLB/c,7500 ppm food,2 months,until death,14,S,0,NS,Female,,NA,No,448040
+Butylated hydroxytoluene,Mus musculus,BaLB/c,7500 ppm food,2 months,2.6 months,8,S,0,NS,Female,,NA,No,448040
+Ginseng extract,Mus musculus,LACa,40 ppm/day,2 months,until death,9,NS,2,NS,Female,,NA,No,571386
+Ginseng extract,Mus musculus,LACa,40 ppm/day,12 months,until death,3,NS,14,NS,Female,,NA,No,571386
+Pineal gland extract,Rattus norvegicus,,"0.5 mg, 5 times a week",,,25,S,,NA,Female,,NA,No,575333
+Sulfamerazine,Rattus norvegicus,,250 mg/kg,,,36.21,S,,NA,Female,,NA,No,620944
+p-fluorophenylalanine,Mus musculus,CBA,2 mM water,12 months,4 weeks,-5,NS,,NA,Female,0,NA,No,689376
+p-fluorophenylalanine,Mus musculus,CBA,0.4 mM water,12 months,4 weeks,-14,S,,NA,Female,0,NA,No,689376
+p-fluorophenylalanine,Mus musculus,CBA,0.08 mM water,12 months,4 weeks,0,NS,,NA,Female,-2,NA,No,689376
+p-fluorophenylalanine,Mus musculus,CBA,2 mM water,1 month,4 weeks,-7,NS,,NA,Female,-12,NA,No,689376
+p-fluorophenylalanine,Mus musculus,CBA,0.4 mM water,1 month,4 weeks,-3,NS,,NA,Female,-3,NA,No,689376
+p-fluorophenylalanine,Mus musculus,CBA,0.08 mM water,1 month,4 weeks,-3,NS,,NA,Female,-4,NA,No,689376
+Hexachlorophene,Mus musculus,XVII/G,150 ppm food,1 month,until death,-7,NS,,NA,Female,,NA,No,728888
+Hexachlorophene,Mus musculus,C57B1,150 ppm food,1 month,until death,-9,NS,,NA,Female,,NA,No,728888
+Ascorbic acid,Drosophila melanogaster,Oregon-R,0.05 M,,,-12.8,NA,,NA,Female,,NA,No,819283
+Ascorbic acid,Drosophila melanogaster,Oregon-R,0.1 M,,,-6.9,NA,,NA,Female,,NA,No,819283
+Ascorbic acid,Drosophila melanogaster,Oregon-R,0.001 M,,,2,NA,,NA,Female,,NA,No,819283
+Sodium tungstate,Rattus norvegicus,Long-Evans,5 ppm,,,-3.57,NS,-12.18,NA,Female,,NA,No,1113208
+Vanadyl sulfate,Mus musculus,Swiss,5 ppm water,after weaning,until death,12,NA,11,S,Female,-14,NA,No,1113210
+Sodium tungstate,Mus musculus,Swiss,5 ppm water,after weaning,until death,-3,NA,2,NS,Female,,NA,No,1113210
+Sodium metaborate,Mus musculus,Swiss,5 ppm water,after weaning,until death,-3,NA,4,NS,Female,,NA,No,1113210
+Potassium titanium oxalate,Mus musculus,Swiss,5 ppm water,after weaning,until death,0,NA,-4,NS,Female,-3,NA,No,1113210
+Nickelous acetate,Mus musculus,Swiss,5 ppm water,after weaning,until death,5,NA,9,S,Female,-14,NA,No,1113210
+Methylmercury acetate,Mus musculus,Swiss,1 ppm water,after weaning,until death,2,NA,4,NS,Female,15,NA,No,1113210
+Mercuric chloride,Mus musculus,Swiss,5 ppm water,after weaning,until death,7,NA,19,NS,Female,8,NA,No,1113210
+Lead acetate,Mus musculus,Swiss,25 ppm water,after weaning,until death,16,NA,2,NS,Female,-3,NA,No,1113210
+Beryllium sulfate,Mus musculus,Swiss,5 ppm water,after weaning,until death,11,NA,13,NS,Female,-4,NA,No,1113210
+Barium acetate,Mus musculus,Swiss,5 ppm water,after weaning,until death,8,NA,-3,NS,Female,0,NS,No,1113210
+Aluminum potassium sulfate,Mus musculus,Swiss,5 ppm water,after weaning,until death,-3,NA,3,NS,Female,27,NA,No,1113210
+Prednisolone sodium phosphate,Mus musculus,DBA/2J,3-3.2 ppm water,7.7 months,until death,0,NS,4,NS,Female,0,NS,No,1132444
+Pineal gland extract,Mus musculus,SHR,0.1 mg subcutaneous injection 5 consecutive days monthly,12 months,until death,3,NA,-3,NA,Female,,NA,No,2682058
+Pineal gland extract,Mus musculus,SHR,0.1 mg subcutaneous injection 5 consecutive days monthly,3.5 months,until death,14,NA,-2,NA,Female,,NA,No,2682058
+Thymus extract,Mus musculus,SHR,0.1 mg subcutaneous injection 5 consecutive days monthly,12 months,until death,0,NA,-6,NA,Female,,NA,No,2682058
+Thymus extract,Mus musculus,SHR,0.1 mg subcutaneous injection 5 consecutive days monthly,3.5 months,until death,0,NA,3,NA,Female,,NA,No,2682058
+Sodium hypophosphite,Zaprionus paravittiger,,1 mM,,,28.1,S,27,NA,Female,,NA,No,3721207
+Sodium hypophosphite,Zaprionus paravittiger,,5 mM,,,25.4,S,19.7,NA,Female,,NA,No,3721207
+Sodium hypophosphite,Zaprionus paravittiger,,100 µM,,,18,S,21,NA,Female,,NA,No,3721207
+Sodium hypophosphite,Zaprionus paravittiger,,100 mM,,,-46.9,S,-47.2,NA,Female,,NA,No,3721207
+Sodium hypophosphite,Zaprionus paravittiger,,10 µM,,,13,S,13.3,NA,Female,,NA,No,3721207
+Sodium hypophosphite,Zaprionus paravittiger,,1 µM,,,1,S,6,NA,Female,,NA,No,3721207
+Sodium hypophosphite,Zaprionus paravittiger,,10 mM,,,-8.3,S,-1.7,NA,Female,,NA,No,3721207
+Sodium hypophosphite,Zaprionus paravittiger,,500 mM,,,-84.1,S,-78.1,NA,Female,,NA,No,3721207
+Sodium hypophosphite,Zaprionus paravittiger,,60 mM,,,-24.4,S,-11.2,NA,Female,,NA,No,3721207
+Sodium hypophosphite,Zaprionus paravittiger,,1 mM,,,-89.8,S,-94.9,NA,Female,,NA,No,3721207
+Nordihydroguaiaretic acid,Aedes aegypti,,0.01% (w/v),,,13.6,NS,,NA,Female,,NA,No,3749035
+Nordihydroguaiaretic acid,Aedes aegypti,,0.005% (w/v),,,6.7,NS,,NA,Female,,NA,No,3749035
+Nordihydroguaiaretic acid,Aedes aegypti,,0.001% (w/v),,,42.7,S,,NA,Female,,NA,No,3749035
+Chlorpromazine chloride,Drosophila melanogaster,Canton S,25 mg/100 mL of medium,,,19,NS,26,NA,Female,,NA,No,4397875
+Procaine HCl,Drosophila melanogaster,Canton S,200 mg/100 mL of medium,,,18,NS,5,NA,Female,,NA,No,4397875
+Colchine,Drosophila melanogaster,Canton S,0.25 mg/100 mL of medium,,,25,NS,14,NA,Female,,NA,No,4397875
+Chlorpheniramine maleate,Drosophila melanogaster,Canton S,16 mg/100 mL of medium,,,18,NS,3,NA,Female,,NA,No,4397875
+Cyclizine HCl,Drosophila melanogaster,Canton S,50 mg/100 mL of medium,,,6,NS,6,NA,Female,,NA,No,4397875
+Tripelennamine HCl,Drosophila melanogaster,Canton S,25 mg/100 mL of medium,,,19,NS,27,NA,Female,,NA,No,4397875
+Doxylamine succinate,Drosophila melanogaster,Canton S,25 mg/100 mL of medium,,,4,NS,5,NA,Female,,NA,No,4397875
+Doxylamine succinate,Drosophila melanogaster,Canton S,100 mg/100 mL of medium,,,22,NS,10,NA,Female,,NA,No,4397875
+Carbinoxamine maleate,Drosophila melanogaster,Canton S,4 mg/100 mL of medium,,,25,NS,31,NA,Female,,NA,No,4397875
+Phenylbutazone,Drosophila melanogaster,Canton S,100 mg/100 mL of medium,,,22,NS,38,NA,Female,,NA,No,4397875
+Indomethacin,Drosophila melanogaster,Canton S,31 mg/100 mL of medium,,,19,NS,33,NA,Female,,NA,No,4397875
+Bismuth sodium tryglycollamate,Drosophila melanogaster,Canton S,310 mg/100 mL of medium,,,13,NS,9,NA,Female,,NA,No,4397875
+Acetaminophen,Drosophila melanogaster,Canton S,650 mg/100 mL of medium,,,-10,NS,-6,NA,Female,,NA,No,4397875
+Dexamethasone sodium phosphate,Drosophila melanogaster,Canton S,0.5 mg/100 mL of medium,,,1,NS,3,NA,Female,,NA,No,4397875
+Sodium salicylate,Drosophila melanogaster,Canton S,175 mg/100 mL of medium,,,25,S,27,NA,Female,,NA,No,4397875
+Salicylamide,Drosophila melanogaster,Canton S,650 mg/100 mL of medium,,,44,S,42,NA,Female,,NA,No,4397875
+3:1 Mixture: salicyl-salicylic acid + aspirin,Drosophila melanogaster,Canton S,490 mg/100 mL of medium,,,12,NS,43,NA,Female,,NA,No,4397875
+Aluminum acetylsalicylate,Drosophila melanogaster,Canton S,680 mg/100 mL of medium,,,12,NS,6,NA,Female,,NA,No,4397875
+Fluprednisolone,Drosophila melanogaster,Canton S,0.047 mg/100 mL of medium,,,3,NS,-1,NA,Female,,NA,No,4397875
+Fluprednisolone,Drosophila melanogaster,Canton S,0.75 mg/100 mL of medium,,,23,S,9,NA,Female,,NA,No,4397875
+Polyvinylpyrrotidone,Drosophila melanogaster,cross between Canton S females with Oregon RC males,500 mg/100 mL of medium,,,7,NS,11,NA,Female,,NA,No,4397875
+Dexamethasone sodium phosphate,Drosophila melanogaster,cross between Canton S females with Oregon RC males,5 mg/100 mL of medium,,,-15,NS,17,NA,Female,,NA,No,4397875
+Meclofenoxate,Drosophila melanogaster,cross between Canton S females with Oregon RC males,120 mg/100 mL of medium,,,28,S,23,NA,Female,,NA,No,4397875
+Inositol,Drosophila melanogaster,cross between Canton S females with Oregon RC males,120 mg/100 mL of medium,,,17,NS,9,NA,Female,,NA,No,4397875
+Aspirin,Drosophila melanogaster,cross between Canton S females with Oregon RC males,20 mg/100 mL of medium,,,-14,NS,5,NA,Female,,NA,No,4397875
+Pantothenic acid,Drosophila melanogaster,cross between Canton S females with Oregon RC males,50 mg/100 mL of medium,,,2,NS,-3,NA,Female,,NA,No,4397875
+Hydrocortisone acetate,Drosophila melanogaster,cross between Canton S females with Oregon RC males,10 mg/100 mL of medium,,,30,S,18,NA,Female,,NA,No,4397875
+Hydrocortisone acetate,Drosophila melanogaster,cross between Canton S females with Oregon RC males,500 mg/100 mL of medium,,,25,S,20,NA,Female,,NA,No,4397875
+Dimethylaminoethyl p-chlorophenoxyacetate,Mus musculus,C57BL/6J,702 ppm water,8.1 or 9.3 months,until death,4,NS,-6,NA,Female,-14,NA,No,4788962
+Chlorpromazine,Mus musculus,C57BL/6J,16.7 ppm water,9.7 or 10.7 months,until death,0,NS,4,NA,Female,0,NA,No,4788962
+Chlorpheniramine,Mus musculus,C57BL/6J,2.28 ppm water,9.4 months,until death,-2,NS,6,NA,Female,-17,NA,No,4788962
+Chlorpheniramine,Mus musculus,C57BL/6J,0.762 ppm water,9.4 or 10.4 months,until death,1,NS,-8,NA,Female,-11,NA,No,4788962
+Chloroquine,Mus musculus,C57BL/6J,39.5 ppm water,10.4 or 12.1 months,until death,0,NS,-9,NA,Female,-1,NA,No,4788962
+Chloroquine,Mus musculus,C57BL/6J,13.2 ppm water,9.4 or 10.4 months,until death,-8,S,-7,NA,Female,4,NA,No,4788962
+Aspirin,Mus musculus,C57BL/6J,495 ppm water,8.1 or 9.3 months,until death,0,NS,-3,NA,Female,-16,NA,No,4788962
+Aspirin,Mus musculus,C57BL/6J,242 ppm water,8.1 months,until death,-10,S,-7,NA,Female,2,NA,No,4788962
+Aspirin,Mus musculus,C57BL/6J,113 ppm water,8.1 months,until death,3,NS,-4,NA,Female,-6,NA,No,4788962
+Acetaminophen,Mus musculus,C57BL/6J,242 ppm water,9.4 months,until death,2,NS,-7,NA,Female,-1,NA,No,4788962
+Ethoxyquin,Mus musculus,C3H,5000 ppm food,3 months,until death,20,S,26,S,Female,-22,NA,No,4927196
+Thyroxin,Rattus norvegicus,Wistar,2 µg/g bodyweight,,,11.6,NA,,NA,Female,,NA,No,6632988
+Thyroxin,Rattus norvegicus,Wistar,1 µg/g bodyweight,,,8.4,NA,,NA,Female,,NA,No,6632988
+Thyroxin,Rattus norvegicus,Wistar,0.5 µg/g bodyweight,,,-3.5,NA,,NA,Female,,NA,No,6632988
+Butylated hydroxytoluene,Drosophila bipectinata,,1000 µM,,,26.1,S,,NA,Female,,NA,No,6656301
+Butylated hydroxytoluene,Drosophila bipectinata,,10 µM,,,4.3,S,,NA,Female,,NA,No,6656301
+Butylated hydroxytoluene,Drosophila bipectinata,,100 µM,,,13,S,,NA,Female,,NA,No,6656301
+Pineal gland extract,Mus musculus,C3H/Sn,0.5 mg subcutaneous injection 5 days monthly,3.5 months,until death,31,S,14,NA,Female,,NA,No,6752596
+Anterior hypothalamus extract,Mus musculus,C3H/Sn,0.5 mg subcutaneous injection 5 days per month,3.5 months,until death,-7,NS,-9,NA,Female,,NA,No,6752596
+Thymus extract,Mus musculus,C3H/Sn,0.5 mg subcutaneous injection 5 days per month,3.5 months,until death,28,S,11,NA,Female,,NA,No,6752596
+Blackcurrant extract,Mus musculus,LACA,220000 ppm food,1.1 month,until death,4,NS,4,S,Female,,NA,No,7140862
+Quercetin,Mus musculus,LACA,1000 ppm food (10 mg/day),1.1 month,until death,-6,NS,1,NS,Female,0,NS,No,7140862
+Kinetin,Zaprionus paravittiger,,25 ppm,,,80,S,19.7,NA,Female,,NA,No,7488181
+Kinetin,Zaprionus paravittiger,,125 ppm,,,22.9,S,15.8,NA,Female,,NA,No,7488181
+Kinetin,Zaprionus paravittiger,,625 ppm,,,-2.9,S,-13.2,NA,Female,,NA,No,7488181
+Kinetin,Zaprionus paravittiger,,3125 ppm,,,-65.7,S,-55.2,NA,Female,,NA,No,7488181
+Methionine,Zaprionus paravittiger,,500 mM,,,-22.19,S,-9.26,NA,Female,,NA,No,7744272
+Methionine,Zaprionus paravittiger,,250 mM,,,-2.87,NS,3.7,NA,Female,,NA,No,7744272
+Methionine,Zaprionus paravittiger,,100 mM,,,24.11,S,9.26,NA,Female,,NA,No,7744272
+Methionine,Zaprionus paravittiger,,10 mM,,,11.57,NS,9.26,NA,Female,,NA,No,7744272
+Methionine,Zaprionus paravittiger,,1 mM,,,12.8,NS,5.56,NA,Female,,NA,No,7744272
+Melatonin,Mus musculus,New Zealand Black,10 ppm water during night,5 months,until death,0,NS,,NA,Female,,NA,No,8290600
+Melatonin,Mus musculus,BALB/c,10 ppm water during night,15 months,until death,18,S,8,S,Female,-7,NS,No,8290600
+Melatonin,Mus musculus,C57BL/6,10 ppm water during night,19 months,until death,7,NS,,NA,Female,,NA,No,8290600
+L-deprenyl,Mus musculus,B6D2F1,0.25 ppm bodyweight 3x/week subcutaneous injection,26 months,until death,9,S,-1,NA,Female,-3,NS,No,8914495
+L-deprenyl,Mus musculus,B6CBAF1,0.25 ppm bodyweight 3x/week subcutaneous injection,18.5 months,until death,7,S,31,NA,Female,7,NS,No,8914495
+Vitamin E,Zaprionus paravittiger,,50 μg/mL,,,-53.96,S,-34.55,NA,Female,,NA,No,8930618
+Vitamin E,Zaprionus paravittiger,,25 μg/mL,,,-42.97,S,-20.73,NA,Female,,NA,No,8930618
+Vitamin E,Zaprionus paravittiger,,10 μg/mL,,,11.26,S,15.04,NA,Female,,NA,No,8930618
+Vitamin E,Zaprionus paravittiger,,5 μg/mL,,,17.19,S,21.13,NA,Female,,NA,No,8930618
+Vitamin E,Zaprionus paravittiger,,1 μg/mL,,,4.03,S,3.66,NA,Female,,NA,No,8930618
+Propyl gallate,Zaprionus paravittiger,,25 µg/ml,,,8.7,S,15.3,NA,Female,,NA,No,8950031
+Kinetin,Zaprionus paravittiger,,100 ppm,,,-5.41,S,-8.47,NA,Female,,NA,No,9137816
+Kinetin,Zaprionus paravittiger,,50 ppm,,,16.22,S,22.73,NA,Female,,NA,No,9137816
+Kinetin,Zaprionus paravittiger,,25 ppm,,,59.46,S,22.03,NA,Female,,NA,No,9137816
+Kinetin,Zaprionus paravittiger,,12.5 ppm,,,32.43,S,16.95,NA,Female,,NA,No,9137816
+Kinetin,Zaprionus paravittiger,,6.25 ppm,,,-5.41,NS,33.9,NA,Female,,NA,No,9137816
+Butylated hydroxyanisole,Zaprionus paravittiger,,10 mM,,,15.1,S,27,NA,Female,,NA,No,9207858
+Butylated hydroxyanisole,Zaprionus paravittiger,,25 mM,,,13.1,S,4.4,NA,Female,,NA,No,9207858
+Butylated hydroxyanisole,Zaprionus paravittiger,,5 mM,,,7.9,S,6.9,NA,Female,,NA,No,9207858
+Butylated hydroxyanisole,Zaprionus paravittiger,,100 mM,,,-57.2,S,-55.2,NA,Female,,NA,No,9207858
+Butylated hydroxyanisole,Zaprionus paravittiger,,1 mM,,,1.7,NS,0.8,NA,Female,,NA,No,9207858
+Butylated hydroxyanisole,Zaprionus paravittiger,,50 mM,,,-45.9,S,-40.7,NA,Female,,NA,No,9207858
+L-deprenyl,Mesocricetus auratus,,0.05 mg/kg/day,,,,S,16.4,NA,Female,,NA,No,9258898
+Epithalamin,Mus musculus,SHR,,,,11,S,0,NA,Female,,NA,No,9701766
+Epithalamin,Mus musculus,C3H/Sn,,,,31,S,10,NA,Female,,NA,No,9701766
+Rhodiola rosea extract,Drosophila melanogaster,,30 mg/mL every other day,,,,NA,28.6,NA,Female,,NA,No,9825229
+Melatonin,Drosophila melanogaster,Canton S,0.08% per unit mass culture medium,,,5.5,S,,NA,Female,,NA,No,10100152
+Dehydroepiandrosterone sulfate,Mus musculus,UM-HET3,100 ppm water,after weaning,until death,-1,NS,0,NS,Female,,NA,No,10443857
+Epitalon,Drosophila melanogaster,Canton S,1*10^-8 %,,,13.4,S,,NA,Female,,NA,No,11087911
+Epitalon,Drosophila melanogaster,Canton S,1*10^-7 %,,,11.8,S,,NA,Female,,NA,No,11087911
+Epitalon,Drosophila melanogaster,Canton S,1*10^-6 %,,,3.2,NS,,NA,Female,,NA,No,11087911
+Epitalon,Drosophila melanogaster,Canton S,1*10^-9 %,,,7.1,NS,,NA,Female,,NA,No,11087911
+Epitalon,Drosophila melanogaster,Canton S,5*10^-6 %,,,3.2,NS,,NA,Female,,NA,No,11087911
+Melatonin,Mus musculus,CBA,20 ppm water during night for 5 consecutive days every week (month?),6 months,until death,5,S,7,S,Female,8,S,No,11445596
+L-Glu-L-Trp dipeptide,Rattus norvegicus,,5 µg/rat. 5 times a week,,,0,NA,10.4,NA,Female,,NA,No,11707921
+Carnosine,Drosophila melanogaster,D-32,200 mg/l,,,,NS,,NA,Female,,NA,No,12447464
+Calcium pantothenate,Mus musculus,C57BL/6,300 µg/day in water,1 month,until death,20,S,,NA,Female,12,NA,No,13614445
+Hydroxylamine hydrochloride,Mus musculus,C3H,20000 ppm food,after weaning,until death,-10,NA,,NA,Female,-6,NA,No,13711616
+Hydroxylamine hydrochloride,Mus musculus,C3H,10000 ppm food,after weaning,until death,7,S,,NA,Female,2,NA,No,13711616
+Cysteine hydrochloride,Mus musculus,C3H,10000 ppm food,after weaning,until death,-10,NA,,NA,Female,-7,NA,No,13711616
+"2,2'-diaminodiethyl disulfide dihydrochloride",Mus musculus,C3H,10000 ppm food,after weaning,until death,-11,NA,,NA,Female,-34,NA,No,13711616
+2-mercaptoethylamine hydrochloride,Mus musculus,C3H,10000 ppm food,after weaning,until death,26,S,,NA,Female,-1,NA,No,13711616
+Procaine,Rattus norvegicus,Wistar,4 mg/kg,,,7.76,NS,,NA,Female,,NA,No,14246524
+Procaine,Rattus norvegicus,Wistar,4 mg/kg,,,2.64,NS,,NA,Female,,NA,No,14246524
+Epitalon,Mus musculus,SHR,1 ug injection 5 consecutive days per month,3 months,until death,-5,NS,13,S,Female,0,NS,No,14501183
+Phenformin,Mus musculus,C3H/Sn,2 mg oral gavage 5 times a week,3.5 months,until death,21,S,28,S,Female,,NA,No,14618027
+Buformin,Rattus norvegicus,LIO,5 mg/day,,,7,S,5.5,NA,Female,,NA,No,14618027
+Resveratrol,Drosophila melanogaster,Canton S,100 µm,,,20,S,,NA,Female,,NA,No,15254550
+Alpha-lipoic acid,Drosophila melanogaster,Canton S,0.01%,,,12,NA,5,NA,Female,,NA,No,15328413
+Trichostatin A,Drosophila melanogaster,Canton S, 10 µM,,,27.3,S,37.9,NA,Female,,NA,No,15346199
+Galactose,Drosophila melanogaster,,6.50%,,,-15.9,S,-17.1,NA,Female,,NA,No,15547319
+Galactose,Musca domestica,,20 mg/ml,,,-19.8,S,-21.9,NA,Female,,NA,No,15547319
+Trichostatin A,Drosophila melanogaster,Canton S,10 µmol/L,,,15.6,NA,,NA,Female,,NA,No,15695762
+L-deprenyl,Rattus norvegicus,F344/DuCrj,0.25 mg/kg. 3 times a week,,,6.7,S,,NA,Female,,NA,No,16463106
+Erythorbic acid,Drosophila melanogaster,Oregon,58.3 mg/mL,,,3.94,S,,NA,Female,,NA,No,16591414
+Erythorbic acid,Drosophila melanogaster,Oregon,58.3 mg/mL,,,17.28,S,,NA,Female,,NA,No,16591414
+Erythorbic acid,Drosophila melanogaster,Oregon,58.3 mg/mL,,,-5.46,NS,,NA,Female,,NA,No,16591414
+Erythorbic acid,Drosophila melanogaster,Oregon,58.3 mg/mL,,,-67.84,S,,NA,Female,,NA,No,16591414
+Vitamin E,Drosophila melanogaster,Canton S,100 µg/ml,,,2,S,,NA,Female,,NA,No,17169403
+Creatine,Mus musculus,C57BL/6J,10000 ppm food,12 months,until death,9,S,3,S,Female,,NA,No,17416441
+Resveratrol,Drosophila melanogaster,Dahomey,1 µM,,,15.2,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,1000 µM,,,3,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,200 µM,,,12.1,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,100 µM,,,0,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,32 µM,,,9.1,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,200 µM,,,-7.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,10 µM,,,15.2,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,3.2 µM,,,-3,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,1000 µM,,,-7.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,100 µM,,,-3.7,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,10 µM,,,0,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,32 µM,,,-7.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,3.2 µM,,,-7.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,200 µM,,,0,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,1000 µM,,,6.9,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,32 µM,,,-3.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,1 µM,,,-3.7,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,100 µM,,,-3.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,10 µM,,,3.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,3.2 µM,,,-3.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,1000 µM,,,-5.6,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,100 µM,,,2.8,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,1 µM,,,6.9,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,200 µM,,,-2.8,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,32 µM,,,-2.8,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,10 µM,,,-5.6,S,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,1 µM,,,-5.6,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Dahomey,3.2 µM,,,-2.8,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,100 µM,,,0,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,1000 µM,,,4.5,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,200 µM,,,-4.5,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,32 µM,,,9.1,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,10 µM,,,-4.5,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,3.2 µM,,,4.5,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,1 µM,,,-6.8,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,1000 µM,,,-3.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,200 µM,,,-3.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,32 µM,,,-15.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,10 µM,,,-7.7,S,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,3.2 µM,,,0,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,3.2 µM,,,-3.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,1 µM,,,0,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,1000 µM,,,3.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,200 µM,,,0,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,100 µM,,,-3.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,32 µM,,,-3.4,S,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,1 µM,,,-3.4,NS,,NA,Female,,NA,No,17875315
+Resveratrol,Drosophila melanogaster,Canton S,10 µM,,,-3.4,NS,,NA,Female,,NA,No,17875315
+Rhodiola rosea extract,Drosophila melanogaster,,30 mg/mL,,,11.9,S,,NA,Female,,NA,No,17990971
+"2,4-dinitrophenol",Mus musculus,Swiss Webster,1 ppm water,4 months,until death,7,S,,NA,Female,-11,S,No,18505478
+Nordihydroguaiaretic acid,Mus musculus,UM-HET3,2500 ppm food (417 ppm bodyweight),9 months,until death,0,NS,0,NS,Female,,NA,Yes,18631321
+Nitroflurbiprofen,Mus musculus,UM-HET3,200 ppm food (33 ppm bodyweight),4 months,until death,0,NS,0,NS,Female,,NA,Yes,18631321
+Aspirin,Mus musculus,UM-HET3,21 ppm food (3.3 ppm bodyweight),4 months,until death,0,NS,0,NS,Female,,NA,Yes,18631321
+4-hydroxyphenyl-N-tert-butylnitrone,Mus musculus,UM-HET3,350 ppm food (53 ppm/day bodyweight),4 months,until death,0,NS,0,NS,Female,,NA,Yes,18631321
+Metformin,Mus musculus,SHR,100 ppm water,3 months,until death,38,S,21,S,Female,0,NS,No,18728386
+Resveratrol,Anastrepha ludens,,100 µM,,,-5.6,NS,10.2,NA,Female,,NA,No,19264118
+Resveratrol,Anastrepha ludens,,100 µM,,,-2.3,NS,26.5,NA,Female,,NA,No,19264118
+Resveratrol,Anastrepha ludens,,100 µM,,,15.6,S,22.5,NA,Female,,NA,No,19264118
+Resveratrol,Anastrepha ludens,,100 µM,,,6.2,NS,7.3,NA,Female,,NA,No,19264118
+Resveratrol,Anastrepha ludens,,100 µM,,,-4.9,NS,5.4,NA,Female,,NA,No,19264118
+Resveratrol,Anastrepha ludens,,100 µM,,,11.2,NS,-1.4,NA,Female,,NA,No,19264118
+Resveratrol,Anastrepha ludens,,100 µM,,,3.8,NS,5.7,NA,Female,,NA,No,19264118
+Resveratrol,Anastrepha ludens,,100 µM,,,2.6,NS,17.5,NA,Female,,NA,No,19264118
+Resveratrol,Anastrepha ludens,,100 µM,,,0,NS,-3.4,NA,Female,,NA,No,19264118
+Resveratrol,Anastrepha ludens,,100 µM,,,-2.3,NS,16.7,NA,Female,,NA,No,19264118
+Resveratrol,Anastrepha ludens,,100 µM,,,-2.8,NS,-4.8,NA,Female,,NA,No,19264118
+Resveratrol,Anastrepha ludens,,100 µM,,,-25.3,S,-9.5,NA,Female,,NA,No,19264118
+Lamotrigine,Drosophila melanogaster,Ives,12 mg/ml,,,17.2,S,,NA,Female,,NA,No,19430925
+Rapamycin,Mus musculus,UM-HET3,14 ppm food (2.24 ppm/day bodyweight),20 months,until death,13,S,14,S,Female,,NA,Yes,19587680
+Enalapril,Mus musculus,UM-HET3,120 ppm food (20 ppm/day bodyweight),4 months,until death,0,NS,0,NS,Female,,NA,Yes,19587680
+Caffeic acid phenethylester,Mus musculus,UM-HET3,300 ppm food (50 ppm/day bodyweight),4 months,until death,0,NS,0,NS,Female,,NA,Yes,19587680
+Caffeic acid phenethylester,Mus musculus,UM-HET3,30 ppm food (5 ppm/day bodyweight),4 months,until death,0,NS,0,NS,Female,,NA,Yes,19587680
+Rhodiola rosea extract,Drosophila melanogaster,,25 mg/mL,,,24,S,31,NA,Female,,NA,No,19634056
+LY-294002,Drosophila melanogaster,Canton S,5 µM,,,14.3,S,16.3,NA,Female,,NA,No,20017609
+Rapamycin,Drosophila melanogaster,white Dahomey,200 µM,,,13,S,,NA,Female,,NA,No,20074526
+Vigconic 28,Mus musculus,C57BL/6J,500 ppm food,9 months,until death,9,S,,NA,Female,,NA,No,20370440
+Curcumin,Drosophila melanogaster,Canton S,100 µM,,,19,S,,NA,Female,,NA,No,20645870
+"S,S-trolox-carnosine",Drosophila melanogaster,,50 mg/L,,,36,S,,NA,Female,,NA,No,20681748
+Stachys lavandulifolia extract,Drosophila melanogaster,Oregon R,20 µl/100 ml media,,,55.7,S,36,NA,Female,,NA,No,20738162
+Stachys lavandulifolia extract,Drosophila melanogaster,Oregon R,12 µl/100 ml media,,,21.9,S,8,NA,Female,,NA,No,20738162
+Stachys lavandulifolia extract,Drosophila melanogaster,Oregon R,12 µl/100 ml media,,,31.3,S,22,NA,Female,,NA,No,20738162
+Stachys lavandulifolia extract,Drosophila melanogaster,Oregon R,20 µl/100 ml media,,,35.6,S,14,NA,Female,,NA,No,20738162
+N-acetyl-L-cysteine,Mus musculus,UM-HET3,5000 ppm water (333 ppm/day bodyweight),7 months,until death,0,NS,0,NS,Female,-18,NA,No,20819793
+Nordihydroguaiaretic acid,Mus musculus,UM-HET3,2500 ppm food (417 ppm bodyweight),16-18 months,until death,0,NS,0,NS,Female,0,NS,No,20819793
+Nitroflurbiprofen,Mus musculus,UM-HET3,200 ppm food (33 ppm bodyweight),16-18 months,until death,0,NS,0,NS,Female,0,NS,No,20819793
+N-acetyl-L-cysteine,Mus musculus,UM-HET3,10000 ppm water (1536 ppm/day bodyweight),7 months,until death,0,NS,0,NS,Female,-25,NA,No,20819793
+Aspirin,Mus musculus,UM-HET3,21 ppm food (3.5 ppm bodyweight),16-18 months,until death,0,NS,0,NS,Female,23,S,No,20819793
+4-hydroxyphenyl-N-tert-butylnitrone,Mus musculus,UM-HET3,315 ppm food (52 ppm/day bodyweight),16-18 months,until death,0,NS,0,NS,Female,0,NS,No,20819793
+Simvastatin,Mus musculus,UM-HET3,120 ppm food (20 ppm/day bodyweight),10 months,until death,0,NS,0,NS,Female,0,NS,Yes,20974732
+Simvastatin,Mus musculus,UM-HET3,12 ppm food (2 ppm/day bodyweight),10 months,until death,0,NS,0,NS,Female,0,NS,Yes,20974732
+Resveratrol,Mus musculus,UM-HET3,1200 ppm food (200 ppm/day bodyweight),12 months,until death,0,NS,0,NS,Female,0,NS,Yes,20974732
+Resveratrol,Mus musculus,UM-HET3,300 ppm food (50 ppm/day bodyweight),12 months,until death,0,NS,0,NS,Female,0,NS,Yes,20974732
+Rapamycin,Mus musculus,UM-HET3,14 ppm food (2.24 ppm/day bodyweight),9 months,until death,18,S,13,S,Female,-6,S,Yes,20974732
+Genistein,Drosophila melanogaster,Oregon-R,10 μL/100 mL,,,-42.86,S,-36.84,NA,Female,,NA,No,21127834
+Genistein,Drosophila melanogaster,Oregon-R,5 μL/100 mL,,,-31.95,S,-24.56,NA,Female,,NA,No,21127834
+Genistein,Drosophila melanogaster,Oregon-R,3 μL/100 mL,,,-20.49,S,-12.28,NA,Female,,NA,No,21127834
+Genistein,Drosophila melanogaster,Oregon-R,1 μL/100 mL,,,-14.11,S,-5.26,NA,Female,,NA,No,21127834
+Nectarine extract,Drosophila melanogaster,Canton S,0.04,,,17.6,S,2.7,NA,Female,,NA,No,21406223
+Pyrrolidine dithiocarbamate,Drosophila melanogaster,,20 mg/l,,,16,S,,NA,Female,,NA,No,21483034
+Rasayana diet,Drosophila melanogaster,Oregon-K,1 drop,,,51.1,S,,NA,Female,,NA,No,21836798
+Rosa damascena extract,Drosophila melanogaster,w1118,,,,4.5,NS,7.4,NA,Female,,NA,No,21928072
+Rosa damascena extract,Drosophila melanogaster,B,,,,31.7,S,13,NA,Female,,NA,No,21928072
+Resveratrol,Drosophila melanogaster,Canton S,100 µM ,,,1.8,NS,,NA,Female,,NA,No,22083438
+Resveratrol,Drosophila melanogaster,Canton S,200 µM,,,-1.5,NS,,NA,Female,,NA,No,22083438
+Rapamycin,Mus musculus,129/Sv,1.5 ppm bodyweight subcutaneous injection 3 times a week for 2 weeks followed by a 2-week break,2 months,until death,10,NS,8,S,Female,-8,S,No,22107964
+Medium-chain triglyceride oil,Mus musculus,UM-HET3,60000 ppm food,4 months,until death,2,NS,0,NS,Female,-15,S,Yes,22451473
+Green tea extract,Mus musculus,UM-HET3,2000 ppm food,4 months,until death,7,NS,0,NS,Female,2,S,Yes,22451473
+Resveratrol,Mus musculus,UM-HET3,300 ppm food,4 months,until death,5,NS,0,NS,Female,-3,S,Yes,22451473
+Oxaloacetate,Mus musculus,UM-HET3,2200 ppm food,4 months,until death,3,NS,0,NS,Female,4,NS,Yes,22451473
+Curcumin,Mus musculus,UM-HET3,2000 ppm food,4 months,until death,5,NS,0,NS,Female,-9,S,Yes,22451473
+Curcumin,Drosophila melanogaster,Oregon R,0.5 mg/g,,,15.5,S,-1.9,NA,Female,,NA,No,22653297
+Curcumin,Drosophila melanogaster,Oregon R,1 mg/g,,,12.6,S,13,NA,Female,,NA,No,22653297
+"3,4-dihydroxybenzaldehyde",Drosophila melanogaster,yw (y1w67c23),1 mM,,,23,S,,NA,Female,,NA,No,22809229
+"3,4-dihydroxybenzaldehyde",Drosophila melanogaster,yw (y1w67c23),3 mM,,,13,S,,NA,Female,,NA,No,22809229
+"3,4-dihydroxybenzaldehyde",Drosophila melanogaster,yw (y1w67c23),0.3 mM,,,13,S,,NA,Female,,NA,No,22809229
+Inositol,Drosophila melanogaster,Canton S,,,,15,S,,NA,Female,,NA,No,22843669
+Pinitol,Drosophila melanogaster,Canton S,,,,12.5,S,,NA,Female,,NA,No,22843669
+Cynomorium songaricum extract,Drosophila melanogaster,Canton S,30 mg/ml,,,11.4,S,,NA,Female,,NA,No,22844336
+Cynomorium songaricum extract,Drosophila melanogaster,Canton S,10 mg/ml,,,15.3,S,,NA,Female,,NA,No,22844336
+Cynomorium songaricum extract,Drosophila melanogaster,Canton S,20 mg/ml,,,17.6,S,,NA,Female,,NA,No,22844336
+Resveratrol,Nothobranchius guentheri,TZ 97-2,100 µL,,,13,S,23,NA,Female,,NA,No,22960591
+Curcumin,Drosophila melanogaster,Ra,100 mM,,,46.8,S,38,NA,Female,,NA,No,23063786
+Curcumin,Drosophila melanogaster,Ra,100 mM,,,25.5,S,0,NA,Female,,NA,No,23063786
+Curcumin,Drosophila melanogaster,Ra,100 mM,,,-17,S,3,NA,Female,,NA,No,23063786
+Curcumin,Drosophila melanogaster,Ra,100 mM,,,-23.4,NS,,NA,Female,,NA,No,23063786
+Metformin,Drosophila melanogaster,Dahomey,2.5 mM,,,0,NS,,NA,Female,,NA,No,23077661
+Metformin,Drosophila melanogaster,Dahomey,5 mM,,,0,NS,,NA,Female,,NA,No,23077661
+Metformin,Drosophila melanogaster,Dahomey,1 mM,,,0,NS,,NA,Female,,NA,No,23077661
+Metformin,Drosophila melanogaster,Dahomey,10 mM,,,-3,NS,,NA,Female,,NA,No,23077661
+Metformin,Drosophila melanogaster,Dahomey,50 mM,,,-22,S,,NA,Female,,NA,No,23077661
+Metformin,Drosophila melanogaster,Dahomey,25 mM,,,-7,S,,NA,Female,,NA,No,23077661
+Metformin,Drosophila melanogaster,Dahomey,100 mM,,,-66,S,,NA,Female,,NA,No,23077661
+Rhodiola rosea extract,Drosophila melanogaster,w1118,NA,,,40,S,,NA,Female,,NA,No,23704949
+Pyrrolidine dithiocarbamate,Drosophila melanogaster,Canton S,125 µM,,,12,S,,NA,Female,,NA,No,24096697
+Methylene blue,Mus musculus,UM-HET3,27 ppm food,4 months,until death,1,NS,6,S,Female,4,NA,Yes,24245565
+Acarbose,Mus musculus,UM-HET3,1000 ppm food,4 months,until death,5,S,9,S,Female,-23,NA,Yes,24245565
+17‐alpha‐estradiol,Mus musculus,UM-HET3,4.8 ppm food,10 months,until death,0,NS,0,NS,Female,-7,NA,Yes,24245565
+Ginseng extract,Drosophila melanogaster,w1118,12 µg/ml,,,13.5,S,,NA,Female,,NA,No,24265871
+Ginseng extract,Drosophila melanogaster,w1118,1.2 µg/ml,,,14.5,S,,NA,Female,,NA,No,24265871
+Ginseng extract,Drosophila melanogaster,w1118,0.12 µg/ml,,,5.7,NS,,NA,Female,,NA,No,24265871
+CU701,Drosophila melanogaster,Canton S,0.30%,,,5.4,S,,NA,Female,,NA,No,24305778
+CU701,Drosophila melanogaster,Canton S,0.30%,,,6,NS,,NA,Female,,NA,No,24305778
+AU701,Drosophila melanogaster,Canton S,0.30%,,,-0.7,NS,,NA,Female,,NA,No,24305778
+AU701,Drosophila melanogaster,Canton S,0.30%,,,11.4,S,,NA,Female,,NA,No,24305778
+Ludwigia octovalvis extract,Drosophila melanogaster,Canton S,100 µg/ml,,,24.2,S,,NA,Female,,NA,No,24338263
+Rapamycin,Mus musculus,UM-HET3,42 ppm food,9 months,until death,26,S,11,S,Female,-20,NA,Yes,24341993
+Rapamycin,Mus musculus,UM-HET3,14 ppm food,9 months,until death,21,S,11,S,Female,-4,NA,Yes,24341993
+Rapamycin,Mus musculus,UM-HET3,4.7 ppm food,9 months,until death,16,S,5,S,Female,-4,NA,Yes,24341993
+Rapamycin,Mus musculus,C57BL/6J,14 ppm food,4 months,until death,7,S,19,S,Female,-15,S,No,24409289
+Rhodiola rosea extract,Drosophila melanogaster,IF,10 mg/ml,,,13.6,S,3.9,NA,Female,,NA,No,24472572
+Rhodiola rosea extract,Drosophila melanogaster,IF,30 mg/ml,,,-9.1,S,-12.2,NA,Female,,NA,No,24472572
+Rhodiola rosea extract,Drosophila melanogaster,IF,2.5 mg/ml,,,6.8,NS,-2.9,NA,Female,,NA,No,24472572
+Rhodiola rosea extract,Drosophila melanogaster,IF,5 mg/ml,,,13.6,S,3.4,NA,Female,,NA,No,24472572
+D-glucosamine,Mus musculus,C57BL/6NRj,10000 ppm,23 months,until death,,S,,NA,Female,0,NS,No,24714520
+Curcumin,Drosophila melanogaster,Canton S,5 µM,,,6,NA,,NA,Female,,NA,No,25173182
+Curcumin,Drosophila melanogaster,Canton S,10 µM,,,34,NA,,NA,Female,,NA,No,25173182
+Curcumin,Drosophila melanogaster,Canton S,25 µM,,,9,NA,,NA,Female,,NA,No,25173182
+Curcumin,Drosophila melanogaster,Canton S,50 µM,,,3,NA,,NA,Female,,NA,No,25173182
+Cinnamon extract,Drosophila melanogaster,w1118,75 mg/ml,,,37,S,,NA,Female,,NA,No,25456850
+Ibuprofen,Drosophila melanogaster,Canton-S,1 μM,,,0.17,NS,,NA,Female,,NA,No,25521617
+Ibuprofen,Drosophila melanogaster,Canton-S,0.5 μM,,,9.75,S,,NA,Female,,NA,No,25521617
+Ibuprofen,Drosophila melanogaster,Canton-S,0.3 μM,,,4.07,NS,,NA,Female,,NA,No,25521617
+Pomegrenate juice,Drosophila melanogaster,Canton S,0.1,,,8,S,,NA,Female,,NA,No,25566518
+Resveratrol,Nothobranchius guentheri,TZ 97-2,200 µg/g,,,14,S,,NA,Female,,NA,No,25569124
+Chrysanthemum extract,Drosophila melanogaster,Oregon R+,,,,5.3,NS,4.7,NA,Female,,NA,No,25628774
+Chrysanthemum extract,Drosophila melanogaster,Oregon R+,,,,1,NS,5.1,NA,Female,,NA,No,25628774
+Chrysanthemum extract,Drosophila melanogaster,Oregon R+,,,,15.5,S,10.4,NA,Female,,NA,No,25628774
+Aspirin,Acheta domesticus,,5.65x10^5 g aspirin/g food,,,52,S,,NA,Female,,NA,No,25833406
+Aspirin,Acheta domesticus,,2.263x10^4 g aspirin/g food,,,49,S,,NA,Female,,NA,No,25833406
+Resveratrol,Anopheles stephensi,,200 µM,,,2.92,NS,-12.28,NA,Female,,NA,No,25848933
+Resveratrol,Anopheles stephensi,,100 µM,,,6.88,NS,-6.11,NA,Female,,NA,No,25848933
+Resveratrol,Anopheles stephensi,,50 µM,,,-5.74,S,-6.89,NA,Female,,NA,No,25848933
+Beta-guanidinopropionic acid,Drosophila melanogaster,w1118,900 mM,,,13.3,S,,NA,Female,,NA,No,26120775
+Curcumin,Drosophila melanogaster,Ra,100 mM,,,46.8,S,38,NA,Female,,NA,No,26136617
+Sodium butyrate,Drosophila melanogaster,Ra,10 mM,,,8.3,S,12,NA,Female,,NA,No,26136617
+Sodium butyrate,Drosophila melanogaster,Ra,10 mM,,,14.6,S,9.1,NA,Female,,NA,No,26136617
+Curcumin,Drosophila melanogaster,Ra,100 mM,,,-23.4,S,,NA,Female,,NA,No,26136617
+Curcumin,Drosophila melanogaster,Ra,100 mM,,,-17,S,-3,NA,Female,,NA,No,26136617
+Curcumin,Drosophila melanogaster,Ra,100 mM,,,25.5,S,0,NA,Female,,NA,No,26136617
+Aspirin,Drosophila melanogaster,Ca,1 μM,,,32.7,S,,NA,Female,,NA,No,26305987
+APHS,Drosophila melanogaster,Canton-S ,0.5 μM,,,9.6,S,,NA,Female,,NA,No,26305987
+NS-398,Drosophila melanogaster,Can,0.5 μM,,,9.3,S,,NA,Female,,NA,No,26305987
+Aspirin,Drosophila melanogaster,Canton-S ,0.5 μM,,,7.7,S,,NA,Female,,NA,No,26305987
+Rhodiola rosea extract,Bombyx mori,N4,,,,2.7,S,2.7,NA,Female,,NA,No,26497336
+Rapamycin,Mus musculus,C57BL/6J.Nia,2 ppm bodyweight intraperitoneal injection every 5 days,20 months,3 months,7,S,18,S,Female,-7,NS,No,27091134
+Fish oil,Mus musculus,UM-HET3,15000 ppm food,9 months,until death,-5,NS,-2,NS,Female,0,NS,Yes,27312235
+Fish oil,Mus musculus,UM-HET3,50000 ppm food,9 months,until death,2,NS,-2,NS,Female,2,S,Yes,27312235
+Protandim,Mus musculus,UM-HET3,"600 ppm food 10-17 months, 1200 ppm food (17 months-death)",10 months,until death,3,S,6,NS,Female,-6,NA,Yes,27312235
+Ursodeoxycholic acid,Mus musculus,UM-HET3,5000 ppm food,5 months,until death,-1,NS,1,NS,Female,-14,S,Yes,27312235
+Nordihydroguaiaretic acid,Mus musculus,UM-HET3,5000 ppm food,6 months,until death,-3,NS,-3,NS,Female,,NA,Yes,27312235
+Metformin,Mus musculus,UM-HET3,1000 ppm food,9 months,until death,0,NS,0,NS,Female,,NA,Yes,27312235
+Acarbose,Mus musculus,UM-HET3,1000 ppm food,16 months,until death,2,NS,6,S,Female,,NA,Yes,27312235
+17‐alpha‐estradiol,Mus musculus,UM-HET3,14.4 ppm food,10 months,until death,1,NS,0,NS,Female,-14,NA,Yes,27312235
+Rapamycin,Mus musculus,C57BL/6JNia,128 ppm food,20 months,3 months,9,S,,NA,Female,7,S,No,27549339
+Rapamycin,Mus musculus,C57BL/6JNia,8 ppm/day bodyweight intraperitoneal injection,20 months,3 months,0,NS,,NA,Female,-13,S,No,27549339
+BP-C3 (benzenepolycarboxylic acids mixture),Mus musculus,Swiss-Derived SHR,50 ppm water,3 months,until death,8,S,12,S,Female,,NA,No,27574962
+Epigallocatechin-3-gallate,Aedes aegypti,Liverpool,100 µM,,,40,S,3.35,NA,Female,,NA,No,27732590
+Quercetin,Aedes aegypti,Liverpool,100 µM,,,30,S,3.4,NA,Female,,NA,No,27732590
+Genistein,Aedes aegypti,Liverpool,100 µM,,,10,S,3.35,NA,Female,,NA,No,27732590
+Resveratrol,Aedes aegypti,Liverpool,100 µM,,,49.6,S,-2.04,NA,Female,,NA,No,27732590
+Spermine,Mus musculus,C57BL/6J,3 mM water,4 months,until death,14,S,,NA,Female,,NA,No,27841876
+Spermidine,Mus musculus,C57BL/6J,3 mM water,18 months,until death,10,S,,NA,Female,0,NS,No,27841876
+Spermidine,Mus musculus,C57BL/6J,0.3mM water,4 months,until death,12,S,,NA,Female,0,NS,No,27841876
+Putrescine,Mus musculus,C57BL/6J,3 mM water,4 months,until death,3,NS,,NA,Female,,NA,No,27841876
+Crocus sativus extract,Drosophila melanogaster,w1118,1%,,,18.3,S,,NA,Female,,NA,No,27878268
+Epicatechin,Drosophila melanogaster,Canton S,0.3µM,,,-6.49,S,-5.22,NA,Female,,NA,No,28066251
+Quercetin,Drosophila melanogaster,Canton S,0.3µM,,,-5.09,S,-8.2,NA,Female,,NA,No,28066251
+Mifepristone,Drosophila melanogaster,Progeny of w[1118] X y; ElavGS,160 μg/mL,,,15.33,S,,NA,Female,,NA,No,28451923
+Mifepristone,Drosophila melanogaster,Progeny of w[1118] X y; ElavGS,160 μg/mL,,,67.1,S,,NA,Female,,NA,No,28451923
+Mifepristone,Drosophila melanogaster,Progeny of w[1118] X y; ElavGS,160 μg/mL,,,56.35,S,,NA,Female,,NA,No,28451923
+Mifepristone,Drosophila melanogaster,Progeny of w[1118] X y; ElavGS,160 μg/mL,,,15.2,S,,NA,Female,,NA,No,28451923
+Minocycline,Drosophila melanogaster,w1118,0.36mM,,,15.6,S,,NA,Female,,NA,No,29152127
+Minocycline,Drosophila melanogaster,w1118,0.05mM,,,22.9,S,,NA,Female,,NA,No,29152127
+Minocycline,Drosophila melanogaster,Canton S,0.36mM,,,7.7,S,,NA,Female,,NA,No,29152127
+Minocycline,Drosophila melanogaster,Canton S,0.05mM,,,13.6,S,,NA,Female,,NA,No,29152127
+Tert-butyl hydroperoxide,Drosophila melanogaster,Canton-S,5 mM,,,22.6,S,,NA,Female,,NA,No,29515102
+Tert-butyl hydroperoxide,Drosophila melanogaster,Canton-S,1 mM,,,22.7,S,,NA,Female,,NA,No,29515102
+Tert-butyl hydroperoxide,Drosophila melanogaster,w iso31,5 mM,,,11.9,S,,NA,Female,,NA,No,29515102
+Tert-butyl hydroperoxide,Drosophila melanogaster,w iso31,1 mM,,,16.7,S,,NA,Female,,NA,No,29515102
+L2-Cmu (IGF-1R antagonist),Mus musculus,CB6F1,20 ppm/weekly i.p. injection,18 months,until death,9,S,0,NS,Female,-13,NS,No,29921922
+N-acetyl-L-cysteine,Drosophila virilis,,1 mM,,,24,S,8.8,NA,Female,,NA,No,30243020
+N-acetyl-L-cysteine,Drosophila virilis,,10 nM,,,22.6,S,6.9,NA,Female,,NA,No,30243020
+N-acetyl-L-cysteine,Drosophila virilis,,10 µM,,,22.7,S,6.9,NA,Female,,NA,No,30243020
+N-acetyl-L-cysteine,Drosophila virilis,,100 nM,,,18.7,S,4.9,NA,Female,,NA,No,30243020
+N-acetyl-L-cysteine,Drosophila virilis,,100 µM,,,26,S,9.8,NA,Female,,NA,No,30243020
+N-acetyl-L-cysteine,Drosophila virilis,,1 µM,,,16,S,6.9,NA,Female,,NA,No,30243020
+N-acetyl-L-cysteine,Drosophila kikkawai,,10 nM,,,5.1,S,0,NA,Female,,NA,No,30243020
+N-acetyl-L-cysteine,Drosophila kikkawai,,100 nM,,,5.1,S,-2,NA,Female,,NA,No,30243020
+Glucomannan Hydrolysate,Drosophila melanogaster,B18,0.25% w/v,,,14.88,S,,NA,Female,,NA,No,30252027
+Glucomannan Hydrolysate,Drosophila melanogaster,Canton-S,0.25% w/v,,,17.66,S,,NA,Female,,NA,No,30252027
+Glucomannan Hydrolysate,Drosophila melanogaster,Oregon-R,0.25% w/v,,,11.7,S,,NA,Female,,NA,No,30252027
+Glucomannan Hydrolysate,Drosophila melanogaster,DGRP-21,0.25% w/v,,,13.4,S,,NA,Female,,NA,No,30252027
+Glucomannan Hydrolysate,Drosophila melanogaster,DGRP-38,0.25% w/v,,,10.1,S,,NA,Female,,NA,No,30252027
+Glucomannan Hydrolysate,Drosophila melanogaster,DGRP-40,0.25% w/v,,,4.6,S,,NA,Female,,NA,No,30252027
+Glucomannan Hydrolysate,Drosophila melanogaster,DGRP-85,0.25% w/v,,,10,S,,NA,Female,,NA,No,30252027
+Glucomannan Hydrolysate,Drosophila melanogaster,DGRP-136,0.25% w/v,,,7.3,S,,NA,Female,,NA,No,30252027
+Curcumin,Drosophila melanogaster,Canton-S,0.2 mg/g,,,6.74,S,8.77,NA,Female,,NA,No,30488487
+Ursolic  acid,Mus musculus,UM-HET3,2000 ppm food,10 months,until death,0,NS,-1,NS,Female,,NA,Yes,30688027
+INT-767d (FXR/TGR5 agonist),Mus musculus,UM-HET3,180 ppm food,10 months,until death,-1,NS,0,NS,Female,,NA,Yes,30688027
+Acarbose,Mus musculus,UM-HET3,2500 ppm food,8 months,until death,4,S,3,NS,Female,-24,S,Yes,30688027
+Acarbose,Mus musculus,UM-HET3,1000 ppm food,8 months,until death,5,S,3,S,Female,-21,S,Yes,30688027
+Acarbose,Mus musculus,UM-HET3,400 ppm food,8 months,until death,0,NS,2,NS,Female,-10,S,Yes,30688027
+2-(2-hydroxyphenyl)benzothiazole,Mus musculus,UM-HET3,1 ppm food,15 months,until death,-2,NS,-1,NS,Female,,NA,Yes,30688027
+TM5441 (PAI-1 inhibitor),Mus musculus,UM-HET3,60 ppm food,11 months,until death,0,NS,-1,NS,Female,,S,Yes,30916479
+Inulin,Mus musculus,UM-HET3,600 ppm food,11 months,until death,1,NS,1,NS,Female,0,NS,Yes,30916479
+Glycine,Mus musculus,UM-HET3,80000 ppm food,9 months,until death,4,S,2,NS,Female,-10,S,Yes,30916479
+Aspirin,Mus musculus,UM-HET3,200 ppm food,11 months,until death,1,NS,1,NS,Female,0,NS,Yes,30916479
+Aspirin,Mus musculus,UM-HET3,60 ppm food,11 months,until death,1,NS,-1,NS,Female,0,NS,Yes,30916479
+N-acetyl-L-cysteine,Drosophila melanogaster,,1 mg/ml,,,3.8,S,,NA,Female,,NA,No,31115735
+Alpha-ketoglutarate,Drosophila melanogaster,WDah,5 µM,,,8.54,S,,NA,Female,,NA,No,31242135
+Agmatine,Drosophila melanogaster,wDah,10 mM,,,4.8,S,,NA,Female,,NA,No,31474368
+Agmatine,Drosophila melanogaster,wDah,2.5 mM,,,8.7,S,,NA,Female,,NA,No,31474368
+Agmatine,Drosophila melanogaster,wDah,1 mM,,,3.2,S,,NA,Female,,NA,No,31474368
+Metformin,Drosophila melanogaster,wDah,50 mM,,,-52.93,S,,NA,Female,,NA,No,31474368
+Metformin,Drosophila melanogaster,wDah,5 mM,,,2.39,NS,,NA,Female,,NA,No,31474368
+Metformin,Drosophila melanogaster,wDah,0.5 mM,,,1.56,NS,,NA,Female,,NA,No,31474368
+Metformin,Drosophila melanogaster,wDah,50 mM,,,-47.12,S,,NA,Female,,NA,No,31474368
+Metformin,Drosophila melanogaster,wDah,5 mM,,,5.41,S,,NA,Female,,NA,No,31474368
+Metformin,Drosophila melanogaster,wDah,0.5 mM,,,17.24,S,,NA,Female,,NA,No,31474368
+Mifepristone,Drosophila melanogaster,,200 μg/mL,,,-3.45,NS,,NA,Female,,NA,No,32648907
+CASIN,Mus musculus,C57BL/6J,25 ppm bodyweight intraperitoneal injection,18 months,4 days,10,S,,NA,Female,0,NS,No,32755011
+Alpha-ketoglutarate,Mus musculus,C57BL/6J,20000 ppm food,18 months,until death,3,S,3,S,Female,0,NS,No,32877690
+Alpha-ketoglutarate,Mus musculus,C57BL/6J,20000 ppm food,18 months,until death,6,S,9,S,Female,0,NS,No,32877690
+Canagliflozin,Mus musculus,UM-HET3,180 ppm food (30 ppm bodyweight),7 months,until death,1,NS,1,NS,Female,-19,S,Yes,32990681
+Vincristine sulfate,Drosophila melanogaster,Canton-S,20 μM,,,-8.36,S,,NA,Female,,NA,No,33008901
+Tetramethylpyrazine,Drosophila melanogaster,Canton-S,20 μM,,,5.61,NS,,NA,Female,,NA,No,33008901
+Rizatriptan Benzoate,Drosophila melanogaster,Canton-S,20 μM,,,3.93,NS,,NA,Female,,NA,No,33008901
+Perphenazine,Drosophila melanogaster,Canton-S,20 μM,,,4.84,NS,,NA,Female,,NA,No,33008901
+Pergolide methanesulfonate,Drosophila melanogaster,Canton-S,20 μM,,,-1.36,NS,,NA,Female,,NA,No,33008901
+Alpha-ketoglutarate,Drosophila melanogaster,Canton-S,20 μM,,,7.74,S,,NA,Female,,NA,No,33008901
+O6-benzylguanine,Drosophila melanogaster,Canton-S,20 μM,,,-1.67,NS,,NA,Female,,NA,No,33008901
+Promazine Hydrochloride,Drosophila melanogaster,Canton-S,20 μM,,,-5.29,NS,,NA,Female,,NA,No,33008901
+Promethazine hydrochloride,Drosophila melanogaster,Canton-S,20 μM,,,10.91,S,,NA,Female,,NA,No,33008901
+D-xylitol,Drosophila melanogaster,Canton-S,20 μM,,,2.4,NS,,NA,Female,,NA,No,33008901
+Bupivacaine Hydrochloride,Drosophila melanogaster,Canton-S,20 μM,,,11.95,S,,NA,Female,,NA,No,33008901
+Thioridazine hydrochloride,Drosophila melanogaster,Canton-S,20 μM,,,5.08,NS,,NA,Female,,NA,No,33008901
+Lomefloxacin Hydrochloride,Drosophila melanogaster,Canton-S,20 μM,,,-1.15,NS,,NA,Female,,NA,No,33008901
+PNU-74654,Drosophila melanogaster,Canton-S,20 μM,,,4.42,NS,,NA,Female,,NA,No,33008901
+Amikacin hydrate,Drosophila melanogaster,Canton-S,20 μM,,,7.75,S,,NA,Female,,NA,No,33008901
+Cefazolin sodium,Drosophila melanogaster,Canton-S,20 μM,,,2.57,NS,,NA,Female,,NA,No,33008901
+Trimethobenzamine-HCL,Drosophila melanogaster,Canton-S,20 μM,,,-2.14,NS,,NA,Female,,NA,No,33008901
+Pinvarium Bromide,Drosophila melanogaster,Canton-S,20 μM,,,-7.35,S,,NA,Female,,NA,No,33008901
+PlusMinusButaclamol-HCL,Drosophila melanogaster,Canton-S,20 μM,,,-3.3,NS,,NA,Female,,NA,No,33008901
+Gedunin,Drosophila melanogaster,Canton-S,20 μM,,,4.45,NS,,NA,Female,,NA,No,33008901
+3-methoxycatechol,Drosophila melanogaster,Canton-S,20 μM,,,-5.42,NS,,NA,Female,,NA,No,33008901
+MG624,Drosophila melanogaster,Canton-S,20 μM,,,-1.26,NS,,NA,Female,,NA,No,33008901
+Vinblastine Sulfate,Drosophila melanogaster,Canton-S,20 μM,,,-5.08,NS,,NA,Female,,NA,No,33008901
+Vortioxetine,Drosophila melanogaster,Canton-S,20 μM,,,-0.77,NS,,NA,Female,,NA,No,33008901
+Thiostrepton,Drosophila melanogaster,Canton-S,20 μM,,,-12.13,S,,NA,Female,,NA,No,33008901
+Sodium Nitroprusside,Drosophila melanogaster,Canton-S,20 μM,,,-1.69,NS,,NA,Female,,NA,No,33008901
+SKF83959,Drosophila melanogaster,Canton-S,20 μM,,,-5.14,NS,,NA,Female,,NA,No,33008901
+Methoxycatechol,Drosophila melanogaster,Canton-S,20 μM,,,1.37,NS,,NA,Female,,NA,No,33008901
+IBet,Drosophila melanogaster,Canton-S,20 μM,,,-3.7,NS,,NA,Female,,NA,No,33008901
+Furosemide,Drosophila melanogaster,Canton-S,20 μM,,,-3.76,NS,,NA,Female,,NA,No,33008901
+Ethotoin,Drosophila melanogaster,Canton-S,20 μM,,,-0.1,NS,,NA,Female,,NA,No,33008901
+Alln,Drosophila melanogaster,Canton-S,20 μM,,,-4.05,NS,,NA,Female,,NA,No,33008901
+Sulindac Sulfide,Drosophila melanogaster,Canton-S,20 μM,,,-0.63,NS,,NA,Female,,NA,No,33008901
+Ononetin,Drosophila melanogaster,Canton-S,20 μM,,,8.08,S,,NA,Female,,NA,No,33008901
+Nebirapine,Drosophila melanogaster,Canton-S,20 μM,,,3.99,NS,,NA,Female,,NA,No,33008901
+Lamotrigine,Drosophila melanogaster,Canton-S,20 μM,,,5.41,NS,,NA,Female,,NA,No,33008901
+Doxazosin mesylate,Drosophila melanogaster,Canton-S,20 μM,,,-3.12,NS,,NA,Female,,NA,No,33008901
+Sulfacetamide,Drosophila melanogaster,Canton-S,20 μM,,,4.72,NS,,NA,Female,,NA,No,33008901
+Salsalate,Drosophila melanogaster,Canton-S,20 μM,,,6.76,S,,NA,Female,,NA,No,33008901
+Oxarbazepine,Drosophila melanogaster,Canton-S,20 μM,,,2.84,NS,,NA,Female,,NA,No,33008901
+Morpholinosydnonimine HCl,Drosophila melanogaster,Canton-S,20 μM,,,6.81,NS,,NA,Female,,NA,No,33008901
+Lorglumide Sodium,Drosophila melanogaster,Canton-S,20 μM,,,5.31,S,,NA,Female,,NA,No,33008901
+Levosulpiride,Drosophila melanogaster,Canton-S,20 μM,,,0.84,NS,,NA,Female,,NA,No,33008901
+Geldanamycin,Drosophila melanogaster,Canton-S,20 μM,,,0.22,NS,,NA,Female,,NA,No,33008901
+Fluvoxamine,Drosophila melanogaster,Canton-S,20 μM,,,13.68,S,,NA,Female,,NA,No,33008901
+DTT,Drosophila melanogaster,Canton-S,20 μM,,,8.26,NS,,NA,Female,,NA,No,33008901
+Dihydroxyflavone,Drosophila melanogaster,Canton-S,20 μM,,,-1.63,NS,,NA,Female,,NA,No,33008901
+Auraptene,Drosophila melanogaster,Canton-S,20 μM,,,5.9,S,,NA,Female,,NA,No,33008901
+Amlexanox,Drosophila melanogaster,Canton-S,20 μM,,,2.33,NS,,NA,Female,,NA,No,33008901
+ScopolamineNbutylbromide,Drosophila melanogaster,Canton-S,20 μM,,,2.21,NS,,NA,Female,,NA,No,33008901
+SCH23390,Drosophila melanogaster,Canton-S,20 μM,,,-3.12,NS,,NA,Female,,NA,No,33008901
+PropanthelineBromide,Drosophila melanogaster,Canton-S,20 μM,,,-0.13,NS,,NA,Female,,NA,No,33008901
+NSC666076,Drosophila melanogaster,Canton-S,20 μM,,,9.77,NS,,NA,Female,,NA,No,33008901
+Dofetilide,Drosophila melanogaster,Canton-S,20 μM,,,-2.25,NS,,NA,Female,,NA,No,33008901
+Cinoxacin,Drosophila melanogaster,Canton-S,20 μM,,,-4.62,NS,,NA,Female,,NA,No,33008901
+Pirenperone,Drosophila melanogaster,Canton-S,20 μM,,,7.15,S,,NA,Female,,NA,No,33008901
+Ziprasidone HCl,Drosophila melanogaster,Canton-S,20 μM,,,5.6,NS,,NA,Female,,NA,No,33008901
+Tetracycline HCL,Drosophila melanogaster,Canton-S,20 μM,,,5.23,S,,NA,Female,,NA,No,33008901
+Hydroxyprogesterone caproate,Drosophila melanogaster,Canton-S,20 μM,,,7.25,NS,,NA,Female,,NA,No,33008901
+Nocodazole,Drosophila melanogaster,Canton-S,20 μM,,,9.03,S,,NA,Female,,NA,No,33008901
+Fluspirilene,Drosophila melanogaster,Canton-S,20 μM,,,8.86,S,,NA,Female,,NA,No,33008901
+Chlorhexidine,Drosophila melanogaster,Canton-S,20 μM,,,5.58,NS,,NA,Female,,NA,No,33008901
+Carvedilol,Drosophila melanogaster,Canton-S,20 μM,,,3.42,NS,,NA,Female,,NA,No,33008901
+3230_2939,Drosophila melanogaster,Canton-S,20 μM,,,-7.5,NS,,NA,Female,,NA,No,33008901
+Vincristine sulfate,Drosophila melanogaster,Canton-S,20 μM,,,-3.48,NS,,NA,Female,,NA,No,33008901
+Promethazine,Drosophila melanogaster,Canton-S,20 μM,,,-1.63,NS,,NA,Female,,NA,No,33008901
+Tetracycline HCL,Drosophila melanogaster,Canton-S,20 μM,,,-4.34,NS,,NA,Female,,NA,No,33008901
+Methanol,Drosophila melanogaster,Canton-S,20 μM,,,-4.56,NS,,NA,Female,,NA,No,33008901
+Dihydrorotenone,Drosophila melanogaster,Canton-S,20 μM,,,4.08,NS,,NA,Female,,NA,No,33008901
+Cannabidiol,Drosophila melanogaster,Canton-S,20 μM,,,5.85,NS,,NA,Female,,NA,No,33008901
+Amoxapine,Drosophila melanogaster,Canton-S,20 μM,,,0,NS,,NA,Female,,NA,No,33008901
+574-Trimethoxyfavone,Drosophila melanogaster,Canton-S,20 μM,,,0.8,NS,,NA,Female,,NA,No,33008901
+Tryptophan,Drosophila melanogaster,Canton-S,20 μM,,,-3.93,S,,NA,Female,,NA,No,33008901
+Pterostilbene,Drosophila melanogaster,Canton-S,20 μM,,,6.69,NS,,NA,Female,,NA,No,33008901
+Phenelzine,Drosophila melanogaster,Canton-S,20 μM,,,-1.18,NS,,NA,Female,,NA,No,33008901
+Nicolsamide,Drosophila melanogaster,Canton-S,20 μM,,,-7.45,S,,NA,Female,,NA,No,33008901
+MG624,Drosophila melanogaster,Canton-S,20 μM,,,-0.61,NS,,NA,Female,,NA,No,33008901
+Gramicidin,Drosophila melanogaster,Canton-S,20 μM,,,4.46,NS,,NA,Female,,NA,No,33008901
+Epoxy Pregnenolone,Drosophila melanogaster,Canton-S,20 μM,,,6.4,NS,,NA,Female,,NA,No,33008901
+Deguelin,Drosophila melanogaster,Canton-S,20 μM,,,2.78,NS,,NA,Female,,NA,No,33008901
+Curcumin,Drosophila melanogaster,Canton-S,20 μM,,,2.41,NS,,NA,Female,,NA,No,33008901
+Cardamonin,Drosophila melanogaster,Canton-S,20 μM,,,-1.48,NS,,NA,Female,,NA,No,33008901
+Benzethonium,Drosophila melanogaster,Canton-S,20 μM,,,0.04,NS,,NA,Female,,NA,No,33008901
+Antimycin A,Drosophila melanogaster,Canton-S,20 μM,,,-50.26,S,,NA,Female,,NA,No,33008901
+Phenyl furoxancarbonitrile,Drosophila melanogaster,Canton-S,20 μM,,,7.69,S,,NA,Female,,NA,No,33008901
+Nicotinamide mononucleotide,Drosophila melanogaster,Canton-S,20 μM,,,0,NS,,NA,Female,,NA,No,33008901
+Ceftriaxone disodium salt,Drosophila melanogaster,Canton-S,20 μM,,,-1.89,NS,,NA,Female,,NA,No,33008901
+Amoxapine,Drosophila melanogaster,Canton-S,20 μM,,,-0.09,NS,,NA,Female,,NA,No,33008901
+Rapamycin,Drosophila melanogaster,Canton-S,20 μM,,,4.29,NS,,NA,Female,,NA,No,33008901
+Norcantharidin,Drosophila melanogaster,Canton-S,20 μM,,,4.28,NS,,NA,Female,,NA,No,33008901
+Mianserin,Drosophila melanogaster,Canton-S,20 μM,,,6,S,,NA,Female,,NA,No,33008901
+LY165_163,Drosophila melanogaster,Canton-S,20 μM,,,5.71,S,,NA,Female,,NA,No,33008901
+Haloperidol,Drosophila melanogaster,Canton-S,20 μM,,,8.82,S,,NA,Female,,NA,No,33008901
+Rapamycin,Mus musculus,UM-HET3,42 ppm food,20 months,3 months,4,NS,4,NS,Female,-11,S,Yes,33145977
+Rapamycin,Mus musculus,UM-HET3,42 ppm food every other month,20 months,unti death,8,S,10,S,Female,-8,S,Yes,33145977
+Rapamycin,Mus musculus,UM-HET3,42 ppm food,20 months,unti death,15,S,12,S,Female,-13,S,Yes,33145977
+MitoQ,Mus musculus,UM-HET3,100 ppm food,7 months,unti death,-2,NS,1,NS,Female,,NA,Yes,33145977
+Minocycline,Mus musculus,UM-HET3,300 ppm food,6 months,unti death,-3,NS,0,NS,Female,,NA,Yes,33145977
+Beta-guanidinopropionic acid,Mus musculus,UM-HET3,3300 ppm food,6 months,unti death,-1,NS,2,NS,Female,,NA,Yes,33145977
+17-dimethylaminoethylamino-17-demethoxygeldanamycin hydrochloride,Mus musculus,UM-HET3,30 ppm food,6 months,unti death,-4,NS,-2,NS,Female,,NA,Yes,33145977
+Dihydromyricetin,Drosophila melanogaster,wDah,100 µM,,,4.48,NS,2.42,NA,Female,,NA,No,33291074
+Dihydromyricetin,Drosophila melanogaster,wDah,40 μM,,,16.49,S,9.42,NA,Female,,NA,No,33291074
+Dihydromyricetin,Drosophila melanogaster,wDah,10 μM,,,8.37,S,1.85,NA,Female,,NA,No,33291074
+Metformin,Mus musculus,C57BL/6,100 ppm/day bodyweight oral gavage,20 months,10 months,-2,S,,NA,Female,0,NS,No,33585467
+Nicotinamide riboside,Mus musculus,UM-HET3,1000 ppm food,8 months,until death,0,NS,2,NS,Female,-14,NA,Yes,33788371
+MIF098 (CD74 antagonist),Mus musculus,UM-HET3,240 ppm food,8 months,until death,-1,NS,-2,NS,Female,-13,NA,Yes,33788371
+Geranylgeranylacetone,Mus musculus,UM-HET3,600 ppm food,9 months,until death,2,NS,3,NS,Female,-8,NA,Yes,33788371
+Candesartan cilexetil,Mus musculus,UM-HET3,30 ppm food,8 months,until death,1,NS,7,NS,Female,-11,NA,Yes,33788371
+C60 fullerene,Mus musculus,CBA/Ca,3.4 ppm in virgin olive oil,10-12 months,7 months,7,NS,2,NA,Female,,NA,No,33849306
+Beta-guanidinopropionic acid,Drosophila melanogaster,w1118,900 mM,,,-63,S,,NA,Female,,NA,No,34141906
+Quercetin,Aedes albopictus,,200 ppm,,,20.53,S,,NA,Female,,NA,No,34188892
+Quercetin,Aedes albopictus,,100 ppm,,,20.88,S,,NA,Female,,NA,No,34188892
+Quercetin,Aedes albopictus,,50 ppm,,,19.01,S,,NA,Female,,NA,No,34188892
+p-coumaric acid,Aedes albopictus,,200 ppm,,,23.26,S,,NA,Female,,NA,No,34188892
+p-coumaric acid,Aedes albopictus,,100 ppm,,,20.38,S,,NA,Female,,NA,No,34188892
+p-coumaric acid,Aedes albopictus,,50 ppm,,,12.97,S,,NA,Female,,NA,No,34188892
+Caffeine,Aedes albopictus,,200 ppm,,,-6.42,NS,,NA,Female,,NA,No,34188892
+Caffeine,Aedes albopictus,,100 ppm,,,-4.64,NS,,NA,Female,,NA,No,34188892
+Caffeine,Aedes albopictus,,50 ppm,,,0.1,NS,,NA,Female,,NA,No,34188892
+78c (CD38 inhibitor),Mus musculus,C57BL/6,600 ppm food,12 months,until death,3,NS,3,NS,Female,-13,NS,No,35263032
+Syringaresinol,Mus musculus,UM-HET3,300 ppm food,5 months,until death,-2,NS,-1,NS,Female,-5,NS,Yes,36179270
+Sulindac,Mus musculus,UM-HET3,5 ppm food,5 months,until death,-2,NS,2,NS,Female,1,NS,Yes,36179270
+"PB125 (carnosol, withaferin A and luteolin)",Mus musculus,UM-HET3,"4.7 ppm carnosol, 9 ppm luteolin, and 0.47 ppm withaferin A food",5 months,until death,1,NS,3,NS,Female,-2,NS,Yes,36179270
+Leucine,Mus musculus,UM-HET3,40000 ppm food,5 months,until death,-2,NS,5,NS,Female,-1,NS,Yes,36179270
+Captopril,Mus musculus,UM-HET3,180 ppm food,5 months,until death,5,S,8,S,Female,-16,S,Yes,36179270
+"(R/S)-1,3-butanediol",Mus musculus,UM-HET3,100000 ppm food,6 months,until death,1,S,4,NS,Female,-7,NS,Yes,36179270
+Alpelisib,Mus musculus,C57BL/6J,300 ppm food,12 months,until death,11,S,0,NS,Female,-4,S,No,37118113
+Taurine,Mus musculus,C57BL/6J,1000 ppm/day bodyweight gavage,14 months,until death,10,S,,NA,Female,-10,S,No,37289866
+SG1002 (hydrogen sulfide donor),Mus musculus,UM-HET3,240 ppm food,5-9 months,until death,-2,NS,-2,NS,Female,0,NS,Yes,38041783
+SG1002 (hydrogen sulfide donor),Mus musculus,UM-HET3,240 ppm food,16 months,until death,1,NS,4,NS,Female,-1,NS,Yes,38041783
+Mycophenolic acid,Mus musculus,UM-HET3,6.7 ppm food,9 months,until death,-1,S,-4,NS,Female,0,NS,Yes,38041783
+Meclizine,Mus musculus,UM-HET3,800 ppm food,12 months,until death,3,S,1,NS,Female,-12,S,Yes,38041783
+Fisetin,Mus musculus,UM-HET3,600 ppm food fed on a repeated cycle of 3 days on and 11 days off,20 months,until death,-1,NS,2,NS,Female,-5,NS,Yes,38041783
+Fisetin,Mus musculus,UM-HET3,600 ppm food fed continuously,20 months,until death,1,NS,-1,NS,Female,0,NS,Yes,38041783
+Dimethyl fumarate,Mus musculus,UM-HET3,120 ppm food,16 months,until death,-1,NS,-2,NS,Female,-5,NS,Yes,38041783
+Dimethyl fumarate,Mus musculus,UM-HET3,120 ppm food,10 months,until death,0,NS,0,NS,Female,0,NS,Yes,38041783
+Astaxanthin,Mus musculus,UM-HET3,4000 ppm food,12 months,until death,3,NS,-1,NS,Female,-6,S,Yes,38041783
+4-phenylbutyrate,Mus musculus,UM-HET3,1000 ppm food,9 months,until death,-2,S,-6,NS,Female,4,NS,Yes,38041783
+16-alpha-hydroxyestradiol,Mus musculus,UM-HET3,5 ppm food,12 months,until death,-7,S,-5,NS,Female,-35,S,Yes,38753230
+Nebivolol,Mus musculus,UM-HET3,60 ppm food,6 months,until death,-5,S,-5,NS,Female,-6,NS,Yes,38753230
+Hydralazine,Mus musculus,UM-HET3,30 ppm food,16 months,until death,-2,NS,1,NS,Female,5,NS,Yes,38753230
+Hydralazine,Mus musculus,UM-HET3,30 ppm food,6 months,until death,-2,NS,-6,NS,Female,-2,NS,Yes,38753230
+"2,4-dinitrophenol",Mus musculus,UM-HET3,3 ppm food,6 months,until death,-4,NS,0,NS,Female,5,NS,Yes,38753230
+Canagliflozin,Mus musculus,UM-HET3,180 ppm food,6 months,until death,-1,NS,4,NS,Female,,NA,Yes,38753230
+Canagliflozin,Mus musculus,UM-HET3,180 ppm food,16 months,until death,-6,S,-8,NS,Female,-14,S,Yes,38753230
+Alpha-ketoglutarate,Mus musculus,UM-HET3,20000 ppm food,18 months,until death,1,NS,-5,NS,Female,8,NS,Yes,38753230
+X203 (anti-IL-11),Mus musculus,C57BL/6 J,40 ppm bodyweight monthly intraperitoneal injection,17.2 months,until death,25,S,,NA,Female,,NA,No,39020175

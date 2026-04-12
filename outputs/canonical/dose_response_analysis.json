@@ -1,0 +1,343 @@
+{
+  "summary": {
+    "top_n": 20,
+    "computed": 16,
+    "constant_dose": 3,
+    "insufficient": 1,
+    "positive_correlation": 7,
+    "negative_correlation": 9,
+    "sig_positive_005": 1,
+    "sig_negative_005": 0
+  },
+  "compounds": {
+    "Spermidine": {
+      "n_parseable": 8,
+      "n_total": 8,
+      "dominant_unit": "mm",
+      "n_same_unit": 6,
+      "n_units": 2,
+      "units": [
+        "mm",
+        "\u00b5m"
+      ],
+      "spearman_rho": 0.4058,
+      "spearman_p": 0.4247,
+      "dose_min": 0.2,
+      "dose_max": 4.0,
+      "effect_min": 10.0,
+      "effect_max": 233.0,
+      "status": "computed"
+    },
+    "Apple extract": {
+      "n_parseable": 5,
+      "n_total": 6,
+      "dominant_unit": "g",
+      "n_same_unit": 3,
+      "status": "constant_dose"
+    },
+    "N-acetyl-L-cysteine": {
+      "n_parseable": 42,
+      "n_total": 45,
+      "dominant_unit": "mm",
+      "n_same_unit": 15,
+      "n_units": 6,
+      "units": [
+        "mg/ml",
+        "mm",
+        "nm",
+        "ppm",
+        "\u00b5g/ml",
+        "\u00b5m"
+      ],
+      "spearman_rho": -0.2576,
+      "spearman_p": 0.354,
+      "dose_min": 1.0,
+      "dose_max": 15.0,
+      "effect_min": -27.2,
+      "effect_max": 31.0,
+      "status": "computed"
+    },
+    "Minocycline": {
+      "n_parseable": 28,
+      "n_total": 28,
+      "dominant_unit": "\u00b5m",
+      "n_same_unit": 14,
+      "n_units": 3,
+      "units": [
+        "mm",
+        "ppm",
+        "\u00b5m"
+      ],
+      "spearman_rho": -0.028,
+      "spearman_p": 0.9242,
+      "dose_min": 50.0,
+      "dose_max": 200.0,
+      "effect_min": 5.0,
+      "effect_max": 51.0,
+      "status": "computed"
+    },
+    "Alpha-ketoglutarate": {
+      "n_parseable": 18,
+      "n_total": 18,
+      "dominant_unit": "mm",
+      "n_same_unit": 9,
+      "n_units": 3,
+      "units": [
+        "mm",
+        "ppm",
+        "\u00b5m"
+      ],
+      "spearman_rho": -0.2277,
+      "spearman_p": 0.5557,
+      "dose_min": 1.0,
+      "dose_max": 10.0,
+      "effect_min": -7.89,
+      "effect_max": 56.25,
+      "status": "computed"
+    },
+    "Carnosine": {
+      "n_parseable": 8,
+      "n_total": 9,
+      "dominant_unit": "mg/l",
+      "n_same_unit": 4,
+      "n_units": 3,
+      "units": [
+        "mg/l",
+        "mm",
+        "\u00b5m"
+      ],
+      "spearman_rho": 0.4,
+      "spearman_p": 0.6,
+      "dose_min": 0.2,
+      "dose_max": 200.0,
+      "effect_min": 19.5,
+      "effect_max": 26.4,
+      "status": "computed"
+    },
+    "Rapamycin": {
+      "n_parseable": 37,
+      "n_total": 37,
+      "dominant_unit": "ppm",
+      "n_same_unit": 24,
+      "n_units": 3,
+      "units": [
+        "nm",
+        "ppm",
+        "\u00b5m"
+      ],
+      "spearman_rho": 0.1876,
+      "spearman_p": 0.3801,
+      "dose_min": 1.5,
+      "dose_max": 128.0,
+      "effect_min": 0.0,
+      "effect_max": 26.0,
+      "status": "computed"
+    },
+    "Mycophenolic acid": {
+      "n_parseable": 7,
+      "n_total": 7,
+      "dominant_unit": "\u00b5m",
+      "n_same_unit": 5,
+      "n_units": 2,
+      "units": [
+        "ppm",
+        "\u00b5m"
+      ],
+      "spearman_rho": -0.2236,
+      "spearman_p": 0.7177,
+      "dose_min": 10.0,
+      "dose_max": 200.0,
+      "effect_min": 0.24,
+      "effect_max": 22.22,
+      "status": "computed"
+    },
+    "Epigallocatechin-3-gallate": {
+      "n_parseable": 14,
+      "n_total": 15,
+      "dominant_unit": "\u00b5m",
+      "n_same_unit": 11,
+      "n_units": 4,
+      "units": [
+        "mg",
+        "mg/ml",
+        "mm",
+        "\u00b5m"
+      ],
+      "spearman_rho": -0.0446,
+      "spearman_p": 0.8964,
+      "dose_min": 10.0,
+      "dose_max": 800.0,
+      "effect_min": -7.9,
+      "effect_max": 64.79,
+      "status": "computed"
+    },
+    "Vitamin E": {
+      "n_parseable": 29,
+      "n_total": 31,
+      "dominant_unit": "\u00b5g/ml",
+      "n_same_unit": 20,
+      "n_units": 5,
+      "units": [
+        "%",
+        "mg/l",
+        "mm",
+        "ug/ml",
+        "\u00b5g/ml"
+      ],
+      "spearman_rho": 0.0735,
+      "spearman_p": 0.7582,
+      "dose_min": 1.0,
+      "dose_max": 400.0,
+      "effect_min": -53.96,
+      "effect_max": 23.2,
+      "status": "computed"
+    },
+    "Melatonin": {
+      "n_parseable": 11,
+      "n_total": 12,
+      "dominant_unit": "ppm",
+      "n_same_unit": 5,
+      "n_units": 4,
+      "units": [
+        "%",
+        "mg/l",
+        "ppm",
+        "\u00b5g/ml"
+      ],
+      "spearman_rho": -0.3536,
+      "spearman_p": 0.5594,
+      "dose_min": 10.0,
+      "dose_max": 20.0,
+      "effect_min": 0.0,
+      "effect_max": 18.0,
+      "status": "computed"
+    },
+    "Royal Jelly": {
+      "n_parseable": 8,
+      "n_total": 8,
+      "dominant_unit": "%",
+      "n_same_unit": 4,
+      "n_units": 3,
+      "units": [
+        "%",
+        "ppm",
+        "\u00b5g/ml"
+      ],
+      "spearman_rho": 1.0,
+      "spearman_p": 0.0,
+      "dose_min": 1.0,
+      "dose_max": 5.0,
+      "effect_min": 8.5,
+      "effect_max": 13.87,
+      "status": "computed"
+    },
+    "L-Carnitine": {
+      "n_parseable": 7,
+      "n_total": 7,
+      "dominant_unit": "mm",
+      "n_same_unit": 6,
+      "status": "constant_dose"
+    },
+    "Rifampicin": {
+      "n_parseable": 12,
+      "n_total": 12,
+      "dominant_unit": "\u00b5m",
+      "n_same_unit": 12,
+      "n_units": 1,
+      "units": [
+        "\u00b5m"
+      ],
+      "spearman_rho": 0.0435,
+      "spearman_p": 0.8932,
+      "dose_min": 1.0,
+      "dose_max": 200.0,
+      "effect_min": 10.6,
+      "effect_max": 56.1,
+      "status": "computed"
+    },
+    "2,4-dinitrophenol": {
+      "n_parseable": 5,
+      "n_total": 6,
+      "dominant_unit": "ppm",
+      "n_same_unit": 3,
+      "n_units": 3,
+      "units": [
+        "%",
+        "nm",
+        "ppm"
+      ],
+      "spearman_rho": -0.866,
+      "spearman_p": 0.3333,
+      "dose_min": 1.0,
+      "dose_max": 3.0,
+      "effect_min": -4.0,
+      "effect_max": 7.0,
+      "status": "computed"
+    },
+    "EUK-134": {
+      "n_parseable": 10,
+      "n_total": 10,
+      "dominant_unit": "mm",
+      "n_same_unit": 7,
+      "n_units": 2,
+      "units": [
+        "mm",
+        "\u00b5m"
+      ],
+      "spearman_rho": 0.6449,
+      "spearman_p": 0.1178,
+      "dose_min": 0.05,
+      "dose_max": 10.0,
+      "effect_min": 29.0,
+      "effect_max": 54.0,
+      "status": "computed"
+    },
+    "Ursolic acid": {
+      "n_parseable": 0,
+      "n_total": 0,
+      "status": "insufficient_data"
+    },
+    "Rhodiola rosea extract": {
+      "n_parseable": 13,
+      "n_total": 19,
+      "dominant_unit": "mg/ml",
+      "n_same_unit": 12,
+      "n_units": 2,
+      "units": [
+        "mg/ml",
+        "\u00b5g/ml"
+      ],
+      "spearman_rho": -0.0935,
+      "spearman_p": 0.7725,
+      "dose_min": 2.5,
+      "dose_max": 30.0,
+      "effect_min": -11.9,
+      "effect_max": 24.0,
+      "status": "computed"
+    },
+    "Propyl gallate": {
+      "n_parseable": 9,
+      "n_total": 9,
+      "dominant_unit": "\u00b5m",
+      "n_same_unit": 6,
+      "status": "constant_dose"
+    },
+    "Cranberry extract": {
+      "n_parseable": 6,
+      "n_total": 7,
+      "dominant_unit": "mg/ml",
+      "n_same_unit": 6,
+      "n_units": 1,
+      "units": [
+        "mg/ml"
+      ],
+      "spearman_rho": -0.7775,
+      "spearman_p": 0.0687,
+      "dose_min": 2.0,
+      "dose_max": 20.0,
+      "effect_min": 6.3,
+      "effect_max": 32.5,
+      "status": "computed"
+    }
+  }
+}

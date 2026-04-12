@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/drugage-skill/manifest.schema.json",
+  "title": "drugage-skill manifest",
+  "type": "object",
+  "required": [
+    "metadata",
+    "input_provenance",
+    "environment",
+    "inclusion_summary",
+    "normalization",
+    "ranking_contract",
+    "evidence_tiers",
+    "top_compounds",
+    "claim_stability_summary",
+    "empirical_null_summary",
+    "null_model_type",
+    "num_null_reruns",
+    "null_seed",
+    "ranking_null_summary"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["title", "schema_version", "run_timestamp"]
+    },
+    "input_provenance": {
+      "type": "object",
+      "required": ["path", "sha256", "source_url", "build", "release_date", "row_count", "required_columns"]
+    },
+    "environment": {
+      "type": "object",
+      "required": ["python_version", "package_versions", "pythonhashseed"]
+    },
+    "inclusion_summary": {
+      "type": "object",
+      "required": ["raw_rows", "included_rows", "excluded_rows", "drop_reasons"]
+    },
+    "normalization": {
+      "type": "object",
+      "required": ["species_overrides_used", "compound_overrides_used"]
+    },
+    "ranking_contract": {
+      "type": "object",
+      "required": ["contract_version", "trimmed_mean_fraction", "tier_priority", "null_model_type"]
+    },
+    "evidence_tiers": {
+      "type": "object"
+    },
+    "top_compounds": {
+      "type": "array"
+    },
+    "claim_stability_summary": {
+      "type": "object",
+      "required": ["evaluated_compounds", "all_perturbations", "passed_counts"]
+    },
+    "empirical_null_summary": {
+      "type": "object",
+      "required": ["null_model_type", "num_null_reruns", "null_seed", "ranking_level_metrics"]
+    }
+  }
+}

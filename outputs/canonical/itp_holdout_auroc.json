@@ -1,0 +1,16 @@
+{
+  "n_positive": 8,
+  "n_negative": 9,
+  "auroc_by_metric": {
+    "robustness_score": 0.8472,
+    "sign_consistency": 0.5,
+    "breadth": 0.7778,
+    "n_experiments": 0.8333,
+    "n_species": 0.625,
+    "median_effect": 0.7708,
+    "trimmed_mean": 0.7917
+  },
+  "auroc_bootstrap_ci_low": 0.6143,
+  "auroc_bootstrap_ci_high": 1.0,
+  "auroc_bootstrap_n": 2000
+}

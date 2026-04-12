@@ -1,0 +1,46 @@
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Large binary outputs
+outputs/canonical/*.png
+outputs/canonical/claim_stability_heatmap.png
+outputs/canonical/null_separation_plot.png
+outputs/itp_holdout/
+outputs/canonical_128perm_backup/
+outputs/canonical_verify/
+outputs/male_verify/
+outputs/female_verify/
+outputs/sex_male/
+outputs/sex_female/
+outputs/null_1000/
+outputs/canonical.pre_cold_run_backup/
+outputs/male_only/
+outputs/female_only/
+
+# Temp
+tmp/
+*.tmp
+.DS_Store
+
+# LaTeX intermediates
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.synctex.gz
+
+# Data archives
+data/*.zip
+data/gendr/
+data/geroprotectors_scraped.json
+drugage_build4.csv
+drugage_build4.zip
+REVIEW_*.md
+REVISION_PLAN.md
+FINAL_CEILING_PLAN.md

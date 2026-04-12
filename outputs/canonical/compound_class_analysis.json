@@ -1,0 +1,18 @@
+{
+  "pure_count": 968,
+  "extract_count": 70,
+  "pure_tiers": {
+    "robust": 40,
+    "promising": 154,
+    "thin_evidence": 401,
+    "conflicted": 373
+  },
+  "extract_tiers": {
+    "robust": 8,
+    "promising": 20,
+    "thin_evidence": 34,
+    "conflicted": 8
+  },
+  "extracts_in_top20": 4,
+  "extracts_in_robust": 8
+}

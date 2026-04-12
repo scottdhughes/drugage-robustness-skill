@@ -1,0 +1,165 @@
+{
+  "scatter": {
+    "spearman_rho": 0.4425,
+    "spearman_p": 5.3382298664835356e-51,
+    "n_compounds": 1038
+  },
+  "residualized": {
+    "regression_r_squared": 0.2207,
+    "regression_slope": 0.1617,
+    "kendall_tau_original_vs_adjusted": 0.4643,
+    "kendall_tau_p": 3.9477637798024494e-111,
+    "top20_original": [
+      "Spermidine",
+      "Apple extract",
+      "N-acetyl-L-cysteine",
+      "Minocycline",
+      "Alpha-ketoglutarate",
+      "Carnosine",
+      "Rapamycin",
+      "Mycophenolic acid",
+      "Epigallocatechin-3-gallate",
+      "Vitamin E",
+      "Melatonin",
+      "SkQ1",
+      "Quercetin",
+      "Royal Jelly",
+      "L-Carnitine",
+      "Rifampicin",
+      "2,4-dinitrophenol",
+      "EUK-134",
+      "Aspirin",
+      "Curcumin"
+    ],
+    "top20_adjusted": [
+      "SkQ1",
+      "Spermidine",
+      "Apple extract",
+      "Edetate Calcium Disodium",
+      "Phenformin",
+      "Lithocholic acid",
+      "4,4\u2032-dimethoxychalcone",
+      "Isorhamnetin",
+      "Tyrphostin AG 1478",
+      "Korean mistletoe extract",
+      "Icariin",
+      "Ginkgo biloba extract",
+      "Epithalamin",
+      "Xanthine",
+      "Calcium pantothenate",
+      "Mycophenolic acid",
+      "Allantoin",
+      "Ursolic acid",
+      "Acetaminophen",
+      "Fucoxanthin"
+    ],
+    "top20_overlap_count": 4
+  },
+  "weight_sensitivity": {
+    "n_samples": 200,
+    "median_tau": 0.7682,
+    "mean_tau": 0.759,
+    "min_tau": 0.5603,
+    "p5_tau": 0.6563,
+    "p95_tau": 0.84
+  },
+  "fisher_itp": {
+    "table": {
+      "pos_robust": 7,
+      "pos_not_robust": 6,
+      "neg_robust": 0,
+      "neg_not_robust": 12
+    },
+    "odds_ratio": "inf",
+    "fisher_p_one_sided": 0.00357
+  },
+  "itp_counts": {
+    "itp_positive_mean_experiments": 10.4,
+    "itp_positive_median_experiments": 4.0,
+    "itp_negative_mean_experiments": 4.0,
+    "itp_negative_median_experiments": 3.0,
+    "itp_mixed_mean_experiments": 14.3
+  },
+  "baselines": {
+    "median_effect": {
+      "kendall_tau_vs_robustness": 0.57,
+      "itp_positive_in_top_quartile": 1,
+      "itp_negative_in_top_quartile": 0
+    },
+    "trimmed_mean_effect": {
+      "kendall_tau_vs_robustness": 0.563,
+      "itp_positive_in_top_quartile": 1,
+      "itp_negative_in_top_quartile": 0
+    },
+    "experiment_count": {
+      "kendall_tau_vs_robustness": 0.1358,
+      "itp_positive_in_top_quartile": 7,
+      "itp_negative_in_top_quartile": 6
+    },
+    "robustness_score": {
+      "kendall_tau_vs_robustness": 1.0,
+      "itp_positive_in_top_quartile": 8,
+      "itp_negative_in_top_quartile": 3
+    }
+  },
+  "correlations": {
+    "breadth": {
+      "breadth": 1.0,
+      "sign_consistency": -0.213,
+      "loso": 0.6529,
+      "loto": 0.647,
+      "aggregation_stability": -0.0485,
+      "magnitude": -0.1335
+    },
+    "sign_consistency": {
+      "breadth": -0.213,
+      "sign_consistency": 1.0,
+      "loso": -0.1124,
+      "loto": -0.1199,
+      "aggregation_stability": 0.857,
+      "magnitude": 0.7999
+    },
+    "loso": {
+      "breadth": 0.6529,
+      "sign_consistency": -0.1124,
+      "loso": 1.0,
+      "loto": 0.9581,
+      "aggregation_stability": 0.0551,
+      "magnitude": -0.0061
+    },
+    "loto": {
+      "breadth": 0.647,
+      "sign_consistency": -0.1199,
+      "loso": 0.9581,
+      "loto": 1.0,
+      "aggregation_stability": 0.045,
+      "magnitude": -0.0326
+    },
+    "aggregation_stability": {
+      "breadth": -0.0485,
+      "sign_consistency": 0.857,
+      "loso": 0.0551,
+      "loto": 0.045,
+      "aggregation_stability": 1.0,
+      "magnitude": 0.7782
+    },
+    "magnitude": {
+      "breadth": -0.1335,
+      "sign_consistency": 0.7999,
+      "loso": -0.0061,
+      "loto": -0.0326,
+      "aggregation_stability": 0.7782,
+      "magnitude": 1.0
+    }
+  },
+  "population": {
+    "total_compounds": 1038,
+    "multi_species_count": 203,
+    "multi_species_fraction": 0.1956,
+    "multi_taxa_count": 189,
+    "multi_taxa_fraction": 0.1821,
+    "median_experiments": 2.0,
+    "mean_experiments": 3.2,
+    "max_experiments": 170
+  }
+}

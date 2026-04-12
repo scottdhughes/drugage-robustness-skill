@@ -1,0 +1,83 @@
+{
+  "null_model_type": "species_stratified_effect_permutation",
+  "num_null_reruns": 1000,
+  "null_seed": 20260322,
+  "ranking_level_metrics": {
+    "top10_mean_robustness_score": {
+      "observed": 0.9409663942537658,
+      "null_mean": 0.9131993791648958,
+      "null_std": 0.011314692798283019,
+      "null_exceedance_rate": 0.001,
+      "empirical_p_value": 0.001998001998001998,
+      "null_z_score": 2.454067077551024
+    },
+    "robust_compound_count": {
+      "observed": 48.0,
+      "null_mean": 29.865,
+      "null_std": 4.103507645904903,
+      "null_exceedance_rate": 0.0,
+      "empirical_p_value": 0.000999000999000999,
+      "null_z_score": 4.41938984032303
+    },
+    "top10_mean_breadth_score": {
+      "observed": 0.9666666666666666,
+      "null_mean": 0.9040055555555555,
+      "null_std": 0.035691648831292395,
+      "null_exceedance_rate": 0.009,
+      "empirical_p_value": 0.00999000999000999,
+      "null_z_score": 1.755623882978849
+    }
+  },
+  "top_compounds": [
+    {
+      "compound_name": "Spermidine",
+      "evidence_tier": "robust",
+      "robustness_score": 1.0
+    },
+    {
+      "compound_name": "Apple extract",
+      "evidence_tier": "robust",
+      "robustness_score": 0.95
+    },
+    {
+      "compound_name": "N-acetyl-L-cysteine",
+      "evidence_tier": "robust",
+      "robustness_score": 0.9467050280112045
+    },
+    {
+      "compound_name": "Minocycline",
+      "evidence_tier": "robust",
+      "robustness_score": 0.9394029761904762
+    },
+    {
+      "compound_name": "Alpha-ketoglutarate",
+      "evidence_tier": "robust",
+      "robustness_score": 0.9378665277777778
+    },
+    {
+      "compound_name": "Carnosine",
+      "evidence_tier": "robust",
+      "robustness_score": 0.9372333333333333
+    },
+    {
+      "compound_name": "Rapamycin",
+      "evidence_tier": "robust",
+      "robustness_score": 0.9294492182505085
+    },
+    {
+      "compound_name": "Mycophenolic acid",
+      "evidence_tier": "robust",
+      "robustness_score": 0.92848
+    },
+    {
+      "compound_name": "Epigallocatechin-3-gallate",
+      "evidence_tier": "robust",
+      "robustness_score": 0.9213476923076923
+    },
+    {
+      "compound_name": "Vitamin E",
+      "evidence_tier": "robust",
+      "robustness_score": 0.9191791666666667
+    }
+  ]
+}

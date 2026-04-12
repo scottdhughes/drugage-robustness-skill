@@ -1,0 +1,488 @@
+{
+  "metadata": {
+    "title": "Claim-Certified Cross-Species Robustness of Longevity Interventions from DrugAge",
+    "schema_version": "2026-03-22.v1",
+    "run_timestamp": "2026-04-12T18:03:30.409689+00:00"
+  },
+  "input_provenance": {
+    "path": "data/drugage_build5_2024-11-29.csv",
+    "sha256": "7ed9771440fa4e1e30be0d3c8e92d919254b572ab40c81e2440ba78c885401d4",
+    "source_url": "https://genomics.senescence.info/drugs/dataset.zip",
+    "build": "Build 5",
+    "release_date": "2024-11-29",
+    "row_count": 3423,
+    "required_columns": [
+      "compound_name",
+      "species",
+      "strain",
+      "dosage",
+      "age_at_initiation",
+      "treatment_duration",
+      "avg_lifespan_change_percent",
+      "avg_lifespan_significance",
+      "max_lifespan_change_percent",
+      "max_lifespan_significance",
+      "gender",
+      "weight_change_percent",
+      "weight_change_significance",
+      "ITP",
+      "pubmed_id"
+    ]
+  },
+  "environment": {
+    "python_version": "3.12.12",
+    "package_versions": {
+      "pandas": "2.3.3",
+      "numpy": "2.4.3",
+      "matplotlib": "3.10.8",
+      "PyYAML": "6.0.3",
+      "jsonschema": "4.26.0"
+    },
+    "pythonhashseed": 0
+  },
+  "inclusion_summary": {
+    "raw_rows": 3423,
+    "included_rows": 3372,
+    "excluded_rows": 51,
+    "drop_reasons": {
+      "missing_or_non_numeric_avg_lifespan_change_percent": 51
+    }
+  },
+  "normalization": {
+    "species_overrides_used": {
+      "Musca Domestica": {
+        "canonical_species": "Musca domestica",
+        "taxon_label": "insect"
+      },
+      "Rattus Norvegicus": {
+        "canonical_species": "Rattus norvegicus",
+        "taxon_label": "mammal"
+      },
+      "Mus Musculus": {
+        "canonical_species": "Mus musculus",
+        "taxon_label": "mammal"
+      }
+    },
+    "compound_overrides_used": {}
+  },
+  "ranking_contract": {
+    "contract_version": "2026-03-22.v1",
+    "trimmed_mean_fraction": 0.1,
+    "tier_priority": {
+      "robust": 0,
+      "promising": 1,
+      "thin_evidence": 2,
+      "conflicted": 3
+    },
+    "null_model_type": "species_stratified_effect_permutation"
+  },
+  "evidence_tiers": {
+    "robust": 48,
+    "promising": 174,
+    "thin_evidence": 435,
+    "conflicted": 381
+  },
+  "top_compounds": [
+    {
+      "rank": 1,
+      "compound_name": "Spermidine",
+      "evidence_tier": "robust",
+      "robust_flag": true,
+      "robustness_score": 1.0,
+      "median_effect": 27.0,
+      "trimmed_mean_effect": 60.5,
+      "num_species": 6,
+      "num_taxa": 5,
+      "num_pmids": 4,
+      "empirical_p_value": 0.01098901098901099
+    },
+    {
+      "rank": 2,
+      "compound_name": "Apple extract",
+      "evidence_tier": "robust",
+      "robust_flag": true,
+      "robustness_score": 0.95,
+      "median_effect": 20.25,
+      "trimmed_mean_effect": 29.166666666666668,
+      "num_species": 3,
+      "num_taxa": 3,
+      "num_pmids": 4,
+      "empirical_p_value": 0.11488511488511488
+    },
+    {
+      "rank": 3,
+      "compound_name": "N-acetyl-L-cysteine",
+      "evidence_tier": "robust",
+      "robust_flag": true,
+      "robustness_score": 0.9467050280112045,
+      "median_effect": 16.0,
+      "trimmed_mean_effect": 15.75264705882353,
+      "num_species": 5,
+      "num_taxa": 3,
+      "num_pmids": 7,
+      "empirical_p_value": 0.07092907092907093
+    },
+    {
+      "rank": 4,
+      "compound_name": "Minocycline",
+      "evidence_tier": "robust",
+      "robust_flag": true,
+      "robustness_score": 0.9394029761904762,
+      "median_effect": 24.799999999999997,
+      "trimmed_mean_effect": 25.712499999999995,
+      "num_species": 3,
+      "num_taxa": 3,
+      "num_pmids": 6,
+      "empirical_p_value": 0.000999000999000999
+    },
+    {
+      "rank": 5,
+      "compound_name": "Alpha-ketoglutarate",
+      "evidence_tier": "robust",
+      "robust_flag": true,
+      "robustness_score": 0.9378665277777778,
+      "median_effect": 7.345000000000001,
+      "trimmed_mean_effect": 10.08875,
+      "num_species": 4,
+      "num_taxa": 3,
+      "num_pmids": 8,
+      "empirical_p_value": 0.005994005994005994
+    },
+    {
+      "rank": 6,
+      "compound_name": "Carnosine",
+      "evidence_tier": "robust",
+      "robust_flag": true,
+      "robustness_score": 0.9372333333333333,
+      "median_effect": 19.75,
+      "trimmed_mean_effect": 16.4,
+      "num_species": 3,
+      "num_taxa": 3,
+      "num_pmids": 4,
+      "empirical_p_value": 0.04795204795204795
+    },
+    {
+      "rank": 7,
+      "compound_name": "Rapamycin",
+      "evidence_tier": "robust",
+      "robust_flag": true,
+      "robustness_score": 0.9294492182505085,
+      "median_effect": 14.0,
+      "trimmed_mean_effect": 14.021290322580645,
+      "num_species": 3,
+      "num_taxa": 3,
+      "num_pmids": 18,
+      "empirical_p_value": 0.000999000999000999
+    },
+    {
+      "rank": 8,
+      "compound_name": "Mycophenolic acid",
+      "evidence_tier": "robust",
+      "robust_flag": true,
+      "robustness_score": 0.92848,
+      "median_effect": 1.0,
+      "trimmed_mean_effect": 7.051428571428572,
+      "num_species": 4,
+      "num_taxa": 4,
+      "num_pmids": 4,
+      "empirical_p_value": 0.4035964035964036
+    },
+    {
+      "rank": 9,
+      "compound_name": "Epigallocatechin-3-gallate",
+      "evidence_tier": "robust",
+      "robust_flag": true,
+      "robustness_score": 0.9213476923076923,
+      "median_effect": 12.85,
+      "trimmed_mean_effect": 11.347692307692306,
+      "num_species": 4,
+      "num_taxa": 3,
+      "num_pmids": 9,
+      "empirical_p_value": 0.5214785214785215
+    },
+    {
+      "rank": 10,
+      "compound_name": "Vitamin E",
+      "evidence_tier": "robust",
+      "robust_flag": true,
+      "robustness_score": 0.9191791666666667,
+      "median_effect": 11.48,
+      "trimmed_mean_effect": 9.179166666666667,
+      "num_species": 7,
+      "num_taxa": 4,
+      "num_pmids": 12,
+      "empirical_p_value": 0.052947052947052944
+    }
+  ],
+  "claim_stability_summary": {
+    "evaluated_compounds": 10,
+    "all_perturbations": 5,
+    "passed_counts": {
+      "leave_one_species_out_positive": 10,
+      "leave_one_taxon_out_positive": 10,
+      "median_vs_trimmed_mean_positive": 10,
+      "exclude_single_pmid_compounds": 10,
+      "exclude_mixed_sign_compounds": 3
+    },
+    "all_checks_passed_count": 3,
+    "compounds": [
+      {
+        "compound_name": "Spermidine",
+        "evidence_tier": "robust",
+        "leave_one_species_out_positive": 1,
+        "leave_one_taxon_out_positive": 1,
+        "median_vs_trimmed_mean_positive": 1,
+        "exclude_single_pmid_compounds": 1,
+        "exclude_mixed_sign_compounds": 1,
+        "all_checks_passed": 1
+      },
+      {
+        "compound_name": "Apple extract",
+        "evidence_tier": "robust",
+        "leave_one_species_out_positive": 1,
+        "leave_one_taxon_out_positive": 1,
+        "median_vs_trimmed_mean_positive": 1,
+        "exclude_single_pmid_compounds": 1,
+        "exclude_mixed_sign_compounds": 1,
+        "all_checks_passed": 1
+      },
+      {
+        "compound_name": "N-acetyl-L-cysteine",
+        "evidence_tier": "robust",
+        "leave_one_species_out_positive": 1,
+        "leave_one_taxon_out_positive": 1,
+        "median_vs_trimmed_mean_positive": 1,
+        "exclude_single_pmid_compounds": 1,
+        "exclude_mixed_sign_compounds": 0,
+        "all_checks_passed": 0
+      },
+      {
+        "compound_name": "Minocycline",
+        "evidence_tier": "robust",
+        "leave_one_species_out_positive": 1,
+        "leave_one_taxon_out_positive": 1,
+        "median_vs_trimmed_mean_positive": 1,
+        "exclude_single_pmid_compounds": 1,
+        "exclude_mixed_sign_compounds": 0,
+        "all_checks_passed": 0
+      },
+      {
+        "compound_name": "Alpha-ketoglutarate",
+        "evidence_tier": "robust",
+        "leave_one_species_out_positive": 1,
+        "leave_one_taxon_out_positive": 1,
+        "median_vs_trimmed_mean_positive": 1,
+        "exclude_single_pmid_compounds": 1,
+        "exclude_mixed_sign_compounds": 0,
+        "all_checks_passed": 0
+      },
+      {
+        "compound_name": "Carnosine",
+        "evidence_tier": "robust",
+        "leave_one_species_out_positive": 1,
+        "leave_one_taxon_out_positive": 1,
+        "median_vs_trimmed_mean_positive": 1,
+        "exclude_single_pmid_compounds": 1,
+        "exclude_mixed_sign_compounds": 1,
+        "all_checks_passed": 1
+      },
+      {
+        "compound_name": "Rapamycin",
+        "evidence_tier": "robust",
+        "leave_one_species_out_positive": 1,
+        "leave_one_taxon_out_positive": 1,
+        "median_vs_trimmed_mean_positive": 1,
+        "exclude_single_pmid_compounds": 1,
+        "exclude_mixed_sign_compounds": 0,
+        "all_checks_passed": 0
+      },
+      {
+        "compound_name": "Mycophenolic acid",
+        "evidence_tier": "robust",
+        "leave_one_species_out_positive": 1,
+        "leave_one_taxon_out_positive": 1,
+        "median_vs_trimmed_mean_positive": 1,
+        "exclude_single_pmid_compounds": 1,
+        "exclude_mixed_sign_compounds": 0,
+        "all_checks_passed": 0
+      },
+      {
+        "compound_name": "Epigallocatechin-3-gallate",
+        "evidence_tier": "robust",
+        "leave_one_species_out_positive": 1,
+        "leave_one_taxon_out_positive": 1,
+        "median_vs_trimmed_mean_positive": 1,
+        "exclude_single_pmid_compounds": 1,
+        "exclude_mixed_sign_compounds": 0,
+        "all_checks_passed": 0
+      },
+      {
+        "compound_name": "Vitamin E",
+        "evidence_tier": "robust",
+        "leave_one_species_out_positive": 1,
+        "leave_one_taxon_out_positive": 1,
+        "median_vs_trimmed_mean_positive": 1,
+        "exclude_single_pmid_compounds": 1,
+        "exclude_mixed_sign_compounds": 0,
+        "all_checks_passed": 0
+      }
+    ]
+  },
+  "empirical_null_summary": {
+    "null_model_type": "species_stratified_effect_permutation",
+    "num_null_reruns": 1000,
+    "null_seed": 20260322,
+    "ranking_level_metrics": {
+      "top10_mean_robustness_score": {
+        "observed": 0.9409663942537658,
+        "null_mean": 0.9131993791648958,
+        "null_std": 0.011314692798283019,
+        "null_exceedance_rate": 0.001,
+        "empirical_p_value": 0.001998001998001998,
+        "null_z_score": 2.454067077551024
+      },
+      "robust_compound_count": {
+        "observed": 48.0,
+        "null_mean": 29.865,
+        "null_std": 4.103507645904903,
+        "null_exceedance_rate": 0.0,
+        "empirical_p_value": 0.000999000999000999,
+        "null_z_score": 4.41938984032303
+      },
+      "top10_mean_breadth_score": {
+        "observed": 0.9666666666666666,
+        "null_mean": 0.9040055555555555,
+        "null_std": 0.035691648831292395,
+        "null_exceedance_rate": 0.009,
+        "empirical_p_value": 0.00999000999000999,
+        "null_z_score": 1.755623882978849
+      }
+    },
+    "top_compounds": [
+      {
+        "compound_name": "Spermidine",
+        "evidence_tier": "robust",
+        "robustness_score": 1.0
+      },
+      {
+        "compound_name": "Apple extract",
+        "evidence_tier": "robust",
+        "robustness_score": 0.95
+      },
+      {
+        "compound_name": "N-acetyl-L-cysteine",
+        "evidence_tier": "robust",
+        "robustness_score": 0.9467050280112045
+      },
+      {
+        "compound_name": "Minocycline",
+        "evidence_tier": "robust",
+        "robustness_score": 0.9394029761904762
+      },
+      {
+        "compound_name": "Alpha-ketoglutarate",
+        "evidence_tier": "robust",
+        "robustness_score": 0.9378665277777778
+      },
+      {
+        "compound_name": "Carnosine",
+        "evidence_tier": "robust",
+        "robustness_score": 0.9372333333333333
+      },
+      {
+        "compound_name": "Rapamycin",
+        "evidence_tier": "robust",
+        "robustness_score": 0.9294492182505085
+      },
+      {
+        "compound_name": "Mycophenolic acid",
+        "evidence_tier": "robust",
+        "robustness_score": 0.92848
+      },
+      {
+        "compound_name": "Epigallocatechin-3-gallate",
+        "evidence_tier": "robust",
+        "robustness_score": 0.9213476923076923
+      },
+      {
+        "compound_name": "Vitamin E",
+        "evidence_tier": "robust",
+        "robustness_score": 0.9191791666666667
+      }
+    ]
+  },
+  "null_model_type": "species_stratified_effect_permutation",
+  "num_null_reruns": 1000,
+  "null_seed": 20260322,
+  "ranking_null_summary": {
+    "top10_mean_robustness_score": {
+      "observed": 0.9409663942537658,
+      "null_mean": 0.9131993791648958,
+      "null_std": 0.011314692798283019,
+      "null_exceedance_rate": 0.001,
+      "empirical_p_value": 0.001998001998001998,
+      "null_z_score": 2.454067077551024
+    },
+    "robust_compound_count": {
+      "observed": 48.0,
+      "null_mean": 29.865,
+      "null_std": 4.103507645904903,
+      "null_exceedance_rate": 0.0,
+      "empirical_p_value": 0.000999000999000999,
+      "null_z_score": 4.41938984032303
+    },
+    "top10_mean_breadth_score": {
+      "observed": 0.9666666666666666,
+      "null_mean": 0.9040055555555555,
+      "null_std": 0.035691648831292395,
+      "null_exceedance_rate": 0.009,
+      "empirical_p_value": 0.00999000999000999,
+      "null_z_score": 1.755623882978849
+    }
+  },
+  "verification": {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "manifest_schema",
+        "passed": true,
+        "details": "ok"
+      },
+      {
+        "name": "artifacts_exist",
+        "passed": true,
+        "details": "required outputs present"
+      },
+      {
+        "name": "top20_unique",
+        "passed": true,
+        "details": "Spermidine,Apple extract,N-acetyl-L-cysteine,Minocycline,Alpha-ketoglutarate,Carnosine,Rapamycin,Mycophenolic acid,Epigallocatechin-3-gallate,Vitamin E,Melatonin,Royal Jelly,L-Carnitine,Rifampicin,2,4-dinitrophenol,EUK-134,Ursolic acid,Rhodiola rosea extract,Propyl gallate,Cranberry extract"
+      },
+      {
+        "name": "top20_ranking_order",
+        "passed": true,
+        "details": "Spermidine,Apple extract,N-acetyl-L-cysteine,Minocycline,Alpha-ketoglutarate,Carnosine,Rapamycin,Mycophenolic acid,Epigallocatechin-3-gallate,Vitamin E,Melatonin,Royal Jelly,L-Carnitine,Rifampicin,2,4-dinitrophenol,EUK-134,Ursolic acid,Rhodiola rosea extract,Propyl gallate,Cranberry extract"
+      },
+      {
+        "name": "tier_assignments",
+        "passed": true,
+        "details": "evidence tiers stable"
+      },
+      {
+        "name": "claim_stability_summary",
+        "passed": true,
+        "details": "{'leave_one_species_out_positive': 10, 'leave_one_taxon_out_positive': 10, 'median_vs_trimmed_mean_positive': 10, 'exclude_single_pmid_compounds': 10, 'exclude_mixed_sign_compounds': 3}"
+      },
+      {
+        "name": "empirical_null_summary",
+        "passed": true,
+        "details": "ranking-level null metrics stable"
+      },
+      {
+        "name": "profile_numeric_metrics",
+        "passed": true,
+        "details": "compound-level numeric metrics stable"
+      }
+    ]
+  }
+}

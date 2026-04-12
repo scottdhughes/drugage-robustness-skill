@@ -1,0 +1,171 @@
+{
+  "species_overrides_used": {
+    "Musca Domestica": {
+      "canonical_species": "Musca domestica",
+      "taxon_label": "insect"
+    },
+    "Rattus Norvegicus": {
+      "canonical_species": "Rattus norvegicus",
+      "taxon_label": "mammal"
+    },
+    "Mus Musculus": {
+      "canonical_species": "Mus musculus",
+      "taxon_label": "mammal"
+    }
+  },
+  "compound_overrides_used": {},
+  "species_taxon_labels": {
+    "Acheta domesticus": {
+      "canonical_species": "Acheta domesticus",
+      "taxon_label": "insect"
+    },
+    "Adineta vaga": {
+      "canonical_species": "Adineta vaga",
+      "taxon_label": "rotifer"
+    },
+    "Aedes aegypti": {
+      "canonical_species": "Aedes aegypti",
+      "taxon_label": "insect"
+    },
+    "Aedes albopictus": {
+      "canonical_species": "Aedes albopictus",
+      "taxon_label": "insect"
+    },
+    "Aeolosoma viride": {
+      "canonical_species": "Aeolosoma viride",
+      "taxon_label": "annelid"
+    },
+    "Anastrepha ludens": {
+      "canonical_species": "Anastrepha ludens",
+      "taxon_label": "insect"
+    },
+    "Anopheles stephensi": {
+      "canonical_species": "Anopheles stephensi",
+      "taxon_label": "insect"
+    },
+    "Apis mellifera": {
+      "canonical_species": "Apis mellifera",
+      "taxon_label": "insect"
+    },
+    "Asplanchna brightwelli": {
+      "canonical_species": "Asplanchna brightwelli",
+      "taxon_label": "rotifer"
+    },
+    "Bombyx mori": {
+      "canonical_species": "Bombyx mori",
+      "taxon_label": "insect"
+    },
+    "Brachionus manjavacas": {
+      "canonical_species": "Brachionus manjavacas",
+      "taxon_label": "rotifer"
+    },
+    "Caenorhabditis briggsae": {
+      "canonical_species": "Caenorhabditis briggsae",
+      "taxon_label": "nematode"
+    },
+    "Caenorhabditis elegans": {
+      "canonical_species": "Caenorhabditis elegans",
+      "taxon_label": "nematode"
+    },
+    "Caenorhabditis tropicalis": {
+      "canonical_species": "Caenorhabditis tropicalis",
+      "taxon_label": "nematode"
+    },
+    "Canis lupus familiaris": {
+      "canonical_species": "Canis lupus familiaris",
+      "taxon_label": "mammal"
+    },
+    "Ceriodaphnia affinis": {
+      "canonical_species": "Ceriodaphnia affinis",
+      "taxon_label": "crustacean"
+    },
+    "Daphnia pulex": {
+      "canonical_species": "Daphnia pulex",
+      "taxon_label": "crustacean"
+    },
+    "Drosophila bipectinata": {
+      "canonical_species": "Drosophila bipectinata",
+      "taxon_label": "insect"
+    },
+    "Drosophila kikkawai": {
+      "canonical_species": "Drosophila kikkawai",
+      "taxon_label": "insect"
+    },
+    "Drosophila melanogaster": {
+      "canonical_species": "Drosophila melanogaster",
+      "taxon_label": "insect"
+    },
+    "Drosophila mojavensis": {
+      "canonical_species": "Drosophila mojavensis",
+      "taxon_label": "insect"
+    },
+    "Drosophila virilis": {
+      "canonical_species": "Drosophila virilis",
+      "taxon_label": "insect"
+    },
+    "Mesocricetus auratus": {
+      "canonical_species": "Mesocricetus auratus",
+      "taxon_label": "mammal"
+    },
+    "Mus Musculus": {
+      "canonical_species": "Mus musculus",
+      "taxon_label": "mammal"
+    },
+    "Mus musculus": {
+      "canonical_species": "Mus musculus",
+      "taxon_label": "mammal"
+    },
+    "Musca Domestica": {
+      "canonical_species": "Musca domestica",
+      "taxon_label": "insect"
+    },
+    "Musca domestica": {
+      "canonical_species": "Musca domestica",
+      "taxon_label": "insect"
+    },
+    "Mytilina brevispina": {
+      "canonical_species": "Mytilina brevispina",
+      "taxon_label": "rotifer"
+    },
+    "Nothobranchius furzeri": {
+      "canonical_species": "Nothobranchius furzeri",
+      "taxon_label": "fish"
+    },
+    "Nothobranchius guentheri": {
+      "canonical_species": "Nothobranchius guentheri",
+      "taxon_label": "fish"
+    },
+    "Paramecium tetraurelia": {
+      "canonical_species": "Paramecium tetraurelia",
+      "taxon_label": "protist"
+    },
+    "Philodina acuticornis": {
+      "canonical_species": "Philodina acuticornis",
+      "taxon_label": "rotifer"
+    },
+    "Podospora anserina": {
+      "canonical_species": "Podospora anserina",
+      "taxon_label": "fungus"
+    },
+    "Rattus Norvegicus": {
+      "canonical_species": "Rattus norvegicus",
+      "taxon_label": "mammal"
+    },
+    "Rattus norvegicus": {
+      "canonical_species": "Rattus norvegicus",
+      "taxon_label": "mammal"
+    },
+    "Saccharomyces cerevisiae": {
+      "canonical_species": "Saccharomyces cerevisiae",
+      "taxon_label": "fungus"
+    },
+    "Tribolium castaneum": {
+      "canonical_species": "Tribolium castaneum",
+      "taxon_label": "insect"
+    },
+    "Zaprionus paravittiger": {
+      "canonical_species": "Zaprionus paravittiger",
+      "taxon_label": "insect"
+    }
+  }
+}

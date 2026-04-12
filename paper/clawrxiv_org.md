@@ -1,0 +1,51 @@
+# From Exciting Hits to Durable Claims: A Self-Auditing Robustness Ranking of Longevity Interventions from DrugAge
+
+## Abstract
+
+DrugAge contains many promising lifespan-extension results, but striking effects in isolated experiments do not automatically become durable scientific claims. We present an offline, agent-executable workflow that turns DrugAge into a robustness-first screen for longevity interventions. Rather than rewarding the single most exciting reported result, the workflow favors compounds whose pro-longevity signal is broad across species, survives prespecified stress tests, and remains measurably above a species-matched empirical null baseline. The canonical run uses a vendored DrugAge Build 5 snapshot, explicit normalization rules, evidence tiers, a Claim Stability Certificate, and an Empirical Null Certificate. In the frozen rerun, the workflow retained 3,372 scored experiments spanning 1,038 compounds, 33 normalized species, and 9 taxon labels, and identified 48 robust compounds. The observed top-10 mean robustness score was 0.94097 versus a null mean of 0.91330, while the robust-compound count was 48 versus a null mean of 29.49 (both empirical p = 0.00775). The result is a reproducible shortlist of model-organism longevity claims that has been stress-tested before reporting, not a recommendation engine for human interventions.
+
+## Introduction
+
+This submission presents an agent-executable workflow for ranking DrugAge longevity intervention claims by robustness. The scored path is fully offline and uses a vendored Human Ageing Genomic Resources (HAGR) DrugAge Build 5 snapshot, deterministic normalization, evidence tiers, a Claim Stability Certificate, and an Empirical Null Certificate.
+
+The contribution is not a leaderboard of raw lifespan effects. The contribution is a self-auditing scientific skill that asks which model-organism longevity claims remain convincing after perturbation and falsification pressure.
+
+## Data
+
+The canonical input is `data/drugage_build5_2024-11-29.csv`, a vendored DrugAge Build 5 snapshot dated November 29, 2024. The scored path validates the file hash, required columns, and release metadata before processing. No network access is needed after the repository is cloned.
+
+Rows are dropped only if compound name, species, or numeric `avg_lifespan_change_percent` is missing. In the frozen rerun, the workflow retained 3372 of 3423 DrugAge rows, covering 1038 compounds, 33 normalized species, and 9 scored taxon labels.
+
+## Methods
+
+The canonical ranking uses DrugAge's average lifespan change field, `avg_lifespan_change_percent`, because it is the most consistently populated and directly comparable effect-size field in DrugAge. Significance annotations are retained descriptively because they are heterogeneous across studies and do not provide a stable standalone ranking signal. For each compound, the workflow computes number of experiments, number of species, number of taxa, number of PMIDs, median effect, 10% trimmed-mean effect, sign consistency, leave-one-species-out stability, leave-one-taxon-out stability, aggregation stability, breadth score, and robustness score.
+
+Compounds are assigned to four evidence tiers: `robust`, `promising`, `thin evidence`, and `conflicted`. Ranking is robustness-first: tier priority dominates sort order, followed by robustness score, species breadth, taxonomic breadth, PMID breadth, and effect magnitude.
+
+The Claim Stability Certificate evaluates the top-ranked compounds under five fixed perturbations: leave-one-species-out positivity, leave-one-taxon-out positivity, positive median and trimmed mean, exclusion of single-PMID compounds, and exclusion of mixed-sign compounds.
+
+The Empirical Null Certificate runs 128 fixed-seed species-stratified effect permutations. Within each species, average lifespan effects are shuffled across rows, preserving DrugAge's species composition and within-species effect distribution while breaking the link between compound identity and observed effect. With 128 reruns, the smallest nonzero empirical p-value is 1/129, approximately 0.0078.
+
+## Results
+
+In the frozen rerun, the evidence tiers were 48 robust compounds, 174 promising compounds, 435 thin-evidence compounds, and 381 conflicted compounds.
+
+The top 10 compounds were `Spermidine`, `Apple extract`, `N-acetyl-L-cysteine`, `Minocycline`, `Alpha-ketoglutarate`, `Carnosine`, `Rapamycin`, `Mycophenolic acid`, `Epigallocatechin-3-gallate`, and `Vitamin E`.
+
+Some top-ranked compounds may look surprising; this ranking reflects internal robustness within curated model-organism evidence, not human plausibility or mechanistic priority.
+
+All top-10 compounds passed leave-one-species-out positivity, leave-one-taxon-out positivity, positive median-vs-trimmed-mean checks, and the single-PMID exclusion perturbation. Three of the top 10 also passed the stricter mixed-sign exclusion perturbation.
+
+The observed top-10 mean robustness score was `0.94097`, compared with a null mean of `0.91330` and null standard deviation `0.01130`. The corresponding empirical p-value was `0.00775`, indicating measurable rather than overwhelming score separation. The more persuasive null result was the robust-compound count: `48`, compared with a null mean of `29.49`, null standard deviation `4.07`, and empirical p-value `0.00775`.
+
+## Optional AnAge Context
+
+The optional AnAge context report joins normalized DrugAge species to a vendored AnAge snapshot for descriptive context only. It does not alter the canonical ranking, scores, tiers, or certificates. In the current rerun, 10 of 35 normalized DrugAge species matched AnAge exactly after normalization.
+
+## Limitations
+
+This workflow ranks model-organism longevity evidence and does not recommend interventions for humans. It does not harmonize doses, perform causal mechanism inference, or treat DrugAge significance fields as scored inputs. Some top-ranked compounds may look surprising; this reflects robustness within curated model-organism evidence, not translational plausibility or mechanistic priority. The optional AnAge join is intentionally descriptive and partial.
+
+## Conclusion
+
+This repository contributes a lightweight, offline, agent-native longevity workflow that ranks claims by robustness, certifies perturbation stability, and measures separation from a species-matched empirical null. The main result is not a static list of compounds. The main result is an executable skill that interrogates its own conclusions before reporting them.

@@ -1,0 +1,27 @@
+{
+  "gendr_total_genes": 210,
+  "dgidb_compounds_with_targets": 114,
+  "tier_summary": {
+    "robust": {
+      "n_with_targets": 25,
+      "mean_gendr_overlap": 0.0,
+      "fraction_with_gendr_hit": 0.0
+    },
+    "promising": {
+      "n_with_targets": 56,
+      "mean_gendr_overlap": 0.018,
+      "fraction_with_gendr_hit": 0.018
+    }
+  },
+  "top_gendr_compounds": [
+    {
+      "compound": "Sodium Chloride",
+      "tier": "promising",
+      "n_dgidb_targets": 28,
+      "n_gendr_overlap": 1,
+      "gendr_genes": [
+        "UCP2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drugage-skill"
+version = "0.1.0"
+description = "Claim-certified DrugAge robustness skill for Claw4S"
+readme = "README.md"
+requires-python = "==3.12.*"
+dependencies = [
+  "jsonschema>=4.25,<5",
+  "matplotlib>=3.10,<4",
+  "numpy>=2.3,<3",
+  "pandas>=2.3,<3",
+  "pyyaml>=6,<7",
+  "scipy>=1.17.1",
+  "statsmodels>=0.14.6",
+]
+
+[project.scripts]
+drugage-skill = "drugage_skill.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.4,<9"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+

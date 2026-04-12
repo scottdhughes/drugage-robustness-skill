@@ -1,0 +1,400 @@
+{
+  "total_itp_compounds_in_drugage": 54,
+  "itp_matched_in_rankings": 53,
+  "itp_by_tier": {
+    "conflicted": 33,
+    "promising": 5,
+    "robust": 10,
+    "thin_evidence": 5
+  },
+  "itp_positive_count": 13,
+  "itp_negative_count": 12,
+  "itp_mixed_count": 29,
+  "itp_positive_by_tier": {
+    "robust": 7,
+    "thin_evidence": 5,
+    "promising": 1
+  },
+  "itp_negative_by_tier": {
+    "conflicted": 12
+  },
+  "top_quartile_cutoff_rank": 259,
+  "itp_in_top_quartile": 15,
+  "itp_in_top_quartile_fraction": 0.283,
+  "itp_positive_in_robust_count": 7,
+  "itp_positive_in_robust_fraction": 0.5385,
+  "itp_negative_all_conflicted": true,
+  "compound_details": [
+    {
+      "compound": "Minocycline",
+      "rank": 4,
+      "tier": "robust",
+      "robustness_score": 0.9394029761904762,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Alpha-ketoglutarate",
+      "rank": 5,
+      "tier": "robust",
+      "robustness_score": 0.9378665277777778,
+      "itp_direction": "positive"
+    },
+    {
+      "compound": "Rapamycin",
+      "rank": 7,
+      "tier": "robust",
+      "robustness_score": 0.9294492182505085,
+      "itp_direction": "positive"
+    },
+    {
+      "compound": "Mycophenolic acid",
+      "rank": 8,
+      "tier": "robust",
+      "robustness_score": 0.92848,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "2,4-dinitrophenol",
+      "rank": 15,
+      "tier": "robust",
+      "robustness_score": 0.896485,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Astaxanthin",
+      "rank": 25,
+      "tier": "robust",
+      "robustness_score": 0.8673561111111111,
+      "itp_direction": "positive"
+    },
+    {
+      "compound": "Green tea extract",
+      "rank": 27,
+      "tier": "robust",
+      "robustness_score": 0.8632677777777777,
+      "itp_direction": "positive"
+    },
+    {
+      "compound": "Glycine",
+      "rank": 34,
+      "tier": "robust",
+      "robustness_score": 0.8357765277777779,
+      "itp_direction": "positive"
+    },
+    {
+      "compound": "Captopril",
+      "rank": 36,
+      "tier": "robust",
+      "robustness_score": 0.8328888888888889,
+      "itp_direction": "positive"
+    },
+    {
+      "compound": "Oxaloacetate",
+      "rank": 45,
+      "tier": "robust",
+      "robustness_score": 0.8051111111111111,
+      "itp_direction": "positive"
+    },
+    {
+      "compound": "Curcumin",
+      "rank": 51,
+      "tier": "promising",
+      "robustness_score": 0.8825059750072654,
+      "itp_direction": "positive"
+    },
+    {
+      "compound": "Hydralazine",
+      "rank": 52,
+      "tier": "promising",
+      "robustness_score": 0.8798495833333333,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Fisetin",
+      "rank": 53,
+      "tier": "promising",
+      "robustness_score": 0.8765476190476191,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Acarbose",
+      "rank": 129,
+      "tier": "promising",
+      "robustness_score": 0.5229722222222222,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "17\u2010alpha\u2010estradiol",
+      "rank": 135,
+      "tier": "promising",
+      "robustness_score": 0.5117222222222222,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Meclizine",
+      "rank": 378,
+      "tier": "thin_evidence",
+      "robustness_score": 0.4624444444444445,
+      "itp_direction": "positive"
+    },
+    {
+      "compound": "(R/S)-1,3-butanediol",
+      "rank": 381,
+      "tier": "thin_evidence",
+      "robustness_score": 0.4619444444444445,
+      "itp_direction": "positive"
+    },
+    {
+      "compound": "Protandim",
+      "rank": 382,
+      "tier": "thin_evidence",
+      "robustness_score": 0.4619444444444445,
+      "itp_direction": "positive"
+    },
+    {
+      "compound": "Geranylgeranylacetone",
+      "rank": 397,
+      "tier": "thin_evidence",
+      "robustness_score": 0.4604444444444445,
+      "itp_direction": "positive"
+    },
+    {
+      "compound": "Candesartan cilexetil",
+      "rank": 412,
+      "tier": "thin_evidence",
+      "robustness_score": 0.4594444444444445,
+      "itp_direction": "positive"
+    },
+    {
+      "compound": "Aspirin",
+      "rank": 658,
+      "tier": "conflicted",
+      "robustness_score": 0.8913006580645161,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Nordihydroguaiaretic acid",
+      "rank": 659,
+      "tier": "conflicted",
+      "robustness_score": 0.8817271708683474,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Resveratrol",
+      "rank": 661,
+      "tier": "conflicted",
+      "robustness_score": 0.858380294117647,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Metformin",
+      "rank": 667,
+      "tier": "conflicted",
+      "robustness_score": 0.8321040404040405,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Simvastatin",
+      "rank": 668,
+      "tier": "conflicted",
+      "robustness_score": 0.8275333333333333,
+      "itp_direction": "negative"
+    },
+    {
+      "compound": "Fish oil",
+      "rank": 673,
+      "tier": "conflicted",
+      "robustness_score": 0.768163492063492,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "4-phenylbutyrate",
+      "rank": 676,
+      "tier": "conflicted",
+      "robustness_score": 0.7414444444444445,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Nicotinamide riboside",
+      "rank": 680,
+      "tier": "conflicted",
+      "robustness_score": 0.7193888888888889,
+      "itp_direction": "negative"
+    },
+    {
+      "compound": "Leucine",
+      "rank": 684,
+      "tier": "conflicted",
+      "robustness_score": 0.6667511111111111,
+      "itp_direction": "negative"
+    },
+    {
+      "compound": "Canagliflozin",
+      "rank": 704,
+      "tier": "conflicted",
+      "robustness_score": 0.4732222222222222,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Caffeic acid phenethylester",
+      "rank": 736,
+      "tier": "conflicted",
+      "robustness_score": 0.40013333333333334,
+      "itp_direction": "negative"
+    },
+    {
+      "compound": "SG1002 (hydrogen sulfide donor)",
+      "rank": 743,
+      "tier": "conflicted",
+      "robustness_score": 0.39608333333333334,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Beta-guanidinopropionic acid",
+      "rank": 766,
+      "tier": "conflicted",
+      "robustness_score": 0.37797619047619047,
+      "itp_direction": "negative"
+    },
+    {
+      "compound": "16-alpha-hydroxyestradiol",
+      "rank": 776,
+      "tier": "conflicted",
+      "robustness_score": 0.3609444444444444,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Ursodeoxycholic acid",
+      "rank": 777,
+      "tier": "conflicted",
+      "robustness_score": 0.3599444444444444,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "17-dimethylaminoethylamino-17-demethoxygeldanamycin hydrochloride",
+      "rank": 778,
+      "tier": "conflicted",
+      "robustness_score": 0.3594444444444444,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Sodium thiosulfate",
+      "rank": 779,
+      "tier": "conflicted",
+      "robustness_score": 0.3589444444444444,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Syringaresinol",
+      "rank": 780,
+      "tier": "conflicted",
+      "robustness_score": 0.3589444444444444,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "MIF098 (CD74 antagonist)",
+      "rank": 784,
+      "tier": "conflicted",
+      "robustness_score": 0.3584444444444444,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Medium-chain triglyceride oil",
+      "rank": 790,
+      "tier": "conflicted",
+      "robustness_score": 0.3574444444444444,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Methylene blue",
+      "rank": 793,
+      "tier": "conflicted",
+      "robustness_score": 0.3194444444444444,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Enalapril",
+      "rank": 798,
+      "tier": "conflicted",
+      "robustness_score": 0.30434222222222224,
+      "itp_direction": "negative"
+    },
+    {
+      "compound": "MitoQ",
+      "rank": 819,
+      "tier": "conflicted",
+      "robustness_score": 0.20694444444444443,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "2-(2-hydroxyphenyl)benzothiazole",
+      "rank": 824,
+      "tier": "conflicted",
+      "robustness_score": 0.20694444444444443,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Inulin",
+      "rank": 827,
+      "tier": "conflicted",
+      "robustness_score": 0.20694444444444443,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "PB125 (carnosol, withaferin A and luteolin)",
+      "rank": 834,
+      "tier": "conflicted",
+      "robustness_score": 0.20694444444444443,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Dimethyl fumarate",
+      "rank": 847,
+      "tier": "conflicted",
+      "robustness_score": 0.19583333333333336,
+      "itp_direction": "mixed"
+    },
+    {
+      "compound": "Nebivolol",
+      "rank": 859,
+      "tier": "conflicted",
+      "robustness_score": 0.19305555555555554,
+      "itp_direction": "negative"
+    },
+    {
+      "compound": "4-hydroxyphenyl-N-tert-butylnitrone",
+      "rank": 871,
+      "tier": "conflicted",
+      "robustness_score": 0.12638888888888888,
+      "itp_direction": "negative"
+    },
+    {
+      "compound": "Nitroflurbiprofen",
+      "rank": 872,
+      "tier": "conflicted",
+      "robustness_score": 0.12638888888888888,
+      "itp_direction": "negative"
+    },
+    {
+      "compound": "INT-767d (FXR/TGR5 agonist)",
+      "rank": 891,
+      "tier": "conflicted",
+      "robustness_score": 0.10694444444444443,
+      "itp_direction": "negative"
+    },
+    {
+      "compound": "TM5441 (PAI-1 inhibitor)",
+      "rank": 893,
+      "tier": "conflicted",
+      "robustness_score": 0.10694444444444443,
+      "itp_direction": "negative"
+    },
+    {
+      "compound": "Sulindac",
+      "rank": 895,
+      "tier": "conflicted",
+      "robustness_score": 0.10694444444444443,
+      "itp_direction": "negative"
+    }
+  ]
+}

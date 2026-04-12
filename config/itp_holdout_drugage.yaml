@@ -1,0 +1,63 @@
+title: 'ITP Holdout Validation: Scoring without ITP-linked rows'
+contract_version: 2026-03-22.v1
+dataset:
+  path: outputs/itp_holdout/drugage_no_itp.csv
+  source_url: https://genomics.senescence.info/drugs/dataset.zip
+  build: Build 5
+  release_date: 2024-11-29
+  sha256: 59a372489690512935df74e893f8ea7876d39f14827180e801c1ac3463bb173f
+  required_columns:
+  - compound_name
+  - species
+  - strain
+  - dosage
+  - age_at_initiation
+  - treatment_duration
+  - avg_lifespan_change_percent
+  - avg_lifespan_significance
+  - max_lifespan_change_percent
+  - max_lifespan_significance
+  - gender
+  - weight_change_percent
+  - weight_change_significance
+  - ITP
+  - pubmed_id
+anage:
+  path: data/anage_snapshot.tsv
+  source_url: https://genomics.senescence.info/species/dataset.zip
+  sha256: 98867969fbd4d0bed6bab415c2715bb19079dbd7f92bdc26e5961856aa1c1519
+  release_name: stable snapshot
+runtime:
+  pythonhashseed: 0
+  package_versions:
+  - pandas
+  - numpy
+  - matplotlib
+  - PyYAML
+  - jsonschema
+outputs:
+  manifest: manifest.json
+  normalization_audit: normalization_audit.json
+  robustness_rankings: robustness_rankings.csv
+  compound_evidence_profiles: compound_evidence_profiles.csv
+  claim_stability_certificate: claim_stability_certificate.json
+  claim_stability_heatmap: claim_stability_heatmap.png
+  empirical_null_certificate: empirical_null_certificate.json
+  compound_null_significance: compound_null_significance.csv
+  null_separation_plot: null_separation_plot.png
+  verification: verification.json
+  anage_species_join: anage_species_join.csv
+  compound_taxonomic_context: compound_taxonomic_context.csv
+  taxonomic_breadth_heatmap: taxonomic_breadth_heatmap.png
+pipeline:
+  trimmed_mean_fraction: 0.1
+  top_n_compounds: 10
+  verification_top_n: 20
+  null_model_type: species_stratified_effect_permutation
+  null_reruns: 1000
+  null_seed: 20260322
+  tier_priority:
+    robust: 0
+    promising: 1
+    thin_evidence: 2
+    conflicted: 3

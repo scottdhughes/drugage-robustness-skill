@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "manifest_schema",
+      "passed": true,
+      "details": "ok"
+    },
+    {
+      "name": "artifacts_exist",
+      "passed": true,
+      "details": "required outputs present"
+    },
+    {
+      "name": "top20_unique",
+      "passed": true,
+      "details": "Spermidine,Apple extract,N-acetyl-L-cysteine,Minocycline,Alpha-ketoglutarate,Carnosine,Rapamycin,Mycophenolic acid,Epigallocatechin-3-gallate,Vitamin E,Melatonin,Royal Jelly,L-Carnitine,Rifampicin,2,4-dinitrophenol,EUK-134,Ursolic acid,Rhodiola rosea extract,Propyl gallate,Cranberry extract"
+    },
+    {
+      "name": "top20_ranking_order",
+      "passed": true,
+      "details": "Spermidine,Apple extract,N-acetyl-L-cysteine,Minocycline,Alpha-ketoglutarate,Carnosine,Rapamycin,Mycophenolic acid,Epigallocatechin-3-gallate,Vitamin E,Melatonin,Royal Jelly,L-Carnitine,Rifampicin,2,4-dinitrophenol,EUK-134,Ursolic acid,Rhodiola rosea extract,Propyl gallate,Cranberry extract"
+    },
+    {
+      "name": "tier_assignments",
+      "passed": true,
+      "details": "evidence tiers stable"
+    },
+    {
+      "name": "claim_stability_summary",
+      "passed": true,
+      "details": "{'leave_one_species_out_positive': 10, 'leave_one_taxon_out_positive': 10, 'median_vs_trimmed_mean_positive': 10, 'exclude_single_pmid_compounds': 10, 'exclude_mixed_sign_compounds': 3}"
+    },
+    {
+      "name": "empirical_null_summary",
+      "passed": true,
+      "details": "ranking-level null metrics stable"
+    },
+    {
+      "name": "profile_numeric_metrics",
+      "passed": true,
+      "details": "compound-level numeric metrics stable"
+    }
+  ]
+}

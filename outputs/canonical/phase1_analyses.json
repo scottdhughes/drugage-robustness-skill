@@ -1,0 +1,73 @@
+{
+  "structure_matched_null": {
+    "canonical_robust_count": 60,
+    "null_mean": 53.65,
+    "null_std": 5.05,
+    "null_z": 1.26,
+    "empirical_p": 0.125749,
+    "n_permutations": 500,
+    "null_type": "compound_identity_shuffle_within_species"
+  },
+  "species_weighting": {
+    "mammalian_species_identified": 0,
+    "original_experiments": 3372,
+    "weighted_experiments": 3372,
+    "top10_overlap": 10,
+    "top20_overlap": 20,
+    "kendall_tau": 1.0,
+    "top10_canonical_only": [],
+    "top10_weighted_only": []
+  },
+  "temporal_holdout": {
+    "pmid_cutoff": 25000000,
+    "pre_experiments": 1602,
+    "post_experiments": 1770,
+    "pre_compounds": 466,
+    "post_compounds_with_data": 663,
+    "pre_top_quartile_post_mean_positive_rate": 0.8533,
+    "pre_bottom_post_mean_positive_rate": 0.679,
+    "mann_whitney_u": 13928.0,
+    "mann_whitney_p": 0.083968,
+    "pre_top_compounds_with_post_data": 40,
+    "pre_bottom_compounds_with_post_data": 623
+  },
+  "leave_mouse_out": {
+    "non_mouse_experiments": 3003,
+    "mouse_experiments": 369,
+    "non_mouse_compounds": 966,
+    "top_quartile_mouse_positive_rate": 0.5502,
+    "bottom_mouse_positive_rate": 0.6027,
+    "mann_whitney_p": 0.786318,
+    "itp_positive_in_top_quartile": "6/8",
+    "itp_negative_in_top_quartile": "2/6"
+  },
+  "negative_simulation": {
+    "negative_fraction": 0.3,
+    "synthetic_negatives_injected": 1011,
+    "original_robust_count": 60,
+    "augmented_robust_count": 35,
+    "survivors": 35,
+    "survival_rate": 0.5833,
+    "lost_compounds": [
+      "Apple extract",
+      "Baicalein",
+      "Calcium pantothenate",
+      "Carnosine",
+      "Chlorophytum borivilianum  extract",
+      "Colanic acid",
+      "Cranberry extract",
+      "Epigallocatechin-3-gallate",
+      "Eserine hemisulfate salt",
+      "Glycine"
+    ]
+  },
+  "clustered_bootstrap": {
+    "n_bootstrap": 500,
+    "n_pmids": 651,
+    "median_tau": 0.7622,
+    "ci_low": 0.6658,
+    "ci_high": 0.8276,
+    "mean_tau": 0.7559,
+    "n_valid_bootstraps": 500
+  }
+}

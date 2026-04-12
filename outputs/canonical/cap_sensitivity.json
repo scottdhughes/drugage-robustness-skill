@@ -1,0 +1,9 @@
+{
+  "n_combinations": 160,
+  "tau_min": 0.7631,
+  "tau_max": 1.0,
+  "tau_median": 0.8276,
+  "tau_mean": 0.8287,
+  "fraction_above_090": 0.025,
+  "fraction_above_080": 0.8063
+}

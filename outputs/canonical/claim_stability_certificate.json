@@ -1,0 +1,114 @@
+{
+  "evaluated_compounds": 10,
+  "all_perturbations": 5,
+  "passed_counts": {
+    "leave_one_species_out_positive": 10,
+    "leave_one_taxon_out_positive": 10,
+    "median_vs_trimmed_mean_positive": 10,
+    "exclude_single_pmid_compounds": 10,
+    "exclude_mixed_sign_compounds": 3
+  },
+  "all_checks_passed_count": 3,
+  "compounds": [
+    {
+      "compound_name": "Spermidine",
+      "evidence_tier": "robust",
+      "leave_one_species_out_positive": 1,
+      "leave_one_taxon_out_positive": 1,
+      "median_vs_trimmed_mean_positive": 1,
+      "exclude_single_pmid_compounds": 1,
+      "exclude_mixed_sign_compounds": 1,
+      "all_checks_passed": 1
+    },
+    {
+      "compound_name": "Apple extract",
+      "evidence_tier": "robust",
+      "leave_one_species_out_positive": 1,
+      "leave_one_taxon_out_positive": 1,
+      "median_vs_trimmed_mean_positive": 1,
+      "exclude_single_pmid_compounds": 1,
+      "exclude_mixed_sign_compounds": 1,
+      "all_checks_passed": 1
+    },
+    {
+      "compound_name": "N-acetyl-L-cysteine",
+      "evidence_tier": "robust",
+      "leave_one_species_out_positive": 1,
+      "leave_one_taxon_out_positive": 1,
+      "median_vs_trimmed_mean_positive": 1,
+      "exclude_single_pmid_compounds": 1,
+      "exclude_mixed_sign_compounds": 0,
+      "all_checks_passed": 0
+    },
+    {
+      "compound_name": "Minocycline",
+      "evidence_tier": "robust",
+      "leave_one_species_out_positive": 1,
+      "leave_one_taxon_out_positive": 1,
+      "median_vs_trimmed_mean_positive": 1,
+      "exclude_single_pmid_compounds": 1,
+      "exclude_mixed_sign_compounds": 0,
+      "all_checks_passed": 0
+    },
+    {
+      "compound_name": "Alpha-ketoglutarate",
+      "evidence_tier": "robust",
+      "leave_one_species_out_positive": 1,
+      "leave_one_taxon_out_positive": 1,
+      "median_vs_trimmed_mean_positive": 1,
+      "exclude_single_pmid_compounds": 1,
+      "exclude_mixed_sign_compounds": 0,
+      "all_checks_passed": 0
+    },
+    {
+      "compound_name": "Carnosine",
+      "evidence_tier": "robust",
+      "leave_one_species_out_positive": 1,
+      "leave_one_taxon_out_positive": 1,
+      "median_vs_trimmed_mean_positive": 1,
+      "exclude_single_pmid_compounds": 1,
+      "exclude_mixed_sign_compounds": 1,
+      "all_checks_passed": 1
+    },
+    {
+      "compound_name": "Rapamycin",
+      "evidence_tier": "robust",
+      "leave_one_species_out_positive": 1,
+      "leave_one_taxon_out_positive": 1,
+      "median_vs_trimmed_mean_positive": 1,
+      "exclude_single_pmid_compounds": 1,
+      "exclude_mixed_sign_compounds": 0,
+      "all_checks_passed": 0
+    },
+    {
+      "compound_name": "Mycophenolic acid",
+      "evidence_tier": "robust",
+      "leave_one_species_out_positive": 1,
+      "leave_one_taxon_out_positive": 1,
+      "median_vs_trimmed_mean_positive": 1,
+      "exclude_single_pmid_compounds": 1,
+      "exclude_mixed_sign_compounds": 0,
+      "all_checks_passed": 0
+    },
+    {
+      "compound_name": "Epigallocatechin-3-gallate",
+      "evidence_tier": "robust",
+      "leave_one_species_out_positive": 1,
+      "leave_one_taxon_out_positive": 1,
+      "median_vs_trimmed_mean_positive": 1,
+      "exclude_single_pmid_compounds": 1,
+      "exclude_mixed_sign_compounds": 0,
+      "all_checks_passed": 0
+    },
+    {
+      "compound_name": "Vitamin E",
+      "evidence_tier": "robust",
+      "leave_one_species_out_positive": 1,
+      "leave_one_taxon_out_positive": 1,
+      "median_vs_trimmed_mean_positive": 1,
+      "exclude_single_pmid_compounds": 1,
+      "exclude_mixed_sign_compounds": 0,
+      "all_checks_passed": 0
+    }
+  ]
+}
