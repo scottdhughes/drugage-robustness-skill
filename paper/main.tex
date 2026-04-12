@@ -62,7 +62,7 @@ Of 54 ITP-tested compounds, 53 matched DrugAge. All 12 ITP-negative compounds la
 
 \subsection{Out-of-Time Validation: Build 4 to Build 5}
 
-DrugAge Build~4 (2021) and Build~5 (2024) provide a temporal split. We defined top-quartile membership using the Build-5 ranking (minor leakage: the 191 compounds with new evidence contribute only 5.7\% of Build-5 rows). Top-quartile compounds accumulated positive evidence at 0.886 versus 0.587 for lower-ranked compounds ($p < 0.0001$). To rule out the attention confound, we controlled for baseline experiment count: OLS regression ($\beta = 0.319$, $p < 10^{-6}$), propensity matching (60 pairs, 0.905 vs.\ 0.569, $p = 0.000039$), and within-$\Delta n$ stratification all confirm the signal survives.
+DrugAge Build~4 (2021) and Build~5 (2024) provide a temporal split. We defined top-quartile membership using the Build-5 ranking (minor leakage: the 189 ranked compounds with new evidence contribute only 5.6\% of Build-5 rows). Top-quartile compounds accumulated positive evidence at 0.886 versus 0.587 for lower-ranked compounds ($p < 0.0001$). To rule out the attention confound, we controlled for baseline experiment count: OLS regression ($\beta = 0.319$, $p < 10^{-6}$), propensity matching (60 pairs, 0.905 vs.\ 0.569, $p = 0.000039$), and within-$\Delta n$ stratification all confirm the signal survives.
 
 \subsection{Naive Baseline Comparison}
 
