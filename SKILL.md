@@ -2,8 +2,8 @@
 name: drugage-robustness-null-certified
 description: Execute a locked, offline DrugAge robustness ranking pipeline with evidence tiers, a claim stability certificate, and an empirical null certificate.
 allowed-tools: Bash(uv *, python *, ls *, test *, shasum *)
-requires_python: "3.12.x"
-package_manager: uv
+requires_python: "3.12.12"
+package_manager: uv (0.9.22)
 repo_root: .
 canonical_output_dir: outputs/canonical
 ---

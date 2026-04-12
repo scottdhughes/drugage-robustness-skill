@@ -58,7 +58,7 @@ The pipeline classified 48 compounds as robust, 174 as promising, 435 as thin ev
 
 \subsection{ITP Cross-Validation}
 
-Of 54 ITP-tested compounds, 53 matched DrugAge. All 12 ITP-negative compounds landed in the conflicted tier (Fisher's exact $p = 0.0036$). Under a clean holdout (all 164 ITP rows removed before scoring), 7/8 ITP-positive compounds remained in the top quartile. The robustness score had the highest point-estimate AUROC ($0.847$, 95\% CI $[0.614, 1.000]$) on the holdout, followed by experiment count ($0.833$), trimmed mean ($0.792$), and median effect ($0.771$). The CI excludes chance but is wide ($n = 17$).
+Of 54 ITP-tested compounds, 53 matched DrugAge. All 12 ITP-negative compounds landed in the conflicted tier (Fisher's exact $p = 0.0036$). Under a clean holdout (all 164 ITP rows removed before scoring), 7/8 ITP-positive compounds remained in the top quartile. The robustness score had the highest point-estimate AUROC ($0.847$, 95\% CI $[0.614, 1.000]$) on the holdout, followed by experiment count ($0.833$), trimmed mean ($0.792$), and median effect ($0.771$). The CI excludes chance but is wide ($n = 17$); we treat this as preliminary evidence of discriminative value, not a definitive superiority claim.
 
 \subsection{Out-of-Time Validation: Build 4 to Build 5}
 
@@ -106,7 +106,9 @@ Robustness $R$ & 1.000 & 8 & 3 & \textbf{0.847} \\
 
 \textbf{Pure-compound-only sensitivity.} Of 48 robust-tier compounds, 40 are pure compounds and 8 are crude extracts/nutraceuticals. After excluding all extracts, the pure-compound top-10 is identical to the canonical top-10 minus Apple extract (rank 2). The ranking is not driven by extract heterogeneity.
 
-\textbf{Cross-database check.} Of 215 Geroprotectors.org compounds, 176 matched DrugAge (22 robust, 27 promising, 94 thin evidence, 33 conflicted). Positivity-skew audit: 70.1\% of DrugAge experiments report positive effects.
+\textbf{Cross-database check.} Of 215 Geroprotectors.org compounds, 176 (81.9\%) matched DrugAge by name --- substantially higher than the 20.7\% expected if Geroprotectors drew randomly from DrugAge's 1{,}038 compounds, confirming shared curation of well-studied longevity interventions. Among matches: 22 robust, 27 promising, 94 thin evidence, 33 conflicted.
+
+\textbf{Publication bias.} 70.1\% of DrugAge's 3{,}372 experiments report positive lifespan change. This positivity skew is a structural feature of the database that inflates sign-consistency scores. The hidden-negative injection grid quantifies the resulting fragility: at 30\% injection, 33\% of the robust tier is lost. The index cannot distinguish genuine geroprotective signal from systematic underreporting of negative results.
 
 \section{Limitations}
 
