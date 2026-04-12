@@ -69,17 +69,18 @@ DrugAge Build~4 (2021) and Build~5 (2024) provide a temporal split. We defined t
 \begin{table}[H]
 \centering
 \scriptsize
-\begin{tabular}{lrrr}
+\begin{tabular}{lrrrr}
 \toprule
-Ranking & $\tau$ vs.\ $R$ & ITP-pos top-Q & ITP-neg top-Q \\
+Ranking & $\tau$ vs.\ $R$ & ITP-pos top-Q & ITP-neg top-Q & Holdout AUROC \\
 \midrule
-Median effect & 0.570 & 1 & 0 \\
-Trimmed mean & 0.563 & 1 & 0 \\
-Experiment count & 0.136 & 7 & 6 \\
-Robustness $R$ & 1.000 & 8 & 3 \\
+Median effect & 0.570 & 1 & 0 & 0.771 \\
+Trimmed mean & 0.563 & 1 & 0 & 0.792 \\
+Experiment count & 0.136 & 7 & 6 & 0.833 \\
+Species $\times$ sign consistency & --- & 8 & 2 & 0.708 \\
+Robustness $R$ & 1.000 & 8 & 3 & \textbf{0.847} \\
 \bottomrule
 \end{tabular}
-\caption{ITP concordance under four rankings. The robustness index is the only method with high ITP-positive recovery and low ITP-negative contamination.}
+\caption{ITP concordance and holdout AUROC under five rankings. The species $\times$ sign-consistency baseline (the simplest comparator matching the ranking's dominant lever) recovers ITP-positive compounds but has lower discriminative power (AUROC 0.708 vs.\ 0.847).}
 \label{tab:baselines}
 \end{table}
 
@@ -101,7 +102,11 @@ Robustness $R$ & 1.000 & 8 & 3 \\
 
 \textbf{Structure-matched null (exploratory).} Shuffling compound identity within species attenuates the signal ($z = 1.26$, $p = 0.13$), confirming part of the robust-tier enrichment is structural.
 
-\textbf{Cross-database check.} Of 215 Geroprotectors.org compounds, 176 matched DrugAge (22 robust, 27 promising, 94 thin evidence, 33 conflicted). Publication-bias audit: 70.1\% of DrugAge experiments report positive effects.
+\textbf{Unseen-species validation.} Among 50 compounds that gained experiments in species not represented in their Build-4 evidence, top-quartile compounds showed a new-species positive rate of 0.776 versus 0.500 for lower-ranked compounds (Mann--Whitney $p = 0.024$). This confirms cross-species generalization: top-ranked compounds show positive effects even in previously untested species.
+
+\textbf{Pure-compound-only sensitivity.} Of 48 robust-tier compounds, 40 are pure compounds and 8 are crude extracts/nutraceuticals. After excluding all extracts, the pure-compound top-10 is identical to the canonical top-10 minus Apple extract (rank 2). The ranking is not driven by extract heterogeneity.
+
+\textbf{Cross-database check.} Of 215 Geroprotectors.org compounds, 176 matched DrugAge (22 robust, 27 promising, 94 thin evidence, 33 conflicted). Positivity-skew audit: 70.1\% of DrugAge experiments report positive effects.
 
 \section{Limitations}
 
