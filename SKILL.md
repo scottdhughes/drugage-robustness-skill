@@ -1,6 +1,6 @@
 ---
-name: drugage-robustness-null-certified
-description: Execute a locked, offline DrugAge robustness ranking pipeline with evidence tiers, a claim stability certificate, and an empirical null certificate.
+name: drugage-evidence-robustness-index
+description: Execute the DrugAge evidence-robustness index pipeline, including canonical scoring, ITP holdout validation, temporal Build 4→5 holdout, sensitivity analyses, and paper artifact generation.
 allowed-tools: Bash(uv *, python *, ls *, test *, shasum *)
 requires_python: "3.12.12"
 package_manager: uv (0.9.22)
@@ -8,30 +8,31 @@ repo_root: .
 canonical_output_dir: outputs/canonical
 ---
 
-# Claim-Certified DrugAge Robustness Skill
+# Evidence-Robustness Index for Longevity Interventions in DrugAge
 
-This skill executes the canonical scored path only. It does not run the optional AnAge context report or posting helpers.
+This skill reproduces every number in the paper from a cold start. No network access is required after cloning — all data is bundled.
 
 ## Runtime Expectations
 
 - Platform: CPU-only
-- Python: 3.12.x
-- Package manager: `uv`
-- Canonical input: `data/drugage_build5_2024-11-29.csv`
-- Offline execution: no network access required after the repo is cloned
+- Python: 3.12.12
+- Package manager: `uv` 0.9.22
+- Canonical input: `data/drugage_build5_2024-11-29.csv` (DrugAge Build 5)
+- Temporal input: `data/drugage_build4_2021-11-20.csv` (DrugAge Build 4)
+- Offline execution: no network access required
+- Wall-clock time: ~7 minutes for canonical pipeline (1,000 permutations)
 
-## Step 1: Confirm Canonical Input
+## Step 1: Confirm Bundled Data
 
 ```bash
-test -f data/drugage_build5_2024-11-29.csv
 shasum -a 256 data/drugage_build5_2024-11-29.csv
+shasum -a 256 data/drugage_build4_2021-11-20.csv
 ```
 
 Expected SHA256:
 
-```text
-7ed9771440fa4e1e30be0d3c8e92d919254b572ab40c81e2440ba78c885401d4
-```
+- Build 5: `7ed9771440fa4e1e30be0d3c8e92d919254b572ab40c81e2440ba78c885401d4`
+- Build 4: `59a372489690512935df74e893f8ea7876d39f14827180e801c1ac3463bb173f`
 
 ## Step 2: Install the Locked Environment
 
@@ -39,62 +40,80 @@ Expected SHA256:
 uv sync --frozen
 ```
 
-Success condition:
-
-- `uv` completes without changing the lockfile
-
 ## Step 3: Run the Canonical Pipeline
 
 ```bash
-uv run --frozen --no-sync drugage-skill run --config config/canonical_drugage.yaml --out outputs/canonical
+uv run --frozen --no-sync drugage-skill run \
+  --config config/canonical_drugage.yaml \
+  --out outputs/canonical
 ```
 
-Success condition:
+Success: `outputs/canonical/verification.json` exists with status `passed`.
 
-- `outputs/canonical/manifest.json` exists
-- all required CSV, JSON, and PNG artifacts are present
-
-## Step 4: Verify the Run
+## Step 4: Verify
 
 ```bash
 uv run --frozen --no-sync drugage-skill verify --run-dir outputs/canonical
 ```
 
-Success condition:
+## Step 5: Run Ceiling Analyses
 
-- exit code is `0`
-- `outputs/canonical/verification.json` exists
-- verification status is `passed`
-
-## Step 5: Confirm Required Artifacts
-
-Required files:
-
-- `outputs/canonical/manifest.json`
-- `outputs/canonical/normalization_audit.json`
-- `outputs/canonical/robustness_rankings.csv`
-- `outputs/canonical/compound_evidence_profiles.csv`
-- `outputs/canonical/claim_stability_certificate.json`
-- `outputs/canonical/claim_stability_heatmap.png`
-- `outputs/canonical/empirical_null_certificate.json`
-- `outputs/canonical/compound_null_significance.csv`
-- `outputs/canonical/null_separation_plot.png`
-- `outputs/canonical/verification.json`
-
-## Optional: Sex-Stratified Sensitivity Analysis
+These scripts generate every sensitivity, validation, and diagnostic artifact referenced in the paper.
 
 ```bash
-uv run --frozen --no-sync drugage-skill run --gender Male --out outputs/male_only
-uv run --frozen --no-sync drugage-skill run --gender Female --out outputs/female_only
+# ITP overlap analysis
+uv run --frozen --no-sync python scripts/itp_overlap_analysis.py
+
+# ITP holdout (removes all ITP rows, reruns scoring)
+uv run --frozen --no-sync drugage-skill run \
+  --config config/itp_holdout_drugage.yaml \
+  --out outputs/itp_holdout/run
+
+# Bayesian model + GLMM
+uv run --frozen --no-sync python scripts/bayesian_robustness.py
+
+# Dose-response analysis
+uv run --frozen --no-sync python scripts/dose_response_analysis.py
+
+# Weight/cap sensitivity, baselines, component correlations, population stats
+uv run --frozen --no-sync python scripts/ceiling_analyses.py
+
+# Temporal holdout, leave-mouse-out, negative injection, PMID bootstrap, species weighting
+uv run --frozen --no-sync python scripts/phase1_analyses.py
 ```
 
-The `--gender` flag filters experiments to a single sex before scoring. Valid values: Male, Female, Hermaphrodite, Pooled, Unknown. This enables sensitivity analysis to assess whether robustness rankings are stable across sexes. In the canonical dataset, 6/10 top compounds are shared between male-only and female-only rankings.
+## Step 6: Confirm Required Artifacts
 
-## Step 6: Canonical Success Criteria
+Canonical pipeline outputs:
 
-The canonical path is successful only if:
+- `outputs/canonical/manifest.json`
+- `outputs/canonical/robustness_rankings.csv`
+- `outputs/canonical/compound_evidence_profiles.csv`
+- `outputs/canonical/empirical_null_certificate.json`
+- `outputs/canonical/claim_stability_certificate.json`
+- `outputs/canonical/verification.json`
 
-- the bundled DrugAge snapshot is used
-- the run command finishes successfully
-- the verify command exits `0`
-- all required artifacts are present and nonempty
+Ceiling analysis outputs:
+
+- `outputs/canonical/itp_overlap_analysis.json`
+- `outputs/canonical/itp_holdout_auroc.json`
+- `outputs/canonical/itp_holdout_validation.json`
+- `outputs/canonical/clean_temporal_holdout.json`
+- `outputs/canonical/bayesian_robustness.json`
+- `outputs/canonical/ceiling_analyses.json`
+- `outputs/canonical/phase1_analyses.json`
+- `outputs/canonical/threshold_sensitivity.json`
+- `outputs/canonical/cap_sensitivity.json`
+- `outputs/canonical/final_analyses.json`
+- `outputs/canonical/temporal_confound_analysis.json`
+- `outputs/canonical/dose_response_analysis.json`
+- `outputs/canonical/funnel_analysis.json`
+- `outputs/canonical/compound_class_analysis.json`
+
+## Success Criteria
+
+The pipeline is successful only if:
+
+- the canonical run finishes and verifies
+- all ceiling analysis JSONs are written
+- every number in the paper can be traced to an artifact in `outputs/canonical/`
