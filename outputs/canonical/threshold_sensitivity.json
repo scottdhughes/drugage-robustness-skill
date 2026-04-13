@@ -1,9 +1,9 @@
 {
   "n_combinations": 540,
-  "median_jaccard": 0.5569,
-  "mean_jaccard": 0.516,
-  "fraction_jaccard_above_050": 0.5778,
-  "fraction_jaccard_above_070": 0.1889,
+  "tau_median": 0.5569,
+  "tau_mean": 0.516,
+  "fraction_above_050": 0.5778,
+  "fraction_above_070": 0.1889,
   "robust_count_range": [
     7,
     86

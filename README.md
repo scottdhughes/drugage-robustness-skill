@@ -11,7 +11,7 @@ An automated pipeline that ranks DrugAge longevity interventions by cross-specie
 - **48 robust-tier compounds** out of 1,038 scored, separated from a 1,000-permutation null at z = 4.42
 - **ITP holdout AUROC = 0.847** (95% CI [0.614, 1.000]) on a clean holdout with all ITP rows removed before scoring
 - **12/12 ITP-negative compounds** correctly classified as conflicted (Fisher's exact p = 0.0036)
-- **Build 4 → Build 5 forward validation**: top-quartile compounds gain positive evidence at 0.886 vs 0.587 (p < 0.0001), controlled for attention confound via regression (β = 0.319, p < 10⁻⁶) and propensity matching (p = 0.000039)
+- **Build 4 → Build 5 forward validation** (leakage-free): Build-4-only scoring → Build-5 outcomes, 0.759 vs 0.435 (p = 0.0004), controlled for attention via regression (β = 0.321, p = 0.003)
 - **Stable under perturbation**: weight sensitivity τ = 0.77, cap sensitivity 80.6% with τ > 0.80, PMID-clustered bootstrap τ = 0.76
 
 ## Quick Start

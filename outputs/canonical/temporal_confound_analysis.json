@@ -1,14 +1,9 @@
 {
-  "regression_top_q_coef": 0.319,
-  "regression_top_q_p": 0.0,
-  "regression_log_b4n_coef": -0.0738,
-  "regression_log_b4n_p": 0.008088,
-  "regression_r_squared": 0.1677,
-  "matched_pairs": 60,
-  "matched_top_rate": 0.9048,
-  "matched_bottom_rate": 0.5692,
-  "matched_p": 3.9e-05,
-  "attention_top_mean_delta": 4.2,
-  "attention_bottom_mean_delta": 2.0,
-  "attention_p": 0.0
+  "source": "clean_temporal_holdout.json",
+  "ols_top_q_coef": 0.3211,
+  "ols_top_q_p": 0.003005,
+  "matched_pairs": 18,
+  "matched_top_rate": 0.7042,
+  "matched_bot_rate": 0.4654,
+  "matched_p": 0.060312
 }

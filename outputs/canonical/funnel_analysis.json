@@ -3,9 +3,5 @@
   "positive_experiments": 2363,
   "negative_experiments": 1009,
   "positive_fraction": 0.7008,
-  "median_effect": 7.1,
-  "mean_effect": 8.89,
-  "effect_precision_spearman_rho": -0.0155,
-  "effect_precision_spearman_p": 0.3667,
-  "asymmetry_note": "70.1% of experiments show positive effects, consistent with publication bias toward positive results in DrugAge"
+  "median_effect": 7.1
 }

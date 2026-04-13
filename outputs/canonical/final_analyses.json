@@ -1,13 +1,7 @@
 {
   "simple_baseline_auroc": 0.7083,
   "robustness_auroc": 0.8472,
-  "simple_baseline_itp_pos_top_q": 8,
-  "simple_baseline_itp_neg_top_q": 2,
-  "unseen_species_top_q_count": 19,
-  "unseen_species_bottom_count": 31,
-  "unseen_species_top_q_rate": 0.7763,
-  "unseen_species_bottom_rate": 0.5,
-  "unseen_species_p": 0.023818,
-  "pure_robust_count": 40,
-  "extract_robust_count": 8
+  "unseen_top_q_rate": 0.7763,
+  "unseen_bottom_rate": 0.5,
+  "unseen_p": 0.023818
 }

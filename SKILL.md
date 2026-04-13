@@ -61,25 +61,59 @@ uv run --frozen --no-sync drugage-skill verify --run-dir outputs/canonical
 These scripts generate every sensitivity, validation, and diagnostic artifact referenced in the paper.
 
 ```bash
-# ITP overlap analysis
+# 5a. ITP overlap analysis → itp_overlap_analysis.json
 uv run --frozen --no-sync python scripts/itp_overlap_analysis.py
 
-# ITP holdout (removes all ITP rows, reruns scoring)
+# 5b. ITP holdout: create filtered CSV, run scoring, compute AUROC
+uv run --frozen --no-sync python -c "
+import csv
+rows = list(csv.DictReader(open('data/drugage_build5_2024-11-29.csv')))
+non_itp = [r for r in rows if r.get('ITP','').strip() != 'Yes']
+import hashlib, pathlib, io
+out = pathlib.Path('outputs/itp_holdout'); out.mkdir(parents=True, exist_ok=True)
+buf = io.StringIO(); w = csv.DictWriter(buf, fieldnames=rows[0].keys()); w.writeheader(); w.writerows(non_itp)
+(out / 'drugage_no_itp.csv').write_text(buf.getvalue())
+"
 uv run --frozen --no-sync drugage-skill run \
   --config config/itp_holdout_drugage.yaml \
   --out outputs/itp_holdout/run
 
-# Bayesian model + GLMM
+# 5c. Bayesian model → bayesian_robustness.json
 uv run --frozen --no-sync python scripts/bayesian_robustness.py
 
-# Dose-response analysis
+# 5d. Dose-response → dose_response_analysis.json
 uv run --frozen --no-sync python scripts/dose_response_analysis.py
 
-# Weight/cap sensitivity, baselines, component correlations, population stats
+# 5e. Weight/cap sensitivity, baselines, correlations, population stats
+#     → ceiling_analyses.json, figures/
 uv run --frozen --no-sync python scripts/ceiling_analyses.py
 
-# Temporal holdout, leave-mouse-out, negative injection, PMID bootstrap, species weighting
+# 5f. Temporal holdout, leave-mouse-out, negative injection, PMID bootstrap
+#     → phase1_analyses.json
 uv run --frozen --no-sync python scripts/phase1_analyses.py
+
+# 5g. Clean temporal holdout (Build-4-only scoring)
+#     → clean_temporal_holdout.json
+uv run --frozen --no-sync python scripts/clean_temporal_holdout.py
+
+# 5h. ITP holdout AUROC → itp_holdout_auroc.json
+uv run --frozen --no-sync python scripts/itp_holdout_auroc.py
+
+# 5i. Threshold sensitivity → threshold_sensitivity.json
+uv run --frozen --no-sync python scripts/threshold_sensitivity.py
+
+# 5j. Temporal confound controls → temporal_confound_analysis.json
+uv run --frozen --no-sync python scripts/temporal_confound_analysis.py
+
+# 5k. Compound class analysis → compound_class_analysis.json
+uv run --frozen --no-sync python scripts/compound_class_analysis.py
+
+# 5l. Final analyses (unseen-species, pure-compound, simple baseline)
+#     → final_analyses.json
+uv run --frozen --no-sync python scripts/final_analyses.py
+
+# 5m. Funnel/positivity analysis → funnel_analysis.json
+uv run --frozen --no-sync python scripts/funnel_analysis.py
 ```
 
 ## Step 6: Confirm Required Artifacts

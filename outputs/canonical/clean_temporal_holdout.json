@@ -1,6 +1,6 @@
 {
-  "design": "Build-4-only scoring, Build-5 delta outcomes",
-  "b4_compounds_scored": 1084,
+  "design": "Build-4-only scoring",
+  "b4_compounds": 1084,
   "b4_top_quartile": 271,
   "compounds_with_delta": 83,
   "top_q_count": 35,
