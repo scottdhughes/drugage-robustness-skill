@@ -19,7 +19,7 @@
 \small
 
 \begin{abstract}
-We present an evidence-robustness index for longevity interventions in DrugAge that ranks compounds by cross-species consistency rather than raw lifespan effect. The index separates from a 1{,}000-permutation species-stratified null ($z = 4.42$, $p = 0.001$) and had the highest ITP concordance among naive baselines: under an ITP-holdout design with all ITP-linked rows excluded, 7/8 ITP-positive compounds remain in the top quartile (AUROC $= 0.847$, 95\% CI $[0.614, 1.000]$). An out-of-time validation (DrugAge Build~4 2021 $\rightarrow$ Build~5 2024) shows top-quartile compounds accumulate significantly more positive evidence ($0.886$ vs.\ $0.587$, $p < 0.0001$); this signal survives after controlling for baseline experiment count via regression ($\beta = 0.319$, $p < 10^{-6}$) and propensity matching ($p = 0.000039$). An empirical Bayes beta-binomial model provides compound-level credible intervals ($\tau = 0.67$ vs.\ heuristic). The ranking is stable under weight perturbation (median $\tau = 0.77$), cap perturbation (80.6\% yield $\tau > 0.80$), and PMID-clustered bootstrap ($\tau = 0.76$, CI $[0.67, 0.83]$). All metrics are formally defined. Code: \texttt{github.com/scottdhughes/drugage-robustness-skill}.
+We present an evidence-robustness index for longevity interventions in DrugAge that ranks compounds by cross-species consistency rather than raw lifespan effect. The index separates from a 1{,}000-permutation species-stratified null ($z = 4.42$, $p = 0.001$) and had the highest point-estimate AUROC on a leakage-controlled ITP holdout ($0.847$, 95\% CI $[0.614, 1.000]$, $n = 17$) among prespecified baselines. A leakage-free out-of-time validation (Build-4-only scoring $\rightarrow$ Build-5 outcomes) shows top-quartile compounds accumulate significantly more positive evidence ($0.759$ vs.\ $0.435$, $p = 0.0004$), surviving after controlling for baseline experiment count ($\beta = 0.321$, $p = 0.003$). An empirical Bayes beta-binomial model provides compound-level credible intervals ($\tau = 0.67$ vs.\ heuristic). The ranking is stable under weight perturbation (median $\tau = 0.77$), cap perturbation (80.6\% yield $\tau > 0.80$), and PMID-clustered bootstrap ($\tau = 0.76$, CI $[0.67, 0.83]$). All metrics are formally defined. Code: \texttt{github.com/scottdhughes/drugage-robustness-skill}.
 \end{abstract}
 
 \section{Introduction}
@@ -54,7 +54,7 @@ Magnitude & $\min(\max(\bar{x}_{\text{trim}}, 0), 50) / 50$ \\
 
 \section{Results}
 
-The pipeline classified 48 compounds as robust, 174 as promising, 435 as thin evidence, and 381 as conflicted. The robust-compound count (48) exceeds the permutation null mean (29.9) at $z = 4.42$, $p = 0.001$. Three compound vignettes illustrate the ranking: \textbf{Spermidine} (rank 1, $R = 1.0$): 8 experiments across 6 species, perfect consistency. \textbf{Rapamycin} (rank 7): 37 experiments, 36/37 positive, ranks lower because breadth saturates. \textbf{Aspirin} (rank 658, conflicted): 31 experiments but only 48\% positive --- genuinely mixed evidence.
+The pipeline classified 48 compounds as robust, 174 as promising, 435 as thin evidence, and 381 as conflicted. The robust-compound count (48) exceeds the permutation null mean (29.9) at $z = 4.42$, $p = 0.001$.
 
 \subsection{ITP Cross-Validation}
 
@@ -62,31 +62,32 @@ Of 54 ITP-tested compounds, 53 matched DrugAge. All 12 ITP-negative compounds la
 
 \subsection{Out-of-Time Validation: Build 4 to Build 5}
 
-DrugAge Build~4 (2021) and Build~5 (2024) provide a temporal split. We defined top-quartile membership using the Build-5 ranking (minor leakage: the 189 ranked compounds with new evidence contribute only 5.6\% of Build-5 rows). Top-quartile compounds accumulated positive evidence at 0.886 versus 0.587 for lower-ranked compounds ($p < 0.0001$). To rule out the attention confound, we controlled for baseline experiment count: OLS regression ($\beta = 0.319$, $p < 10^{-6}$), propensity matching (60 pairs, 0.905 vs.\ 0.569, $p = 0.000039$), and within-$\Delta n$ stratification all confirm the signal survives.
+DrugAge Build~4 (2021, 1{,}084 compounds) and Build~5 (2024, 1{,}038 compounds) provide a temporal split. We scored all compounds using Build-4 data only, defined top-quartile membership from those Build-4-only ranks, then evaluated outcomes among the 83 compounds that gained new experiments in Build~5. Top-quartile compounds (as ranked by Build-4 evidence alone) accumulated positive evidence at $0.759$ versus $0.435$ for lower-ranked compounds (Mann--Whitney $p = 0.0004$, $n_{\text{top}} = 35$, $n_{\text{bottom}} = 48$). An OLS regression controlling for baseline experiment count confirms the signal ($\beta = 0.321$, $p = 0.003$; the baseline-count coefficient is near zero, $p = 0.97$). Propensity-matched pairs (18 pairs, nearest-neighbor on baseline experiment count within caliper $\leq 3$) show 0.704 versus 0.465 ($p = 0.06$, borderline at reduced $n$). This is a leakage-free temporal holdout: Build-5 data was not used to define the ranking.
 
 \subsection{Naive Baseline Comparison}
 
 \begin{table}[H]
 \centering
 \scriptsize
-\begin{tabular}{lrrrr}
+\begin{tabular}{lr}
 \toprule
-Ranking & $\tau$ vs.\ $R$ & ITP-pos top-Q & ITP-neg top-Q & Holdout AUROC \\
+Ranking method & Holdout AUROC \\
 \midrule
-Median effect & 0.570 & 1 & 0 & 0.771 \\
-Trimmed mean & 0.563 & 1 & 0 & 0.792 \\
-Experiment count & 0.136 & 7 & 6 & 0.833 \\
-Species $\times$ sign consistency & --- & 8 & 2 & 0.708 \\
-Robustness $R$ & 1.000 & 8 & 3 & \textbf{0.847} \\
+Sign consistency alone & 0.500 \\
+Species $\times$ sign cons.\ ($n_{\text{sp}} \cdot \text{sc} \cdot \mathbf{1}[\tilde{x}>0]$) & 0.708 \\
+Median effect & 0.771 \\
+Trimmed-mean effect & 0.792 \\
+Experiment count & 0.833 \\
+Robustness $R$ & \textbf{0.847} \\
 \bottomrule
 \end{tabular}
-\caption{ITP concordance and holdout AUROC under five rankings. The species $\times$ sign-consistency baseline (the simplest comparator matching the ranking's dominant lever) recovers ITP-positive compounds but has lower discriminative power (AUROC 0.708 vs.\ 0.847).}
+\caption{ITP-holdout AUROC (8 positive, 9 negative, all ITP rows excluded before scoring). The species $\times$ sign-consistency baseline is defined as $n_{\text{species}} \cdot \text{sign\_consistency}$ for compounds with positive median effect, zero otherwise.}
 \label{tab:baselines}
 \end{table}
 
 \section{Sensitivity and Robustness Diagnostics}
 
-\textbf{Weight and cap stability.} 200 Dirichlet-sampled weight vectors yield median Kendall $\tau = 0.77$ versus the canonical ranking; 80.6\% of 160 breadth-cap combinations yield $\tau > 0.80$. The specific weights and caps do not drive the ranking.
+\textbf{Weight and cap stability.} 200 Dirichlet-sampled weight vectors yield median Kendall $\tau = 0.77$ versus the canonical ranking; 80.6\% of 160 breadth-cap combinations yield $\tau > 0.80$. The continuous score is moderately stable to weight and cap perturbation, while robust-tier membership is most sensitive to the minimum-species gate.
 
 \textbf{Threshold sensitivity.} Because the ranking is lexicographic (tier first), tier thresholds are the true levers. Across 540 threshold combinations, the minimum-species gate is the dominant determinant: changing $\geq 2$ to $\geq 3$ drops the robust set from 48 to 17 (Jaccard $= 0.354$). LOSO relaxation ($1.0 \rightarrow 0.8$) changes nothing.
 
@@ -100,13 +101,11 @@ Robustness $R$ & 1.000 & 8 & 3 & \textbf{0.847} \\
 
 \textbf{Data-volume confound.} Spearman $\rho = 0.44$ between experiment count and $R$; $R^2 = 0.22$ from log-regression. The confound is real but does not dominate: 78\% of score variance is not explained by data volume.
 
-\textbf{Structure-matched null (exploratory).} Shuffling compound identity within species attenuates the signal ($z = 1.26$, $p = 0.13$), confirming part of the robust-tier enrichment is structural.
+\textbf{Structure-matched null.} An exploratory null shuffling compound identity within species attenuates the signal to $z = 1.26$ ($p = 0.13$), confirming part of the robust-tier enrichment is structural rather than biological.
 
 \textbf{Unseen-species validation.} Among 50 compounds that gained experiments in species not represented in their Build-4 evidence, top-quartile compounds showed a new-species positive rate of 0.776 versus 0.500 for lower-ranked compounds (Mann--Whitney $p = 0.024$). This confirms cross-species generalization: top-ranked compounds show positive effects even in previously untested species.
 
 \textbf{Pure-compound-only sensitivity.} Of 48 robust-tier compounds, 40 are pure compounds and 8 are crude extracts/nutraceuticals. After excluding all extracts, the pure-compound top-10 is identical to the canonical top-10 minus Apple extract (rank 2). The ranking is not driven by extract heterogeneity.
-
-\textbf{Cross-database check.} Of 215 Geroprotectors.org compounds, 176 (81.9\%) matched DrugAge by name --- substantially higher than the 20.7\% expected if Geroprotectors drew randomly from DrugAge's 1{,}038 compounds, confirming shared curation of well-studied longevity interventions. Among matches: 22 robust, 27 promising, 94 thin evidence, 33 conflicted.
 
 \textbf{Publication bias.} 70.1\% of DrugAge's 3{,}372 experiments report positive lifespan change. This positivity skew is a structural feature of the database that inflates sign-consistency scores. The hidden-negative injection grid quantifies the resulting fragility: at 30\% injection, 33\% of the robust tier is lost. The index cannot distinguish genuine geroprotective signal from systematic underreporting of negative results.
 
@@ -116,7 +115,7 @@ This index measures \emph{analytical} robustness --- cross-species consistency w
 
 \section{Conclusion}
 
-This evidence-robustness index ranks longevity claims by analytical consistency, separates from a permutation null ($z = 4.42$), and predicts future evidence accumulation across database builds ($p < 0.0001$, controlled for attention). It had the highest ITP concordance among baselines (AUROC $= 0.847$ on clean holdout) and is stable under weight, cap, threshold, species-weighting, and PMID-clustered perturbations. The index measures evidence robustness inside DrugAge, not biological efficacy.
+This evidence-robustness index ranks longevity claims by analytical consistency, separates from a permutation null ($z = 4.42$), and predicts future evidence accumulation across database builds ($p = 0.0004$ on a leakage-free Build-4-only holdout, controlled for attention). It had the highest ITP concordance among baselines (AUROC $= 0.847$ on clean holdout) and is stable under weight, cap, threshold, species-weighting, and PMID-clustered perturbations. The index measures evidence robustness inside DrugAge, not biological efficacy.
 
 \paragraph{Take-home for experimentalists.} The 48 robust-tier compounds have cross-species, internally consistent, leave-one-out-resilient evidence. Conflicted-tier compounds (381, including metformin, aspirin, resveratrol) have genuinely mixed evidence and may benefit from targeted replication before drawing conclusions.
 
