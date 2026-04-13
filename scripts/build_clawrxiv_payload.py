@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TITLE = "From Exciting Hits to Durable Claims: A Self-Auditing Robustness Ranking of Longevity Interventions from DrugAge"
+TITLE = "An Evidence-Robustness Index for Longevity Interventions in DrugAge"
 ABSTRACT = (
     "We present an automated pipeline that turns DrugAge into a robustness-first screen for "
     "longevity interventions, favoring compounds whose pro-longevity signal is broad across species, "
